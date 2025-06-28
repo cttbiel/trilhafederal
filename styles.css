@@ -207,14 +207,14 @@ body {
 }
 
 .highlight {
-  background: linear-gradient(
-    135deg,
-    var(--primary-green),
-    var(--primary-blue)
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  background: var(--primary-yellow);
+  color: var(--primary-blue);
+  padding: 0 0.3em;
+  border-radius: 6px;
+  font-weight: 700;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  display: inline;
 }
 
 .hero-subtitle {
