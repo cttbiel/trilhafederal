@@ -35,20 +35,21 @@ document.addEventListener("DOMContentLoaded", function () {
   // Smooth scroll para links internos
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
-      e.preventDefault();
-
-      const targetId = this.getAttribute("href");
-      const targetSection = document.querySelector(targetId);
-
-      if (targetSection) {
-        const headerHeight = header.offsetHeight;
-        const targetPosition = targetSection.offsetTop - headerHeight;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: "smooth",
-        });
+      const href = this.getAttribute("href");
+      // Só previne o padrão se for âncora interna existente
+      if (href && href.startsWith("#")) {
+        const targetSection = document.querySelector(href);
+        if (targetSection) {
+          e.preventDefault();
+          const headerHeight = header.offsetHeight;
+          const targetPosition = targetSection.offsetTop - headerHeight;
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        }
       }
+      // Se não for âncora interna, deixa o comportamento padrão (redireciona)
     });
   });
 
