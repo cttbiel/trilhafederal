@@ -34,6 +34,12 @@
             <li><a href="#inicio" class="nav-link">Início</a></li>
             <li><a href="#sobre" class="nav-link">Sobre</a></li>
             <li><a href="#vestibulares" class="nav-link">Vestibulares</a></li>
+            <li>
+              <a href="internacional.html" class="nav-link"
+                >Trilha Internacional</a
+              >
+            </li>
+            <li><a href="equipe.html" class="nav-link">Nossa Equipe</a></li>
             <li><a href="#recursos" class="nav-link">Recursos</a></li>
             <li><a href="#contato" class="nav-link">Contato</a></li>
           </ul>
@@ -64,7 +70,9 @@
             <a href="#vestibulares" class="btn btn-primary"
               >Explorar Vestibulares</a
             >
-            <a href="#sobre" class="btn btn-secondary">Saiba Mais</a>
+            <a href="internacional.html" class="btn btn-secondary"
+              >Trilha Internacional</a
+            >
           </div>
         </div>
         <div class="hero-image">
@@ -134,12 +142,14 @@
           <div class="about-story">
             <h3>Nossa História</h3>
             <p>
-              Fundado por Gabriel Junio Silva de Carvalho e Kauã Sergio Ramos
-              Faria, o Trilha Federal nasceu da experiência pessoal de ambos,
-              que descobriram tardiamente as oportunidades em instituições
-              federais. Determinados a evitar que outros passem pela mesma
-              situação, criaram esta plataforma para centralizar e divulgar
-              informações sobre vestibulares federais.
+              Fundado em 2025 por quatro jovens estudantes do CEFET-MG, o Trilha
+              Federal nasceu da experiência pessoal de Gabriel Junio Silva de
+              Carvalho e Kauã Sergio Ramos Faria, que descobriram tardiamente as
+              oportunidades em instituições federais após estudarem em escolas
+              de ensino médio com poucos recursos. Hoje, junto com Gabriel
+              Expedito Campos Coelho da Silva e Caio Bertolato Silva, todos
+              cursando Engenharia de Computação, criaram esta plataforma para
+              evitar que outros estudantes passem pela mesma situação.
             </p>
             <div class="stats">
               <div class="stat">
@@ -154,6 +164,11 @@
                 <span class="stat-number">27</span>
                 <span class="stat-label">Estados</span>
               </div>
+            </div>
+            <div class="about-cta">
+              <a href="equipe.html" class="btn btn-outline"
+                >Conheça Nossa Equipe</a
+              >
             </div>
           </div>
         </div>
@@ -219,7 +234,7 @@
               <li>Escolas Técnicas Federais</li>
               <li>Centros de Educação Profissional</li>
             </ul>
-            <a href="#" class="btn btn-outline">Ver Todas</a>
+            <a href="#" class="btn btn-outline">Ver Todos</a>
           </div>
         </div>
       </div>
@@ -302,6 +317,87 @@
       </div>
     </section>
 
+    <!-- Contato Section -->
+    <section id="contato" class="contato">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Entre em Contato</h2>
+          <p class="section-subtitle">
+            Tem dúvidas? Quer contribuir? Fale conosco!
+          </p>
+        </div>
+        <div class="contato-content">
+          <div class="contato-info">
+            <div class="contato-item">
+              <div class="contato-icon">📧</div>
+              <div class="contato-detalhes">
+                <h4>Email</h4>
+                <p>contato@trilhafederal.com.br</p>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-icon">📱</div>
+              <div class="contato-detalhes">
+                <h4>WhatsApp</h4>
+                <p>(31) 99999-9999</p>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-icon">📍</div>
+              <div class="contato-detalhes">
+                <h4>Localização</h4>
+                <p>Belo Horizonte, MG - Brasil</p>
+              </div>
+            </div>
+            <div class="contato-item">
+              <div class="contato-icon">🏛️</div>
+              <div class="contato-detalhes">
+                <h4>Instituição</h4>
+                <p>
+                  CEFET-MG - Centro Federal de Educação Tecnológica de Minas
+                  Gerais
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="contato-form">
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="nome">Nome Completo</label>
+                <input type="text" id="nome" name="nome" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="assunto">Assunto</label>
+                <select id="assunto" name="assunto" required>
+                  <option value="">Selecione um assunto</option>
+                  <option value="duvida">Dúvida sobre Vestibulares</option>
+                  <option value="sugestao">Sugestão</option>
+                  <option value="parceria">Proposta de Parceria</option>
+                  <option value="outro">Outro</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="mensagem">Mensagem</label>
+                <textarea
+                  id="mensagem"
+                  name="mensagem"
+                  rows="5"
+                  required
+                ></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">
+                Enviar Mensagem
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Footer -->
     <footer class="footer">
       <div class="container">
@@ -330,7 +426,7 @@
               <li><a href="#inicio">Início</a></li>
               <li><a href="#sobre">Sobre</a></li>
               <li><a href="#vestibulares">Vestibulares</a></li>
-              <li><a href="#recursos">Recursos</a></li>
+              <li><a href="internacional.html">Trilha Internacional</a></li>
             </ul>
           </div>
           <div class="footer-section">
@@ -339,18 +435,18 @@
               <li><a href="#">Universidades Federais</a></li>
               <li><a href="#">Institutos Federais</a></li>
               <li><a href="#">Escolas Técnicas</a></li>
-              <li><a href="#">Centros de Educação</a></li>
+              <li><a href="internacional.html">Bolsas Internacionais</a></li>
             </ul>
           </div>
           <div class="footer-section">
             <h4>Contato</h4>
             <p>📧 contato@trilhafederal.com.br</p>
-            <p>📱 (11) 99999-9999</p>
-            <p>📍 São Paulo, SP - Brasil</p>
+            <p>📱 (31) 99999-9999</p>
+            <p>📍 Belo Horizonte, MG - Brasil</p>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2024 Trilha Federal. Todos os direitos reservados.</p>
+          <p>&copy; 2025 Trilha Federal. Todos os direitos reservados.</p>
           <p>Desenvolvido com ❤️ para democratizar a educação pública</p>
         </div>
       </div>
