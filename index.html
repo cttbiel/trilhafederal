@@ -5,8 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trilha Federal</title>
     <link rel="shortcut icon" type="image/x-icon" href="/logo-cortada.ico" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Segoe UI", sans-serif;
+        background-color: #ffffff;
+        color: #003366;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        text-align: center;
+        background-image: linear-gradient(to bottom right, #e6f0ff, #ffffff);
+      }
+
+      header {
+        margin-bottom: 20px;
+      }
+
+      img.logo {
+        width: 150px;
+        margin-bottom: 10px;
+      }
+
+      h1 {
+        font-size: 2.5em;
+        margin: 0;
+        color: #003366;
+      }
+
+      p.slogan {
+        font-size: 1.1em;
+        color: #555;
+        margin-bottom: 30px;
+      }
+
+      a.button {
+        background-color: #003366;
+        color: white;
+        padding: 12px 24px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: background 0.3s;
+      }
+
+      a.button:hover {
+        background-color: #0055aa;
+      }
+
+      footer {
+        position: absolute;
+        bottom: 10px;
+        font-size: 0.8em;
+        color: #888;
+      }
+    </style>
   </head>
   <body>
-    <p>Olá, seja bem-vindo a versão beta do nosso site!</p>
+    <header>
+      <img
+        src="/assets/trilha federal sem fundo.png"
+        alt="Logo Trilha Federal"
+        class="logo"
+      />
+      <h1>Trilha Federal</h1>
+      <p class="slogan">
+        O caminho até o ensino público de excelência começa aqui.
+      </p>
+      <a href="#" class="button">Saiba Mais</a>
+    </header>
+    <footer>Versão Beta – Em construção 🚧</footer>
   </body>
 </html>
