@@ -177,7 +177,7 @@ O site é totalmente responsivo e funciona perfeitamente em:
 
 ## 📞 Contato
 
-- **Email**: contato@trilhafederal.com.br
+- **Email**: cttbiel@gmail.com
 - **WhatsApp**: (31) 99999-9999
 - **Localização**: Belo Horizonte, MG - Brasil
 - **Instituição**: CEFET-MG

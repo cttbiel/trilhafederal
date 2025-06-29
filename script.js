@@ -138,30 +138,116 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.classList.add("loaded");
   });
 
-  // Formulário de contato (se existir)
+  // Formulário de contato funcional
   const contactForm = document.querySelector("#contact-form");
   if (contactForm) {
     contactForm.addEventListener("submit", function (e) {
       e.preventDefault();
 
-      // Simular envio do formulário
       const submitBtn = this.querySelector('button[type="submit"]');
       const originalText = submitBtn.textContent;
+      const formData = new FormData(this);
 
+      // Obter dados do formulário
+      const nome = formData.get("nome");
+      const email = formData.get("email");
+      const assunto = formData.get("assunto");
+      const mensagem = formData.get("mensagem");
+
+      // Validar dados
+      if (!nome || !email || !assunto || !mensagem) {
+        showNotification("Por favor, preencha todos os campos.", "error");
+        return;
+      }
+
+      // Validar email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        showNotification("Por favor, insira um email válido.", "error");
+        return;
+      }
+
+      // Mostrar loading
       submitBtn.textContent = "Enviando...";
       submitBtn.disabled = true;
 
-      setTimeout(() => {
-        submitBtn.textContent = "Enviado!";
-        submitBtn.style.background = "var(--primary-green)";
-
-        setTimeout(() => {
+      // Enviar email usando EmailJS
+      emailjs
+        .send("service_trilhafederal", "template_contato", {
+          to_email: "cttbiel@gmail.com",
+          from_name: nome,
+          from_email: email,
+          subject: `Contato Trilha Federal - ${assunto}`,
+          message: mensagem,
+          assunto: assunto,
+        })
+        .then(function (response) {
+          console.log("SUCCESS!", response.status, response.text);
+          showNotification(
+            "Mensagem enviada com sucesso! Entraremos em contato em breve.",
+            "success"
+          );
+          contactForm.reset();
+        })
+        .catch(function (error) {
+          console.log("FAILED...", error);
+          showNotification(
+            "Erro ao enviar mensagem. Tente novamente ou entre em contato diretamente pelo email.",
+            "error"
+          );
+        })
+        .finally(function () {
           submitBtn.textContent = originalText;
           submitBtn.disabled = false;
-          submitBtn.style.background = "";
-          this.reset();
-        }, 2000);
-      }, 1500);
+        });
+    });
+  }
+
+  // Função para mostrar notificações
+  function showNotification(message, type = "info") {
+    // Remover notificação anterior se existir
+    const existingNotification = document.querySelector(".notification");
+    if (existingNotification) {
+      existingNotification.remove();
+    }
+
+    // Criar nova notificação
+    const notification = document.createElement("div");
+    notification.className = `notification notification-${type}`;
+    notification.innerHTML = `
+      <div class="notification-content">
+        <span class="notification-message">${message}</span>
+        <button class="notification-close">&times;</button>
+      </div>
+    `;
+
+    // Adicionar ao body
+    document.body.appendChild(notification);
+
+    // Mostrar notificação
+    setTimeout(() => {
+      notification.classList.add("show");
+    }, 100);
+
+    // Auto-remover após 5 segundos
+    setTimeout(() => {
+      notification.classList.remove("show");
+      setTimeout(() => {
+        if (notification.parentNode) {
+          notification.remove();
+        }
+      }, 300);
+    }, 5000);
+
+    // Fechar ao clicar no X
+    const closeBtn = notification.querySelector(".notification-close");
+    closeBtn.addEventListener("click", () => {
+      notification.classList.remove("show");
+      setTimeout(() => {
+        if (notification.parentNode) {
+          notification.remove();
+        }
+      }, 300);
     });
   }
 
@@ -202,37 +288,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Remover classe ativa de todos os botões
       filterButtons.forEach((btn) => btn.classList.remove("active"));
+      // Adicionar classe ativa ao botão clicado
       this.classList.add("active");
 
       // Filtrar cards
       vestibularCards.forEach((card) => {
-        if (filter === "all" || card.getAttribute("data-category") === filter) {
+        if (
+          filter === "todos" ||
+          card.getAttribute("data-category") === filter
+        ) {
           card.style.display = "block";
-          card.classList.add("animate-in");
         } else {
           card.style.display = "none";
-          card.classList.remove("animate-in");
         }
       });
     });
   });
 
-  // Search functionality (se implementado)
-  const searchInput = document.querySelector("#search-input");
+  // Busca em tempo real (se implementado)
+  const searchInput = document.querySelector(".search-input");
   if (searchInput) {
-    searchInput.addEventListener("input", function () {
-      const searchTerm = this.value.toLowerCase();
-      const searchableElements = document.querySelectorAll("[data-search]");
+    searchInput.addEventListener(
+      "input",
+      debounce(function () {
+        const searchTerm = this.value.toLowerCase();
 
-      searchableElements.forEach((element) => {
-        const text = element.textContent.toLowerCase();
-        if (text.includes(searchTerm)) {
-          element.style.display = "block";
-        } else {
-          element.style.display = "none";
-        }
-      });
-    });
+        vestibularCards.forEach((card) => {
+          const title = card.querySelector("h3").textContent.toLowerCase();
+          const description = card.querySelector("p").textContent.toLowerCase();
+
+          if (title.includes(searchTerm) || description.includes(searchTerm)) {
+            card.style.display = "block";
+          } else {
+            card.style.display = "none";
+          }
+        });
+      }, 300)
+    );
+  }
+
+  // Debounce function
+  function debounce(func, wait) {
+    let timeout;
+    return function executedFunction(...args) {
+      const later = () => {
+        clearTimeout(timeout);
+        func(...args);
+      };
+      clearTimeout(timeout);
+      timeout = setTimeout(later, wait);
+    };
   }
 
   // Newsletter signup (se implementado)
