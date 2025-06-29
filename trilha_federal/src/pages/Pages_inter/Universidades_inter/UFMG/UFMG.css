@@ -1,0 +1,282 @@
+/* UFMG.css - baseado em InstitutionPage.css */
+
+.institution-page {
+  min-height: 100vh;
+  background: var(--background-white);
+  padding-top: 80px;
+}
+
+.institution-header {
+  width: 100vw;
+  position: relative;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  min-height: 75vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)),
+    url("../../../../../assets/Institution_images/UFMG_campus.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 0 0 2rem 2rem;
+  margin-bottom: 2rem;
+  overflow: hidden;
+  padding-top: 2rem;
+}
+
+.institution-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 156, 59, 0.2),
+    rgba(255, 215, 0, 0.1),
+    rgba(0, 71, 171, 0.2)
+  );
+  z-index: 1;
+}
+
+.back-button {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  background: transparent;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  z-index: 2;
+}
+
+.back-button:hover {
+  transform: translateY(-2px);
+  background: transparent;
+}
+
+.institution-hero {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 2rem;
+}
+
+.institution-info h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  line-height: 1.2;
+}
+
+.institution-type {
+  font-size: 1.5rem;
+  opacity: 0.9;
+  margin-bottom: 1.5rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.institution-location {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  opacity: 0.8;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.website-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: transparent;
+  color: white;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.125rem;
+  transition: all 0.3s ease;
+  box-shadow: none;
+  border: none;
+  outline: none;
+}
+
+.website-button:hover {
+  transform: translateY(-3px);
+  background: transparent;
+}
+
+.institution-content {
+  padding: 3rem 0;
+  background: #f3f5f7;
+}
+
+.container {
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 2.5vw;
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1000px 400px;
+  gap: 3rem;
+  align-items: start;
+  justify-content: center;
+}
+
+.main-content section {
+  background: white;
+  padding: 3rem 4rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+  font-size: 1.18rem;
+  width: 1000px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.main-content section:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.main-content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  border-bottom: 3px solid var(--primary-color);
+  padding-bottom: 0.5rem;
+}
+
+.main-content p,
+.main-content li {
+  font-size: 1.15rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.course-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--background-light);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+}
+
+.course-card:hover {
+  background: var(--background-green);
+  transform: translateX(5px);
+}
+
+.course-icon {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.course-card h3 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.admission-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.admission-card {
+  text-align: center;
+  padding: 1.5rem;
+  background: #f0f2f5;
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
+  color: #1a2330;
+}
+
+.admission-card:hover {
+  background: #e6eaf0;
+}
+
+.admission-icon {
+  color: #1a6ed8;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  transition: color 0.3s;
+}
+
+.admission-card h3 {
+  font-size: 1rem;
+  color: #1a2330;
+  margin-bottom: 0.5rem;
+}
+
+.admission-card p {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a2330;
+  margin: 0;
+}
+
+.sidebar section {
+  background: white;
+  width: 400px;
+  padding: 2.5rem 2.5rem;
+  border-radius: 1rem;
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
+}
+
+.saiba-mais-btn {
+  margin-top: 1rem;
+  background: var(--primary-color, #0047ab);
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.6rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+  opacity: 0.95;
+}
+.saiba-mais-btn:hover {
+  background: #013e70;
+  opacity: 1;
+}
