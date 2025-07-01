@@ -40,7 +40,7 @@ const InstitutionPage = ({
   };
 
   // Imagem padrão quando a imagem específica não carrega
-  const defaultImage = "/src/assets/Main_images/trilha_federal_img_001.jpeg";
+  const defaultImage = "/Main_images/trilha_federal_img_001.jpeg";
   const campusImage = imageError
     ? defaultImage
     : imagens?.campus || defaultImage;
