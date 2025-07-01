@@ -25,16 +25,7 @@
       }
     ],
     "cursos_graduacao": [
-      "Administração",
-      "Engenharia de Computação",
-      "Medicina",
-      "Direito",
-      "Arquitetura e Urbanismo",
-      "Ciência da Computação",
-      "Engenharia Civil",
-      "Psicologia",
-      "Matemática",
-      "Física"
+      "Administração", "Engenharia de Computação", "Medicina", "Direito", "Arquitetura e Urbanismo", "Ciência da Computação", "Engenharia Civil", "Psicologia", "Matemática", "Física"
     ],
     "cursos_tecnicos": [
       { "nome": "Análises Clínicas", "modalidade": "Integrado" },
@@ -71,32 +62,14 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "LB_PPI",
-        "descricao": "Negros, pardos ou indígenas, baixa renda, escola pública"
-      },
-      {
-        "modalidade": "LB_Q",
-        "descricao": "Quilombolas, baixa renda, escola pública"
-      },
-      {
-        "modalidade": "LB_PCD",
-        "descricao": "Pessoa com deficiência, baixa renda, escola pública"
-      },
+      { "modalidade": "LB_PPI", "descricao": "Negros, pardos ou indígenas, baixa renda, escola pública" },
+      { "modalidade": "LB_Q", "descricao": "Quilombolas, baixa renda, escola pública" },
+      { "modalidade": "LB_PCD", "descricao": "Pessoa com deficiência, baixa renda, escola pública" },
       { "modalidade": "LB_EP", "descricao": "Baixa renda, escola pública" },
-      {
-        "modalidade": "LI_PPI",
-        "descricao": "Negros, pardos ou indígenas, escola pública"
-      },
+      { "modalidade": "LI_PPI", "descricao": "Negros, pardos ou indígenas, escola pública" },
       { "modalidade": "LI_Q", "descricao": "Quilombolas, escola pública" },
-      {
-        "modalidade": "LI_PCD",
-        "descricao": "Pessoa com deficiência, escola pública"
-      },
-      {
-        "modalidade": "LI_EP",
-        "descricao": "Escola pública, independente de renda"
-      }
+      { "modalidade": "LI_PCD", "descricao": "Pessoa com deficiência, escola pública" },
+      { "modalidade": "LI_EP", "descricao": "Escola pública, independente de renda" }
     ],
     "contatos": {
       "site": "https://www.ufmg.br",
@@ -105,8 +78,8 @@
       "instagram": "@ufmgoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UFMG_campus.jpg",
-      "logo": "/Institution_images/UFMG_logo.png"
+      "campus": "/src/assets/Institution_images/UFMG_campus.jpg",
+      "logo": "/src/assets/Institution_images/UFMG_logo.png"
     },
     "descricao": "A UFMG é uma das principais universidades públicas do Brasil, reconhecida pela excelência em ensino, pesquisa e extensão. Fundada em 1927, oferece mais de 80 cursos de graduação e é referência nacional em diversas áreas do conhecimento."
   },
@@ -118,43 +91,16 @@
     "regiao": "Sudeste",
     "cidade": "Uberlândia",
     "campi": [
-      {
-        "nome": "Campus Santa Mônica (Reitoria)",
-        "endereco": "Avenida João Naves de Ávila, 2121, Santa Mônica, Uberlândia - MG, CEP 38400-902"
-      },
-      {
-        "nome": "Campus Umuarama",
-        "endereco": "Av. Amazonas, S/N, Umuarama, Uberlândia - MG, CEP 38400-902"
-      },
-      {
-        "nome": "Campus Educação Física",
-        "endereco": "Rua Benjamin Constant, 1286, Aparecida, Uberlândia - MG, CEP 38400-678"
-      },
+      { "nome": "Campus Santa Mônica (Reitoria)", "endereco": "Avenida João Naves de Ávila, 2121, Santa Mônica, Uberlândia - MG, CEP 38400-902" },
+      { "nome": "Campus Umuarama", "endereco": "Av. Amazonas, S/N, Umuarama, Uberlândia - MG, CEP 38400-902" },
+      { "nome": "Campus Educação Física", "endereco": "Rua Benjamin Constant, 1286, Aparecida, Uberlândia - MG, CEP 38400-678" },
       { "nome": "Campus Glória", "endereco": "BR-050, Km 78, Uberlândia - MG" },
-      {
-        "nome": "Campus Pontal",
-        "endereco": "Rua 20, 1600, Tupã, Ituiutaba - MG, CEP 38304-402"
-      },
-      {
-        "nome": "Campus Monte Carmelo",
-        "endereco": "Rodovia LMG 746, Km 1, Araras, Monte Carmelo - MG, CEP 38500-000"
-      },
-      {
-        "nome": "Campus Patos de Minas",
-        "endereco": "Rua Padre Pavoni, 290, Rosário, Patos de Minas - MG, CEP 38701-002"
-      }
+      { "nome": "Campus Pontal", "endereco": "Rua 20, 1600, Tupã, Ituiutaba - MG, CEP 38304-402" },
+      { "nome": "Campus Monte Carmelo", "endereco": "Rodovia LMG 746, Km 1, Araras, Monte Carmelo - MG, CEP 38500-000" },
+      { "nome": "Campus Patos de Minas", "endereco": "Rua Padre Pavoni, 290, Rosário, Patos de Minas - MG, CEP 38701-002" }
     ],
     "cursos_graduacao": [
-      "Administração",
-      "Engenharia de Computação",
-      "Medicina",
-      "Direito",
-      "Arquitetura e Urbanismo",
-      "Ciência da Computação",
-      "Engenharia Civil",
-      "Psicologia",
-      "Matemática",
-      "Física"
+      "Administração", "Engenharia de Computação", "Medicina", "Direito", "Arquitetura e Urbanismo", "Ciência da Computação", "Engenharia Civil", "Psicologia", "Matemática", "Física"
     ],
     "cursos_tecnicos": [
       { "nome": "Análises Clínicas", "modalidade": "Subsequente" },
@@ -191,36 +137,15 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "LB_PPI",
-        "descricao": "Negros, pardos ou indígenas, baixa renda, escola pública"
-      },
-      {
-        "modalidade": "LB_Q",
-        "descricao": "Quilombolas, baixa renda, escola pública"
-      },
-      {
-        "modalidade": "LB_PCD",
-        "descricao": "Pessoa com deficiência, baixa renda, escola pública"
-      },
+      { "modalidade": "LB_PPI", "descricao": "Negros, pardos ou indígenas, baixa renda, escola pública" },
+      { "modalidade": "LB_Q", "descricao": "Quilombolas, baixa renda, escola pública" },
+      { "modalidade": "LB_PCD", "descricao": "Pessoa com deficiência, baixa renda, escola pública" },
       { "modalidade": "LB_EP", "descricao": "Baixa renda, escola pública" },
-      {
-        "modalidade": "LI_PPI",
-        "descricao": "Negros, pardos ou indígenas, escola pública"
-      },
+      { "modalidade": "LI_PPI", "descricao": "Negros, pardos ou indígenas, escola pública" },
       { "modalidade": "LI_Q", "descricao": "Quilombolas, escola pública" },
-      {
-        "modalidade": "LI_PCD",
-        "descricao": "Pessoa com deficiência, escola pública"
-      },
-      {
-        "modalidade": "LI_EP",
-        "descricao": "Escola pública, independente de renda"
-      },
-      {
-        "modalidade": "Refugiados",
-        "descricao": "Cota específica para pessoas em situação de refúgio, asilo político, apátridas ou sob outras políticas humanitárias"
-      }
+      { "modalidade": "LI_PCD", "descricao": "Pessoa com deficiência, escola pública" },
+      { "modalidade": "LI_EP", "descricao": "Escola pública, independente de renda" },
+      { "modalidade": "Refugiados", "descricao": "Cota específica para pessoas em situação de refúgio, asilo político, apátridas ou sob outras políticas humanitárias" }
     ],
     "contatos": {
       "site": "https://www.ufu.br",
@@ -229,8 +154,8 @@
       "instagram": "@ufuoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UFU_campus.jpg",
-      "logo": "/Institution_images/UFU_logo.png"
+      "campus": "/src/assets/Institution_images/UFU_campus.jpg",
+      "logo": "/src/assets/Institution_images/UFU_logo.png"
     },
     "descricao": "A UFU é uma importante universidade pública federal sediada em Minas Gerais, com forte atuação na região do Triângulo Mineiro. Oferece ampla formação em graduação, pós e cursos técnicos, com políticas de inclusão e múltiplos processos seletivos."
   },
@@ -242,30 +167,12 @@
     "regiao": "Sudeste",
     "cidade": "Viçosa",
     "campi": [
-      {
-        "nome": "Campus Viçosa",
-        "endereco": "Avenida Peter Henry Rolfs, s/n, Campus Universitário, Viçosa - MG, CEP 36570-900"
-      },
-      {
-        "nome": "Campus Florestal",
-        "endereco": "Rodovia LMG 818, km 6, Florestal - MG, CEP 35690-000"
-      },
-      {
-        "nome": "Campus Rio Paranaíba",
-        "endereco": "Rodovia BR 354, Km 310, Rio Paranaíba - MG, CEP 38810-000"
-      }
+      { "nome": "Campus Viçosa", "endereco": "Avenida Peter Henry Rolfs, s/n, Campus Universitário, Viçosa - MG, CEP 36570-900" },
+      { "nome": "Campus Florestal", "endereco": "Rodovia LMG 818, km 6, Florestal - MG, CEP 35690-000" },
+      { "nome": "Campus Rio Paranaíba", "endereco": "Rodovia BR 354, Km 310, Rio Paranaíba - MG, CEP 38810-000" }
     ],
     "cursos_graduacao": [
-      "Agronomia",
-      "Engenharia Agrícola",
-      "Engenharia Civil",
-      "Engenharia de Alimentos",
-      "Medicina Veterinária",
-      "Ciências Biológicas",
-      "Administração",
-      "Economia",
-      "Nutrição",
-      "Zootecnia"
+      "Agronomia", "Engenharia Agrícola", "Engenharia Civil", "Engenharia de Alimentos", "Medicina Veterinária", "Ciências Biológicas", "Administração", "Economia", "Nutrição", "Zootecnia"
     ],
     "cursos_tecnicos": [
       { "nome": "Agropecuária", "modalidade": "Integrado" },
@@ -290,32 +197,14 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "LB_PPI",
-        "descricao": "Negros, pardos ou indígenas, baixa renda, escola pública"
-      },
-      {
-        "modalidade": "LB_Q",
-        "descricao": "Quilombolas, baixa renda, escola pública"
-      },
-      {
-        "modalidade": "LB_PCD",
-        "descricao": "Pessoa com deficiência, baixa renda, escola pública"
-      },
+      { "modalidade": "LB_PPI", "descricao": "Negros, pardos ou indígenas, baixa renda, escola pública" },
+      { "modalidade": "LB_Q", "descricao": "Quilombolas, baixa renda, escola pública" },
+      { "modalidade": "LB_PCD", "descricao": "Pessoa com deficiência, baixa renda, escola pública" },
       { "modalidade": "LB_EP", "descricao": "Baixa renda, escola pública" },
-      {
-        "modalidade": "LI_PPI",
-        "descricao": "Negros, pardos ou indígenas, escola pública"
-      },
+      { "modalidade": "LI_PPI", "descricao": "Negros, pardos ou indígenas, escola pública" },
       { "modalidade": "LI_Q", "descricao": "Quilombolas, escola pública" },
-      {
-        "modalidade": "LI_PCD",
-        "descricao": "Pessoa com deficiência, escola pública"
-      },
-      {
-        "modalidade": "LI_EP",
-        "descricao": "Escola pública, independente de renda"
-      }
+      { "modalidade": "LI_PCD", "descricao": "Pessoa com deficiência, escola pública" },
+      { "modalidade": "LI_EP", "descricao": "Escola pública, independente de renda" }
     ],
     "contatos": {
       "site": "https://www.ufv.br",
@@ -324,8 +213,8 @@
       "instagram": "@ufvoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UFV_campus.jpg",
-      "logo": "/Institution_images/UFV_logo.png"
+      "campus": "/src/assets/Institution_images/UFV_campus.jpg",
+      "logo": "/src/assets/Institution_images/UFV_logo.png"
     },
     "descricao": "A UFV é referência nacional em ciências agrárias, exatas, biológicas e humanas. Fundada em 1926, oferece ensino de excelência em graduação, pós e cursos técnicos, com forte atuação em pesquisa e extensão."
   },
@@ -337,30 +226,12 @@
     "regiao": "Sudeste",
     "cidade": "São Paulo",
     "campi": [
-      {
-        "nome": "Campus Butantã",
-        "endereco": "Rua da Reitoria, 374, Butantã, São Paulo - SP, CEP 05508-220"
-      },
-      {
-        "nome": "Campus Ribeirão Preto",
-        "endereco": "Av. Bandeirantes, 3900, Ribeirão Preto - SP, CEP 14040-900"
-      },
-      {
-        "nome": "Campus São Carlos",
-        "endereco": "Av. Trabalhador São-carlense, 400, São Carlos - SP, CEP 13566-590"
-      }
+      { "nome": "Campus Butantã", "endereco": "Rua da Reitoria, 374, Butantã, São Paulo - SP, CEP 05508-220" },
+      { "nome": "Campus Ribeirão Preto", "endereco": "Av. Bandeirantes, 3900, Ribeirão Preto - SP, CEP 14040-900" },
+      { "nome": "Campus São Carlos", "endereco": "Av. Trabalhador São-carlense, 400, São Carlos - SP, CEP 13566-590" }
     ],
     "cursos_graduacao": [
-      "Medicina",
-      "Direito",
-      "Engenharia de Computação",
-      "Arquitetura e Urbanismo",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Psicologia",
-      "Farmácia",
-      "Odontologia"
+      "Medicina", "Direito", "Engenharia de Computação", "Arquitetura e Urbanismo", "Administração", "Física", "Matemática", "Psicologia", "Farmácia", "Odontologia"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -374,10 +245,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas USP",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal e política interna."
-      }
+      { "modalidade": "Lei de Cotas USP", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal e política interna." }
     ],
     "contatos": {
       "site": "https://www.usp.br",
@@ -386,8 +254,8 @@
       "instagram": "@uspoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/USP_campus.jpg",
-      "logo": "/Institution_images/USP_logo.png"
+      "campus": "/src/assets/Institution_images/USP_campus.jpg",
+      "logo": "/src/assets/Institution_images/USP_logo.png"
     },
     "descricao": "A USP é a maior universidade pública do Brasil, referência em ensino, pesquisa e extensão, com campi em várias cidades do estado de São Paulo."
   },
@@ -399,30 +267,12 @@
     "regiao": "Sudeste",
     "cidade": "Campinas",
     "campi": [
-      {
-        "nome": "Campus Campinas (Barão Geraldo)",
-        "endereco": "Rua Sérgio Buarque de Holanda, 500, Barão Geraldo, Campinas - SP, CEP 13083-859"
-      },
-      {
-        "nome": "Campus Limeira",
-        "endereco": "Rua Paschoal Marmo, 1888, Jd. Nova Itália, Limeira - SP, CEP 13484-332"
-      },
-      {
-        "nome": "Campus Piracicaba (FCA)",
-        "endereco": "Av. Cândido Motta, 200, Piracicaba - SP, CEP 13414-903"
-      }
+      { "nome": "Campus Campinas (Barão Geraldo)", "endereco": "Rua Sérgio Buarque de Holanda, 500, Barão Geraldo, Campinas - SP, CEP 13083-859" },
+      { "nome": "Campus Limeira", "endereco": "Rua Paschoal Marmo, 1888, Jd. Nova Itália, Limeira - SP, CEP 13484-332" },
+      { "nome": "Campus Piracicaba (FCA)", "endereco": "Av. Cândido Motta, 200, Piracicaba - SP, CEP 13414-903" }
     ],
     "cursos_graduacao": [
-      "Engenharia de Computação",
-      "Medicina",
-      "Direito",
-      "Arquitetura e Urbanismo",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Química",
-      "Ciências Biológicas",
-      "Engenharia Química"
+      "Engenharia de Computação", "Medicina", "Direito", "Arquitetura e Urbanismo", "Administração", "Física", "Matemática", "Química", "Ciências Biológicas", "Engenharia Química"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -436,10 +286,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UNICAMP",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal e política interna."
-      }
+      { "modalidade": "Lei de Cotas UNICAMP", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal e política interna." }
     ],
     "contatos": {
       "site": "https://www.unicamp.br",
@@ -448,8 +295,8 @@
       "instagram": "@unicampoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UNICAMP_campus.jpg",
-      "logo": "/Institution_images/UNICAMP_logo.png"
+      "campus": "/src/assets/Institution_images/UNICAMP_campus.jpg",
+      "logo": "/src/assets/Institution_images/UNICAMP_logo.png"
     },
     "descricao": "A UNICAMP é uma das principais universidades do Brasil, referência em pesquisa, inovação e ensino, com forte presença internacional e campi em Campinas, Limeira e Piracicaba."
   },
@@ -461,30 +308,12 @@
     "regiao": "Sudeste",
     "cidade": "São Paulo",
     "campi": [
-      {
-        "nome": "Campus São Paulo",
-        "endereco": "Rua Dr. Bento Teobaldo Ferraz, 271, Barra Funda, São Paulo - SP, CEP 01140-070"
-      },
-      {
-        "nome": "Campus Araraquara",
-        "endereco": "Rua Expedicionários do Brasil, 1621, Centro, Araraquara - SP, CEP 14801-210"
-      },
-      {
-        "nome": "Campus Bauru",
-        "endereco": "Av. Eng. Luiz Edmundo Carrijo Coube, 14-01, Vargem Limpa, Bauru - SP, CEP 17033-360"
-      }
+      { "nome": "Campus São Paulo", "endereco": "Rua Dr. Bento Teobaldo Ferraz, 271, Barra Funda, São Paulo - SP, CEP 01140-070" },
+      { "nome": "Campus Araraquara", "endereco": "Rua Expedicionários do Brasil, 1621, Centro, Araraquara - SP, CEP 14801-210" },
+      { "nome": "Campus Bauru", "endereco": "Av. Eng. Luiz Edmundo Carrijo Coube, 14-01, Vargem Limpa, Bauru - SP, CEP 17033-360" }
     ],
     "cursos_graduacao": [
-      "Engenharia Civil",
-      "Odontologia",
-      "Psicologia",
-      "Administração",
-      "Engenharia Elétrica",
-      "Física",
-      "Matemática",
-      "Ciências Biológicas",
-      "Engenharia de Produção",
-      "Arquitetura e Urbanismo"
+      "Engenharia Civil", "Odontologia", "Psicologia", "Administração", "Engenharia Elétrica", "Física", "Matemática", "Ciências Biológicas", "Engenharia de Produção", "Arquitetura e Urbanismo"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -498,10 +327,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UNESP",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal e política interna."
-      }
+      { "modalidade": "Lei de Cotas UNESP", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal e política interna." }
     ],
     "contatos": {
       "site": "https://www.unesp.br",
@@ -510,8 +336,8 @@
       "instagram": "@unespoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UNESP_campus.jpg",
-      "logo": "/Institution_images/UNESP_logo.png"
+      "campus": "/src/assets/Institution_images/UNESP_campus.jpg",
+      "logo": "/src/assets/Institution_images/UNESP_logo.png"
     },
     "descricao": "A UNESP é uma das maiores universidades do Brasil, com campi em diversas cidades do estado de São Paulo, reconhecida pela excelência em ensino, pesquisa e extensão."
   },
@@ -523,26 +349,11 @@
     "regiao": "Sudeste",
     "cidade": "Rio de Janeiro",
     "campi": [
-      {
-        "nome": "Campus Fundão (Ilha do Governador)",
-        "endereco": "Av. Athos da Silveira Ramos, 274, Cidade Universitária, Rio de Janeiro - RJ, CEP 21941-916"
-      },
-      {
-        "nome": "Campus Praia Vermelha",
-        "endereco": "Av. Pasteur, 250, Urca, Rio de Janeiro - RJ, CEP 22290-240"
-      }
+      { "nome": "Campus Fundão (Ilha do Governador)", "endereco": "Av. Athos da Silveira Ramos, 274, Cidade Universitária, Rio de Janeiro - RJ, CEP 21941-916" },
+      { "nome": "Campus Praia Vermelha", "endereco": "Av. Pasteur, 250, Urca, Rio de Janeiro - RJ, CEP 22290-240" }
     ],
     "cursos_graduacao": [
-      "Engenharia Química",
-      "Medicina",
-      "Direito",
-      "Arquitetura e Urbanismo",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Psicologia",
-      "Farmácia",
-      "Odontologia"
+      "Engenharia Química", "Medicina", "Direito", "Arquitetura e Urbanismo", "Administração", "Física", "Matemática", "Psicologia", "Farmácia", "Odontologia"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -555,10 +366,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UFRJ",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas UFRJ", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.ufrj.br",
@@ -567,8 +375,8 @@
       "instagram": "@ufrjoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UFRJ_campus.jpg",
-      "logo": "/Institution_images/UFRJ_logo.png"
+      "campus": "/src/assets/Institution_images/UFRJ_campus.jpg",
+      "logo": "/src/assets/Institution_images/UFRJ_logo.png"
     },
     "descricao": "A UFRJ é uma das mais antigas e prestigiadas universidades do Brasil, referência em ensino, pesquisa e extensão, com campi na cidade do Rio de Janeiro."
   },
@@ -580,26 +388,11 @@
     "regiao": "Sudeste",
     "cidade": "Niterói",
     "campi": [
-      {
-        "nome": "Campus Gragoatá",
-        "endereco": "Rua Alexandre Moura, s/n, São Domingos, Niterói - RJ, CEP 24210-200"
-      },
-      {
-        "nome": "Campus Praia Vermelha",
-        "endereco": "Av. General Milton Tavares de Souza, s/n, Boa Viagem, Niterói - RJ, CEP 24210-346"
-      }
+      { "nome": "Campus Gragoatá", "endereco": "Rua Alexandre Moura, s/n, São Domingos, Niterói - RJ, CEP 24210-200" },
+      { "nome": "Campus Praia Vermelha", "endereco": "Av. General Milton Tavares de Souza, s/n, Boa Viagem, Niterói - RJ, CEP 24210-346" }
     ],
     "cursos_graduacao": [
-      "Engenharia de Produção",
-      "Medicina",
-      "Direito",
-      "Arquitetura e Urbanismo",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Psicologia",
-      "Farmácia",
-      "Odontologia"
+      "Engenharia de Produção", "Medicina", "Direito", "Arquitetura e Urbanismo", "Administração", "Física", "Matemática", "Psicologia", "Farmácia", "Odontologia"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -612,10 +405,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UFF",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas UFF", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.uff.br",
@@ -624,8 +414,8 @@
       "instagram": "@uffoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UFF_campus.jpg",
-      "logo": "/Institution_images/UFF_logo.png"
+      "campus": "/src/assets/Institution_images/UFF_campus.jpg",
+      "logo": "/src/assets/Institution_images/UFF_logo.png"
     },
     "descricao": "A UFF é uma das maiores universidades federais do Brasil, com forte atuação em ensino, pesquisa e extensão, e campi em Niterói e outras cidades do RJ."
   },
@@ -637,26 +427,11 @@
     "regiao": "Sudeste",
     "cidade": "Seropédica",
     "campi": [
-      {
-        "nome": "Campus Seropédica",
-        "endereco": "BR-465, Km 7, Seropédica - RJ, CEP 23890-000"
-      },
-      {
-        "nome": "Campus Nova Iguaçu",
-        "endereco": "Rua Professor Paris, 240, Moquetá, Nova Iguaçu - RJ, CEP 26265-090"
-      }
+      { "nome": "Campus Seropédica", "endereco": "BR-465, Km 7, Seropédica - RJ, CEP 23890-000" },
+      { "nome": "Campus Nova Iguaçu", "endereco": "Rua Professor Paris, 240, Moquetá, Nova Iguaçu - RJ, CEP 26265-090" }
     ],
     "cursos_graduacao": [
-      "Agronomia",
-      "Engenharia Florestal",
-      "Medicina Veterinária",
-      "Ciências Biológicas",
-      "Administração",
-      "Engenharia de Alimentos",
-      "Zootecnia",
-      "Engenharia Agrícola",
-      "Ciências Econômicas",
-      "Engenharia Química"
+      "Agronomia", "Engenharia Florestal", "Medicina Veterinária", "Ciências Biológicas", "Administração", "Engenharia de Alimentos", "Zootecnia", "Engenharia Agrícola", "Ciências Econômicas", "Engenharia Química"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -669,10 +444,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UFRRJ",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas UFRRJ", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://portal.ufrrj.br",
@@ -681,8 +453,8 @@
       "instagram": "@ufrrjoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UFRRJ_campus.jpg",
-      "logo": "/Institution_images/UFRRJ_logo.png"
+      "campus": "/src/assets/Institution_images/UFRRJ_campus.jpg",
+      "logo": "/src/assets/Institution_images/UFRRJ_logo.png"
     },
     "descricao": "A UFRRJ é referência nacional em ciências agrárias, ambientais e biológicas, com forte atuação em pesquisa e extensão no estado do Rio de Janeiro."
   },
@@ -694,30 +466,12 @@
     "regiao": "Sudeste",
     "cidade": "Vitória",
     "campi": [
-      {
-        "nome": "Campus Goiabeiras",
-        "endereco": "Av. Fernando Ferrari, 514, Goiabeiras, Vitória - ES, CEP 29075-910"
-      },
-      {
-        "nome": "Campus Maruípe",
-        "endereco": "Av. Marechal Campos, 1468, Maruípe, Vitória - ES, CEP 29043-900"
-      },
-      {
-        "nome": "Campus Alegre",
-        "endereco": "BR 482, Km 47, Alegre - ES, CEP 29500-000"
-      }
+      { "nome": "Campus Goiabeiras", "endereco": "Av. Fernando Ferrari, 514, Goiabeiras, Vitória - ES, CEP 29075-910" },
+      { "nome": "Campus Maruípe", "endereco": "Av. Marechal Campos, 1468, Maruípe, Vitória - ES, CEP 29043-900" },
+      { "nome": "Campus Alegre", "endereco": "BR 482, Km 47, Alegre - ES, CEP 29500-000" }
     ],
     "cursos_graduacao": [
-      "Engenharia Civil",
-      "Medicina",
-      "Direito",
-      "Arquitetura e Urbanismo",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Psicologia",
-      "Farmácia",
-      "Odontologia"
+      "Engenharia Civil", "Medicina", "Direito", "Arquitetura e Urbanismo", "Administração", "Física", "Matemática", "Psicologia", "Farmácia", "Odontologia"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -730,10 +484,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UFES",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas UFES", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.ufes.br",
@@ -742,8 +493,8 @@
       "instagram": "@ufesoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UFES_campus.jpg",
-      "logo": "/Institution_images/UFES_logo.png"
+      "campus": "/src/assets/Institution_images/UFES_campus.jpg",
+      "logo": "/src/assets/Institution_images/UFES_logo.png"
     },
     "descricao": "A UFES é a principal universidade pública do Espírito Santo, referência em ensino, pesquisa e extensão, com campi em Vitória, Alegre e São Mateus."
   },
@@ -755,26 +506,11 @@
     "regiao": "Sudeste",
     "cidade": "Rio de Janeiro",
     "campi": [
-      {
-        "nome": "Campus Maracanã",
-        "endereco": "Rua São Francisco Xavier, 524, Maracanã, Rio de Janeiro - RJ, CEP 20550-900"
-      },
-      {
-        "nome": "Campus Resende",
-        "endereco": "Av. Cel. Mendes, 2041, Campos Elíseos, Resende - RJ, CEP 27541-000"
-      }
+      { "nome": "Campus Maracanã", "endereco": "Rua São Francisco Xavier, 524, Maracanã, Rio de Janeiro - RJ, CEP 20550-900" },
+      { "nome": "Campus Resende", "endereco": "Av. Cel. Mendes, 2041, Campos Elíseos, Resende - RJ, CEP 27541-000" }
     ],
     "cursos_graduacao": [
-      "Medicina",
-      "Direito",
-      "Engenharia Química",
-      "Arquitetura e Urbanismo",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Psicologia",
-      "Farmácia",
-      "Odontologia"
+      "Medicina", "Direito", "Engenharia Química", "Arquitetura e Urbanismo", "Administração", "Física", "Matemática", "Psicologia", "Farmácia", "Odontologia"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -788,10 +524,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UERJ",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Estadual e Federal."
-      }
+      { "modalidade": "Lei de Cotas UERJ", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Estadual e Federal." }
     ],
     "contatos": {
       "site": "https://www.uerj.br",
@@ -800,8 +533,8 @@
       "instagram": "@uerjoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UERJ_campus.jpg",
-      "logo": "/Institution_images/UERJ_logo.png"
+      "campus": "/src/assets/Institution_images/UERJ_campus.jpg",
+      "logo": "/src/assets/Institution_images/UERJ_logo.png"
     },
     "descricao": "A UERJ é uma das principais universidades estaduais do Brasil, referência em ensino, pesquisa e extensão, com forte atuação social no estado do Rio de Janeiro."
   },
@@ -813,26 +546,11 @@
     "regiao": "Sudeste",
     "cidade": "Belo Horizonte",
     "campi": [
-      {
-        "nome": "Campus Belo Horizonte",
-        "endereco": "Rua Paraíba, 29, Funcionários, Belo Horizonte - MG, CEP 30130-140"
-      },
-      {
-        "nome": "Campus Frutal",
-        "endereco": "Av. Brasília, 1889, Frutal - MG, CEP 38200-000"
-      }
+      { "nome": "Campus Belo Horizonte", "endereco": "Rua Paraíba, 29, Funcionários, Belo Horizonte - MG, CEP 30130-140" },
+      { "nome": "Campus Frutal", "endereco": "Av. Brasília, 1889, Frutal - MG, CEP 38200-000" }
     ],
     "cursos_graduacao": [
-      "Engenharia Civil",
-      "Pedagogia",
-      "Direito",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Psicologia",
-      "Artes Visuais",
-      "Ciências Biológicas",
-      "Engenharia de Produção"
+      "Engenharia Civil", "Pedagogia", "Direito", "Administração", "Física", "Matemática", "Psicologia", "Artes Visuais", "Ciências Biológicas", "Engenharia de Produção"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -846,10 +564,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UEMG",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Estadual e Federal."
-      }
+      { "modalidade": "Lei de Cotas UEMG", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Estadual e Federal." }
     ],
     "contatos": {
       "site": "https://www.uemg.br",
@@ -858,8 +573,8 @@
       "instagram": "@uemgoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UEMG_campus.jpg",
-      "logo": "/Institution_images/UEMG_logo.png"
+      "campus": "/src/assets/Institution_images/UEMG_campus.jpg",
+      "logo": "/src/assets/Institution_images/UEMG_logo.png"
     },
     "descricao": "A UEMG é a principal universidade estadual de Minas Gerais, com campi em várias cidades e forte atuação em ensino, pesquisa e extensão."
   },
@@ -871,26 +586,11 @@
     "regiao": "Sudeste",
     "cidade": "Juiz de Fora",
     "campi": [
-      {
-        "nome": "Campus Juiz de Fora",
-        "endereco": "Rua José Lourenço Kelmer, s/n, São Pedro, Juiz de Fora - MG, CEP 36036-900"
-      },
-      {
-        "nome": "Campus Governador Valadares",
-        "endereco": "Rua São Paulo, 745, Centro, Governador Valadares - MG, CEP 35010-180"
-      }
+      { "nome": "Campus Juiz de Fora", "endereco": "Rua José Lourenço Kelmer, s/n, São Pedro, Juiz de Fora - MG, CEP 36036-900" },
+      { "nome": "Campus Governador Valadares", "endereco": "Rua São Paulo, 745, Centro, Governador Valadares - MG, CEP 35010-180" }
     ],
     "cursos_graduacao": [
-      "Medicina",
-      "Direito",
-      "Engenharia Civil",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Psicologia",
-      "Farmácia",
-      "Odontologia",
-      "Engenharia de Produção"
+      "Medicina", "Direito", "Engenharia Civil", "Administração", "Física", "Matemática", "Psicologia", "Farmácia", "Odontologia", "Engenharia de Produção"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -911,10 +611,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UFJF",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas UFJF", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.ufjf.br",
@@ -923,8 +620,8 @@
       "instagram": "@ufjfoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UFJF_campus.jpg",
-      "logo": "/Institution_images/UFJF_logo.png"
+      "campus": "/src/assets/Institution_images/UFJF_campus.jpg",
+      "logo": "/src/assets/Institution_images/UFJF_logo.png"
     },
     "descricao": "A UFJF é referência em ensino, pesquisa e extensão, com forte atuação regional e nacional, e processos seletivos diversificados."
   },
@@ -936,26 +633,11 @@
     "regiao": "Sudeste",
     "cidade": "Ouro Preto",
     "campi": [
-      {
-        "nome": "Campus Morro do Cruzeiro",
-        "endereco": "Campus Universitário, Morro do Cruzeiro, Ouro Preto - MG, CEP 35400-000"
-      },
-      {
-        "nome": "Campus Mariana",
-        "endereco": "Rua do Catete, 166, Centro, Mariana - MG, CEP 35420-000"
-      }
+      { "nome": "Campus Morro do Cruzeiro", "endereco": "Campus Universitário, Morro do Cruzeiro, Ouro Preto - MG, CEP 35400-000" },
+      { "nome": "Campus Mariana", "endereco": "Rua do Catete, 166, Centro, Mariana - MG, CEP 35420-000" }
     ],
     "cursos_graduacao": [
-      "Engenharia de Minas",
-      "Engenharia Civil",
-      "Direito",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Psicologia",
-      "Farmácia",
-      "Odontologia",
-      "Engenharia de Produção"
+      "Engenharia de Minas", "Engenharia Civil", "Direito", "Administração", "Física", "Matemática", "Psicologia", "Farmácia", "Odontologia", "Engenharia de Produção"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -968,10 +650,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UFOP",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas UFOP", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.ufop.br",
@@ -980,8 +659,8 @@
       "instagram": "@ufopoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UFOP_campus.jpg",
-      "logo": "/Institution_images/UFOP_logo.png"
+      "campus": "/src/assets/Institution_images/UFOP_campus.jpg",
+      "logo": "/src/assets/Institution_images/UFOP_logo.png"
     },
     "descricao": "A UFOP é referência nacional em engenharia, ciências humanas e sociais, com forte tradição histórica e cultural em Minas Gerais."
   },
@@ -993,26 +672,11 @@
     "regiao": "Sudeste",
     "cidade": "Diamantina",
     "campi": [
-      {
-        "nome": "Campus JK (Diamantina)",
-        "endereco": "Rodovia MGT 367, Km 583, nº 5000, Alto da Jacuba, Diamantina - MG, CEP 39100-000"
-      },
-      {
-        "nome": "Campus Teófilo Otoni",
-        "endereco": "Rua do Cruzeiro, 1, Jardim São Paulo, Teófilo Otoni - MG, CEP 39803-371"
-      }
+      { "nome": "Campus JK (Diamantina)", "endereco": "Rodovia MGT 367, Km 583, nº 5000, Alto da Jacuba, Diamantina - MG, CEP 39100-000" },
+      { "nome": "Campus Teófilo Otoni", "endereco": "Rua do Cruzeiro, 1, Jardim São Paulo, Teófilo Otoni - MG, CEP 39803-371" }
     ],
     "cursos_graduacao": [
-      "Medicina",
-      "Engenharia Civil",
-      "Direito",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Psicologia",
-      "Farmácia",
-      "Odontologia",
-      "Engenharia de Produção"
+      "Medicina", "Engenharia Civil", "Direito", "Administração", "Física", "Matemática", "Psicologia", "Farmácia", "Odontologia", "Engenharia de Produção"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -1025,10 +689,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UFVJM",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas UFVJM", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.ufvjm.edu.br",
@@ -1037,8 +698,8 @@
       "instagram": "@ufvjmfederal"
     },
     "imagens": {
-      "campus": "/Institution_images/UFVJM_campus.jpg",
-      "logo": "/Institution_images/UFVJM_logo.png"
+      "campus": "/src/assets/Institution_images/UFVJM_campus.jpg",
+      "logo": "/src/assets/Institution_images/UFVJM_logo.png"
     },
     "descricao": "A UFVJM é referência em ensino, pesquisa e extensão no norte e nordeste de Minas Gerais, com forte atuação regional."
   },
@@ -1050,26 +711,11 @@
     "regiao": "Sudeste",
     "cidade": "Alfenas",
     "campi": [
-      {
-        "nome": "Campus Sede (Alfenas)",
-        "endereco": "Rua Gabriel Monteiro da Silva, 700, Centro, Alfenas - MG, CEP 37130-000"
-      },
-      {
-        "nome": "Campus Poços de Caldas",
-        "endereco": "Rua dos Bandeirantes, 1803, Jardim Bandeirantes, Poços de Caldas - MG, CEP 37701-015"
-      }
+      { "nome": "Campus Sede (Alfenas)", "endereco": "Rua Gabriel Monteiro da Silva, 700, Centro, Alfenas - MG, CEP 37130-000" },
+      { "nome": "Campus Poços de Caldas", "endereco": "Rua dos Bandeirantes, 1803, Jardim Bandeirantes, Poços de Caldas - MG, CEP 37701-015" }
     ],
     "cursos_graduacao": [
-      "Medicina",
-      "Engenharia Química",
-      "Direito",
-      "Administração",
-      "Física",
-      "Matemática",
-      "Psicologia",
-      "Farmácia",
-      "Odontologia",
-      "Engenharia de Produção"
+      "Medicina", "Engenharia Química", "Direito", "Administração", "Física", "Matemática", "Psicologia", "Farmácia", "Odontologia", "Engenharia de Produção"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -1082,10 +728,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UNIFAL-MG",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas UNIFAL-MG", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.unifal-mg.edu.br",
@@ -1094,8 +737,8 @@
       "instagram": "@unifalmg"
     },
     "imagens": {
-      "campus": "/Institution_images/UNIFAL_campus.jpg",
-      "logo": "/Institution_images/UNIFAL_logo.png"
+      "campus": "/src/assets/Institution_images/UNIFAL_campus.jpg",
+      "logo": "/src/assets/Institution_images/UNIFAL_logo.png"
     },
     "descricao": "A UNIFAL-MG é referência em ensino, pesquisa e extensão no sul de Minas Gerais, com forte atuação regional e nacional."
   },
@@ -1107,26 +750,11 @@
     "regiao": "Sudeste",
     "cidade": "São Paulo",
     "campi": [
-      {
-        "nome": "Campus São Paulo",
-        "endereco": "Rua Botucatu, 740, Vila Clementino, São Paulo - SP, CEP 04023-900"
-      },
-      {
-        "nome": "Campus Diadema",
-        "endereco": "Rua Prof. Artur Riedel, 275, Jd. Eldorado, Diadema - SP, CEP 09972-270"
-      }
+      { "nome": "Campus São Paulo", "endereco": "Rua Botucatu, 740, Vila Clementino, São Paulo - SP, CEP 04023-900" },
+      { "nome": "Campus Diadema", "endereco": "Rua Prof. Artur Riedel, 275, Jd. Eldorado, Diadema - SP, CEP 09972-270" }
     ],
     "cursos_graduacao": [
-      "Medicina",
-      "Enfermagem",
-      "Farmácia",
-      "Biomedicina",
-      "Fisioterapia",
-      "Ciências Biológicas",
-      "Engenharia Química",
-      "Engenharia de Materiais",
-      "Administração",
-      "Ciências Contábeis"
+      "Medicina", "Enfermagem", "Farmácia", "Biomedicina", "Fisioterapia", "Ciências Biológicas", "Engenharia Química", "Engenharia de Materiais", "Administração", "Ciências Contábeis"
     ],
     "cursos_tecnicos": [],
     "processos_seletivos": [
@@ -1139,10 +767,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas UNIFESP",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas UNIFESP", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos e indígenas, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.unifesp.br",
@@ -1151,9 +776,9 @@
       "instagram": "@unifespoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/UNIFESP_campus.jpg",
-      "logo": "/Institution_images/UNIFESP_logo.png"
+      "campus": "/src/assets/Institution_images/UNIFESP_campus.jpg",
+      "logo": "/src/assets/Institution_images/UNIFESP_logo.png"
     },
     "descricao": "A UNIFESP é referência nacional em saúde, ciências biológicas e exatas, com forte atuação em pesquisa e extensão em São Paulo e região."
   }
-]
+] 

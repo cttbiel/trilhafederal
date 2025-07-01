@@ -7,24 +7,12 @@
     "regiao": "Sudeste",
     "cidade": "Belo Horizonte",
     "campi": [
-      {
-        "nome": "Campus Belo Horizonte",
-        "endereco": "Av. Amazonas, 5253, Nova Suíssa, Belo Horizonte - MG, CEP 30421-169"
-      },
-      {
-        "nome": "Campus Araxá",
-        "endereco": "Av. Ministro Olavo Drummond, 25, São Geraldo, Araxá - MG, CEP 38104-200"
-      },
-      {
-        "nome": "Campus Divinópolis",
-        "endereco": "Rua Álvares de Azevedo, 400, Bela Vista, Divinópolis - MG, CEP 35503-822"
-      }
+      { "nome": "Campus Belo Horizonte", "endereco": "Av. Amazonas, 5253, Nova Suíssa, Belo Horizonte - MG, CEP 30421-169" },
+      { "nome": "Campus Araxá", "endereco": "Av. Ministro Olavo Drummond, 25, São Geraldo, Araxá - MG, CEP 38104-200" },
+      { "nome": "Campus Divinópolis", "endereco": "Rua Álvares de Azevedo, 400, Bela Vista, Divinópolis - MG, CEP 35503-822" }
     ],
     "cursos_graduacao": [
-      "Engenharia de Controle e Automação",
-      "Engenharia Elétrica",
-      "Engenharia Mecânica",
-      "Administração"
+      "Engenharia de Controle e Automação", "Engenharia Elétrica", "Engenharia Mecânica", "Administração"
     ],
     "cursos_tecnicos": [
       { "nome": "Técnico em Informática", "modalidade": "Integrado" },
@@ -49,10 +37,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas CEFET-MG",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas CEFET-MG", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.cefetmg.br",
@@ -61,8 +46,8 @@
       "instagram": "@cefetmgoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/CEFET_campus.jpg",
-      "logo": "/Institution_images/CEFET_logo.png"
+      "campus": "/src/assets/Institution_images/CEFET_campus.jpg",
+      "logo": "/src/assets/Institution_images/CEFET_logo.png"
     },
     "descricao": "O CEFET-MG é referência nacional em educação técnica e tecnológica, com forte atuação em Minas Gerais. Oferece cursos técnicos, de graduação e pós-graduação, promovendo inovação, inclusão e desenvolvimento regional."
   },
@@ -74,20 +59,11 @@
     "regiao": "Sudeste",
     "cidade": "Rio de Janeiro",
     "campi": [
-      {
-        "nome": "Campus Maracanã",
-        "endereco": "Av. Maracanã, 229, Maracanã, Rio de Janeiro - RJ, CEP 20271-110"
-      },
-      {
-        "nome": "Campus Nova Iguaçu",
-        "endereco": "Av. Gov. Roberto Silveira, s/n, Centro, Nova Iguaçu - RJ, CEP 26275-580"
-      }
+      { "nome": "Campus Maracanã", "endereco": "Av. Maracanã, 229, Maracanã, Rio de Janeiro - RJ, CEP 20271-110" },
+      { "nome": "Campus Nova Iguaçu", "endereco": "Av. Gov. Roberto Silveira, s/n, Centro, Nova Iguaçu - RJ, CEP 26275-580" }
     ],
     "cursos_graduacao": [
-      "Engenharia de Produção",
-      "Engenharia Elétrica",
-      "Engenharia Mecânica",
-      "Administração"
+      "Engenharia de Produção", "Engenharia Elétrica", "Engenharia Mecânica", "Administração"
     ],
     "cursos_tecnicos": [
       { "nome": "Técnico em Informática", "modalidade": "Integrado" },
@@ -112,10 +88,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas CEFET-RJ",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas CEFET-RJ", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.cefet-rj.br",
@@ -124,8 +97,8 @@
       "instagram": "@cefetrjoficial"
     },
     "imagens": {
-      "campus": "/Institution_images/CEFETRJ_campus.jpg",
-      "logo": "/Institution_images/CEFETRJ_logo.png"
+      "campus": "/src/assets/Institution_images/CEFETRJ_campus.jpg",
+      "logo": "/src/assets/Institution_images/CEFETRJ_logo.png"
     },
     "descricao": "O CEFET-RJ é uma das principais instituições de ensino técnico e tecnológico do Brasil, com tradição em inovação, pesquisa e formação de profissionais qualificados."
   },
@@ -137,10 +110,7 @@
     "regiao": "Sudeste",
     "cidade": "Belo Horizonte",
     "campi": [
-      {
-        "nome": "Campus UFMG",
-        "endereco": "Av. Antônio Carlos, 6627, Pampulha, Belo Horizonte - MG, CEP 31270-901"
-      }
+      { "nome": "Campus UFMG", "endereco": "Av. Antônio Carlos, 6627, Pampulha, Belo Horizonte - MG, CEP 31270-901" }
     ],
     "cursos_graduacao": [],
     "cursos_tecnicos": [
@@ -159,10 +129,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas COLTEC",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas COLTEC", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.coltec.ufmg.br",
@@ -171,8 +138,8 @@
       "instagram": "@coltecufmg"
     },
     "imagens": {
-      "campus": "/Institution_images/COLTEC_campus.jpg",
-      "logo": "/Institution_images/COLTEC_logo.png"
+      "campus": "/src/assets/Institution_images/COLTEC_campus.jpg",
+      "logo": "/src/assets/Institution_images/COLTEC_logo.png"
     },
     "descricao": "O COLTEC é referência em ensino técnico integrado ao ensino médio, com tradição em inovação, pesquisa e formação de jovens profissionais em Minas Gerais."
   },
@@ -184,10 +151,7 @@
     "regiao": "Sudeste",
     "cidade": "Viçosa",
     "campi": [
-      {
-        "nome": "Campus UFV",
-        "endereco": "Avenida Peter Henry Rolfs, s/n, Campus Universitário, Viçosa - MG, CEP 36570-900"
-      }
+      { "nome": "Campus UFV", "endereco": "Avenida Peter Henry Rolfs, s/n, Campus Universitário, Viçosa - MG, CEP 36570-900" }
     ],
     "cursos_graduacao": [],
     "cursos_tecnicos": [
@@ -206,10 +170,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas COLUNI",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas COLUNI", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.coluni.ufv.br",
@@ -218,8 +179,8 @@
       "instagram": "@coluniufv"
     },
     "imagens": {
-      "campus": "/Institution_images/COLUNI_campus.jpg",
-      "logo": "/Institution_images/COLUNI_logo.png"
+      "campus": "/src/assets/Institution_images/COLUNI_campus.jpg",
+      "logo": "/src/assets/Institution_images/COLUNI_logo.png"
     },
     "descricao": "O COLUNI é um colégio técnico universitário vinculado à UFV, referência em ensino técnico integrado ao ensino médio, com tradição em formação de jovens profissionais."
   },
@@ -231,14 +192,8 @@
     "regiao": "Sudeste",
     "cidade": "Rio de Janeiro",
     "campi": [
-      {
-        "nome": "Campus Centro",
-        "endereco": "Rua Campo de Santana, 131, Centro, Rio de Janeiro - RJ, CEP 20211-130"
-      },
-      {
-        "nome": "Campus São Cristóvão",
-        "endereco": "Rua São Cristóvão, 177, São Cristóvão, Rio de Janeiro - RJ, CEP 20940-001"
-      }
+      { "nome": "Campus Centro", "endereco": "Rua Campo de Santana, 131, Centro, Rio de Janeiro - RJ, CEP 20211-130" },
+      { "nome": "Campus São Cristóvão", "endereco": "Rua São Cristóvão, 177, São Cristóvão, Rio de Janeiro - RJ, CEP 20940-001" }
     ],
     "cursos_graduacao": [],
     "cursos_tecnicos": [
@@ -257,10 +212,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas Pedro II",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal."
-      }
+      { "modalidade": "Lei de Cotas Pedro II", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
     ],
     "contatos": {
       "site": "https://www.cp2.g12.br",
@@ -269,8 +221,8 @@
       "instagram": "@colegiopedroii"
     },
     "imagens": {
-      "campus": "/Institution_images/COLÉGIO_PEDRO_campus.jpeg",
-      "logo": "/Institution_images/PEDROII_logo.png"
+      "campus": "/src/assets/Institution_images/COLÉGIO_PEDRO_campus.jpeg",
+      "logo": "/src/assets/Institution_images/PEDROII_logo.png"
     },
     "descricao": "O Colégio Pedro II é uma das instituições de ensino mais tradicionais do Brasil, referência em educação básica e técnica, com diversos campi no Rio de Janeiro."
   },
@@ -282,10 +234,7 @@
     "regiao": "Sudeste",
     "cidade": "São Paulo",
     "campi": [
-      {
-        "nome": "Unidade Central",
-        "endereco": "Av. Tiradentes, 822, Luz, São Paulo - SP, CEP 01102-000"
-      }
+      { "nome": "Unidade Central", "endereco": "Av. Tiradentes, 822, Luz, São Paulo - SP, CEP 01102-000" }
     ],
     "cursos_graduacao": [],
     "cursos_tecnicos": [
@@ -304,10 +253,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas ETEC",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme legislação estadual."
-      }
+      { "modalidade": "Lei de Cotas ETEC", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme legislação estadual." }
     ],
     "contatos": {
       "site": "https://www.etecgv.com.br",
@@ -316,8 +262,8 @@
       "instagram": "@etecgetuliovargas"
     },
     "imagens": {
-      "campus": "/Institution_images/ETECGV_campus.jpg",
-      "logo": "/Institution_images/ETECGV_logo.png"
+      "campus": "/src/assets/Institution_images/ETECGV_campus.jpg",
+      "logo": "/src/assets/Institution_images/ETECGV_logo.png"
     },
     "descricao": "A ETEC Getúlio Vargas é uma das mais tradicionais escolas técnicas estaduais de São Paulo, referência em ensino técnico integrado ao ensino médio, com forte atuação em áreas como administração, informática e química."
   },
@@ -329,10 +275,7 @@
     "regiao": "Sudeste",
     "cidade": "São José dos Campos",
     "campi": [
-      {
-        "nome": "Unidade Central",
-        "endereco": "Rua Felício Savastano, 300, Vila Industrial, São José dos Campos - SP, CEP 12220-160"
-      }
+      { "nome": "Unidade Central", "endereco": "Rua Felício Savastano, 300, Vila Industrial, São José dos Campos - SP, CEP 12220-160" }
     ],
     "cursos_graduacao": [],
     "cursos_tecnicos": [
@@ -351,10 +294,7 @@
       }
     ],
     "cotas": [
-      {
-        "modalidade": "Lei de Cotas ETEC",
-        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme legislação estadual."
-      }
+      { "modalidade": "Lei de Cotas ETEC", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme legislação estadual." }
     ],
     "contatos": {
       "site": "https://www.etecsanjosedoscampos.com.br",
@@ -363,9 +303,9 @@
       "instagram": "@etecsanjosedoscampos"
     },
     "imagens": {
-      "campus": "/Institution_images/ETECSJC_campus.jpg",
-      "logo": "/Institution_images/ETECSJC_logo.png"
+      "campus": "/src/assets/Institution_images/ETECSJC_campus.jpg",
+      "logo": "/src/assets/Institution_images/ETECSJC_logo.png"
     },
     "descricao": "A ETEC de São José dos Campos é referência em ensino técnico estadual, com destaque para os cursos de mecatrônica, logística e informática, formando profissionais qualificados para o mercado regional."
   }
-]
+] 
