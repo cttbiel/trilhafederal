@@ -1,0 +1,366 @@
+[
+  {
+    "nome": "Instituto Federal de Minas Gerais",
+    "tipo": "Instituto Federal",
+    "sigla": "IFMG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "cidade": "Belo Horizonte",
+    "campi": [
+      { "nome": "Campus Belo Horizonte", "endereco": "Rua Álvares Maciel, 104, Santa Efigênia, Belo Horizonte - MG, CEP 30260-060" },
+      { "nome": "Campus Bambuí", "endereco": "Fazenda Varginha, Bambuí - MG, CEP 38900-000" },
+      { "nome": "Campus Ouro Preto", "endereco": "Rua Pandiá Calógeras, 898, Bauxita, Ouro Preto - MG, CEP 35400-000" }
+    ],
+    "cursos_graduacao": [
+      "Engenharia Elétrica", "Engenharia Mecânica", "Administração", "Sistemas de Informação"
+    ],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Informática", "modalidade": "Integrado" },
+      { "nome": "Técnico em Eletrotécnica", "modalidade": "Subsequente" },
+      { "nome": "Técnico em Química", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular IFMG",
+        "descricao": "Processo seletivo próprio do IFMG para cursos técnicos e superiores, com provas objetivas e redação.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      },
+      {
+        "nome": "ENEM/SiSU",
+        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "datas": {
+          "inscricoes": "Janeiro de 2025"
+        }
+      }
+    ],
+    "cotas": [
+      { "modalidade": "Lei de Cotas IFMG", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
+    ],
+    "contatos": {
+      "site": "https://www.ifmg.edu.br",
+      "telefone": "(31) 2513-5000",
+      "email": "reitoria@ifmg.edu.br",
+      "instagram": "@ifmgoficial"
+    },
+    "imagens": {
+      "campus": "/src/assets/Institution_images/IFMG_campus.jpg",
+      "logo": "/src/assets/Institution_images/IFMG_logo.png"
+    },
+    "descricao": "O Instituto Federal de Minas Gerais (IFMG) é uma instituição pública de ensino, pesquisa e extensão, com forte atuação em diversas regiões do estado. Oferece cursos técnicos, de graduação e pós-graduação, com foco na formação cidadã, inovação tecnológica e desenvolvimento regional. O IFMG se destaca pela qualidade do ensino, infraestrutura moderna e projetos de extensão que impactam positivamente a sociedade. Com múltiplos campi, o instituto promove inclusão social, pesquisa aplicada e parcerias com o setor produtivo, contribuindo para o avanço da educação profissional e tecnológica em Minas Gerais."
+  },
+  {
+    "nome": "Instituto Federal do Rio de Janeiro",
+    "tipo": "Instituto Federal",
+    "sigla": "IFRJ",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "cidade": "Rio de Janeiro",
+    "campi": [
+      { "nome": "Campus Maracanã", "endereco": "Rua Senador Furtado, 121, Maracanã, Rio de Janeiro - RJ, CEP 20270-021" },
+      { "nome": "Campus Nilópolis", "endereco": "Rua Lúcio Tavares, 1045, Centro, Nilópolis - RJ, CEP 26530-060" },
+      { "nome": "Campus Volta Redonda", "endereco": "Rua Antônio Barreiros, 212, Nossa Senhora das Graças, Volta Redonda - RJ, CEP 27215-350" }
+    ],
+    "cursos_graduacao": [
+      "Licenciatura em Química", "Tecnologia em Processos Químicos", "Engenharia de Controle e Automação"
+    ],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Química", "modalidade": "Integrado" },
+      { "nome": "Técnico em Informática", "modalidade": "Subsequente" },
+      { "nome": "Técnico em Meio Ambiente", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular IFRJ",
+        "descricao": "Processo seletivo próprio do IFRJ para cursos técnicos e superiores, com provas objetivas e redação.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      },
+      {
+        "nome": "ENEM/SiSU",
+        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "datas": {
+          "inscricoes": "Janeiro de 2025"
+        }
+      }
+    ],
+    "cotas": [
+      { "modalidade": "Lei de Cotas IFRJ", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
+    ],
+    "contatos": {
+      "site": "https://portal.ifrj.edu.br",
+      "telefone": "(21) 3293-6000",
+      "email": "reitoria@ifrj.edu.br",
+      "instagram": "@ifrjoficial"
+    },
+    "imagens": {
+      "campus": "/src/assets/Institution_images/IFRJ_campus.jpg",
+      "logo": "/src/assets/Institution_images/IFRJ_logo.png"
+    },
+    "descricao": "O Instituto Federal do Rio de Janeiro (IFRJ) é referência em educação profissional, científica e tecnológica no estado do Rio de Janeiro. Com diversos campi distribuídos pela capital e interior, o IFRJ oferece cursos técnicos, de graduação e pós-graduação, promovendo inclusão social, inovação e desenvolvimento regional. A instituição investe em pesquisa aplicada, projetos de extensão e parcerias com empresas, contribuindo para a formação de profissionais qualificados e cidadãos críticos. O IFRJ valoriza a diversidade, a sustentabilidade e o compromisso com a transformação social, sendo reconhecido pela excelência acadêmica e pelo impacto positivo em suas comunidades."
+  },
+  {
+    "nome": "Instituto Federal do Espírito Santo",
+    "tipo": "Instituto Federal",
+    "sigla": "IFES",
+    "estado": "Espírito Santo",
+    "regiao": "Sudeste",
+    "cidade": "Vitória",
+    "campi": [
+      { "nome": "Campus Vitória", "endereco": "Avenida Vitória, 1729, Jucutuquara, Vitória - ES, CEP 29040-780" },
+      { "nome": "Campus Serra", "endereco": "Rodovia ES 010, Km 6,5, Bairro de Fátima, Serra - ES, CEP 29161-971" },
+      { "nome": "Campus Cachoeiro de Itapemirim", "endereco": "Rodovia BR 482, Km 47, Aeroporto, Cachoeiro de Itapemirim - ES, CEP 29300-970" }
+    ],
+    "cursos_graduacao": [
+      "Engenharia de Controle e Automação", "Engenharia Elétrica", "Licenciatura em Física"
+    ],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Eletrotécnica", "modalidade": "Integrado" },
+      { "nome": "Técnico em Informática", "modalidade": "Subsequente" },
+      { "nome": "Técnico em Mecânica", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular IFES",
+        "descricao": "Processo seletivo próprio do IFES para cursos técnicos e superiores, com provas objetivas e redação.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      },
+      {
+        "nome": "ENEM/SiSU",
+        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "datas": {
+          "inscricoes": "Janeiro de 2025"
+        }
+      }
+    ],
+    "cotas": [
+      { "modalidade": "Lei de Cotas IFES", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
+    ],
+    "contatos": {
+      "site": "https://www.ifes.edu.br",
+      "telefone": "(27) 3331-2200",
+      "email": "reitoria@ifes.edu.br",
+      "instagram": "@ifesoficial"
+    },
+    "imagens": {
+      "campus": "/src/assets/Institution_images/IFES_campus.jpg",
+      "logo": "/src/assets/Institution_images/IFES_logo.png"
+    },
+    "descricao": "O Instituto Federal do Espírito Santo (IFES) é uma instituição pública de ensino, pesquisa e extensão, com atuação em todo o estado do Espírito Santo. Oferece cursos técnicos, de graduação e pós-graduação, promovendo a inclusão social, inovação tecnológica e desenvolvimento regional. O IFES é reconhecido pela excelência acadêmica, infraestrutura moderna e projetos de extensão que impactam positivamente a sociedade capixaba. Com múltiplos campi, o instituto contribui para a formação de profissionais qualificados e cidadãos críticos, fortalecendo a educação profissional e tecnológica no Espírito Santo."
+  },
+  {
+    "nome": "Instituto Federal de São Paulo",
+    "tipo": "Instituto Federal",
+    "sigla": "IFSP",
+    "estado": "São Paulo",
+    "regiao": "Sudeste",
+    "cidade": "São Paulo",
+    "campi": [
+      { "nome": "Campus São Paulo", "endereco": "Rua Pedro Vicente, 625, Canindé, São Paulo - SP, CEP 01109-010" },
+      { "nome": "Campus Campinas", "endereco": "Avenida Heitor Lacerda Guedes, 1000, Jardim Santa Mônica, Campinas - SP, CEP 13064-320" },
+      { "nome": "Campus São Carlos", "endereco": "Rua Pedro Raimundo, 13-45, Vila Nery, São Carlos - SP, CEP 13560-647" }
+    ],
+    "cursos_graduacao": [
+      "Engenharia de Produção", "Licenciatura em Matemática", "Tecnologia em Análise e Desenvolvimento de Sistemas"
+    ],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Informática", "modalidade": "Integrado" },
+      { "nome": "Técnico em Mecânica", "modalidade": "Subsequente" },
+      { "nome": "Técnico em Edificações", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular IFSP",
+        "descricao": "Processo seletivo próprio do IFSP para cursos técnicos e superiores, com provas objetivas e redação.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      },
+      {
+        "nome": "ENEM/SiSU",
+        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "datas": {
+          "inscricoes": "Janeiro de 2025"
+        }
+      }
+    ],
+    "cotas": [
+      { "modalidade": "Lei de Cotas IFSP", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
+    ],
+    "contatos": {
+      "site": "https://www.ifsp.edu.br",
+      "telefone": "(11) 3775-4500",
+      "email": "reitoria@ifsp.edu.br",
+      "instagram": "@ifsppaulista"
+    },
+    "imagens": {
+      "campus": "/src/assets/Institution_images/IFSP_campus.jpg",
+      "logo": "/src/assets/Institution_images/IFSP_logo.png"
+    },
+    "descricao": "O Instituto Federal de São Paulo (IFSP) é uma das maiores instituições de ensino, pesquisa e extensão do Brasil, com dezenas de campi espalhados pelo estado de São Paulo. Oferece cursos técnicos, de graduação e pós-graduação, promovendo a inclusão social, inovação tecnológica e desenvolvimento regional. O IFSP é reconhecido pela excelência acadêmica, infraestrutura moderna e projetos de extensão que impactam positivamente a sociedade paulista. Com múltiplos campi, o instituto contribui para a formação de profissionais qualificados e cidadãos críticos, fortalecendo a educação profissional e tecnológica em São Paulo."
+  },
+  {
+    "nome": "Instituto Federal do Norte de Minas Gerais",
+    "tipo": "Instituto Federal",
+    "sigla": "IFNMG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "cidade": "Montes Claros",
+    "campi": [
+      { "nome": "Campus Montes Claros", "endereco": "Rua Dois, 300, Village do Lago I, Montes Claros - MG, CEP 39404-058" },
+      { "nome": "Campus Almenara", "endereco": "Rodovia BR 367, Km 03, Almenara - MG, CEP 39900-000" },
+      { "nome": "Campus Januária", "endereco": "Avenida Aeroporto, 3050, Januária - MG, CEP 39480-000" }
+    ],
+    "cursos_graduacao": [
+      "Engenharia Civil", "Licenciatura em Química", "Tecnologia em Alimentos"
+    ],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Agropecuária", "modalidade": "Integrado" },
+      { "nome": "Técnico em Informática", "modalidade": "Subsequente" },
+      { "nome": "Técnico em Meio Ambiente", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular IFNMG",
+        "descricao": "Processo seletivo próprio do IFNMG para cursos técnicos e superiores, com provas objetivas e redação.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      },
+      {
+        "nome": "ENEM/SiSU",
+        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "datas": {
+          "inscricoes": "Janeiro de 2025"
+        }
+      }
+    ],
+    "cotas": [
+      { "modalidade": "Lei de Cotas IFNMG", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
+    ],
+    "contatos": {
+      "site": "https://www.ifnmg.edu.br",
+      "telefone": "(38) 2101-9200",
+      "email": "reitoria@ifnmg.edu.br",
+      "instagram": "@ifnmgoficial"
+    },
+    "imagens": {
+      "campus": "/src/assets/Institution_images/IFNMG_campus.jpg",
+      "logo": "/src/assets/Institution_images/IFNMG_logo.png"
+    },
+    "descricao": "O Instituto Federal do Norte de Minas Gerais (IFNMG) é referência em educação profissional, científica e tecnológica no norte de Minas Gerais. Com diversos campi distribuídos pela região, o IFNMG oferece cursos técnicos, de graduação e pós-graduação, promovendo inclusão social, inovação e desenvolvimento regional. A instituição investe em pesquisa aplicada, projetos de extensão e parcerias com empresas, contribuindo para a formação de profissionais qualificados e cidadãos críticos. O IFNMG valoriza a diversidade, a sustentabilidade e o compromisso com a transformação social, sendo reconhecido pela excelência acadêmica e pelo impacto positivo em suas comunidades."
+  },
+  {
+    "nome": "Instituto Federal do Triângulo Mineiro",
+    "tipo": "Instituto Federal",
+    "sigla": "IFTM",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "cidade": "Uberaba",
+    "campi": [
+      { "nome": "Campus Uberaba", "endereco": "Avenida Doutor Randolfo Borges Júnior, 1400, Distrito Industrial III, Uberaba - MG, CEP 38064-790" },
+      { "nome": "Campus Ituiutaba", "endereco": "Rua Belarmino Vilela Junqueira, 329, Universitário, Ituiutaba - MG, CEP 38302-200" },
+      { "nome": "Campus Paracatu", "endereco": "Rua Euridamas A. de Brito, 651, Paracatuzinho, Paracatu - MG, CEP 38600-000" }
+    ],
+    "cursos_graduacao": [
+      "Engenharia Agronômica", "Licenciatura em Química", "Tecnologia em Alimentos"
+    ],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Agropecuária", "modalidade": "Integrado" },
+      { "nome": "Técnico em Informática", "modalidade": "Subsequente" },
+      { "nome": "Técnico em Eletrotécnica", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular IFTM",
+        "descricao": "Processo seletivo próprio do IFTM para cursos técnicos e superiores, com provas objetivas e redação.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      },
+      {
+        "nome": "ENEM/SiSU",
+        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "datas": {
+          "inscricoes": "Janeiro de 2025"
+        }
+      }
+    ],
+    "cotas": [
+      { "modalidade": "Lei de Cotas IFTM", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
+    ],
+    "contatos": {
+      "site": "https://www.iftm.edu.br",
+      "telefone": "(34) 3829-5700",
+      "email": "reitoria@iftm.edu.br",
+      "instagram": "@iftmoficial"
+    },
+    "imagens": {
+      "campus": "/src/assets/Institution_images/IFTM_campus.jpg",
+      "logo": "/src/assets/Institution_images/IFTM_logo.png"
+    },
+    "descricao": "O Instituto Federal do Triângulo Mineiro (IFTM) é uma instituição pública de ensino, pesquisa e extensão, com forte atuação no Triângulo Mineiro e Alto Paranaíba. Oferece cursos técnicos, de graduação e pós-graduação, com foco na formação cidadã, inovação tecnológica e desenvolvimento regional. O IFTM se destaca pela qualidade do ensino, infraestrutura moderna e projetos de extensão que impactam positivamente a sociedade. Com múltiplos campi, o instituto promove inclusão social, pesquisa aplicada e parcerias com o setor produtivo, contribuindo para o avanço da educação profissional e tecnológica na região."
+  },
+  {
+    "nome": "Instituto Federal Fluminense",
+    "tipo": "Instituto Federal",
+    "sigla": "IFF",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "cidade": "Campos dos Goytacazes",
+    "campi": [
+      { "nome": "Campus Campos Centro", "endereco": "Rua Dr. Siqueira, 273, Parque Dom Bosco, Campos dos Goytacazes - RJ, CEP 28030-130" },
+      { "nome": "Campus Macaé", "endereco": "Rua Aloísio da Silva Gomes, 50, Granja dos Cavaleiros, Macaé - RJ, CEP 27930-560" },
+      { "nome": "Campus Itaperuna", "endereco": "Rodovia BR 356, Km 3, Cidade Nova, Itaperuna - RJ, CEP 28300-000" }
+    ],
+    "cursos_graduacao": [
+      "Engenharia de Controle e Automação", "Licenciatura em Matemática", "Tecnologia em Sistemas para Internet"
+    ],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Informática", "modalidade": "Integrado" },
+      { "nome": "Técnico em Eletrotécnica", "modalidade": "Subsequente" },
+      { "nome": "Técnico em Química", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular IFF",
+        "descricao": "Processo seletivo próprio do IFF para cursos técnicos e superiores, com provas objetivas e redação.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      },
+      {
+        "nome": "ENEM/SiSU",
+        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "datas": {
+          "inscricoes": "Janeiro de 2025"
+        }
+      }
+    ],
+    "cotas": [
+      { "modalidade": "Lei de Cotas IFF", "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal." }
+    ],
+    "contatos": {
+      "site": "https://portal1.iff.edu.br",
+      "telefone": "(22) 2737-2400",
+      "email": "reitoria@iff.edu.br",
+      "instagram": "@iffluminense"
+    },
+    "imagens": {
+      "campus": "/src/assets/Institution_images/IFF_campus.jpg",
+      "logo": "/src/assets/Institution_images/IFF_logo.png"
+    },
+    "descricao": "O Instituto Federal Fluminense (IFF) é referência em educação profissional, científica e tecnológica no norte e noroeste do estado do Rio de Janeiro. Com diversos campi distribuídos pela região, o IFF oferece cursos técnicos, de graduação e pós-graduação, promovendo inclusão social, inovação e desenvolvimento regional. A instituição investe em pesquisa aplicada, projetos de extensão e parcerias com empresas, contribuindo para a formação de profissionais qualificados e cidadãos críticos. O IFF valoriza a diversidade, a sustentabilidade e o compromisso com a transformação social, sendo reconhecido pela excelência acadêmica e pelo impacto positivo em suas comunidades."
+  }
+] 

@@ -1,0 +1,29 @@
+/* src/components/MapaDoBrasil.css */
+.map-wrapper {
+  width: 100%;
+  max-width: 700px;
+  margin: 2rem auto;
+}
+
+.map-wrapper svg {
+  width: 100%;
+  height: auto;
+}
+
+/* Cor base para TODOS os estados. O mapa começa assim. */
+#mapa-brasil-svg g path {
+  fill: var(--azul-mapa-base); /* Azul bem claro e neutro */
+  stroke: var(--branco);
+  stroke-width: 2px;
+  transition: fill 0.2s ease-in-out;
+}
+
+/* Efeito HOVER: Só colore a região sob o mouse */
+#mapa-brasil-svg #regiao-norte:hover path,
+#mapa-brasil-svg #regiao-nordeste:hover path,
+#mapa-brasil-svg #regiao-centro-oeste:hover path,
+#mapa-brasil-svg #regiao-sudeste:hover path,
+#mapa-brasil-svg #regiao-sul:hover path {
+  fill: var(--roxo-principal);
+  cursor: pointer;
+}
