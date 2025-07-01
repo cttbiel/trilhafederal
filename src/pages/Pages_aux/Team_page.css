@@ -228,14 +228,18 @@
 
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   justify-content: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 1rem;
 }
 
 .team-card {
   background: white;
-  padding: 2.5rem;
+  padding: 2.2rem 1.5rem;
   border-radius: 20px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   text-align: center;
@@ -243,10 +247,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 480px;
-  justify-content: flex-start;
-  min-width: 320px;
-  max-width: 400px;
+  min-height: 420px;
+  max-width: 100%;
+  width: 100%;
   margin: 0 auto;
 }
 
@@ -258,7 +261,6 @@
 .member-avatar {
   width: 120px;
   height: 120px;
-  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -266,6 +268,25 @@
   margin: 0 auto 1.5rem;
   font-size: 3rem;
   flex-shrink: 0;
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+}
+
+.avatar-img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(30, 58, 138, 0.10);
+  display: block;
+  border: none;
+}
+
+.member-avatar img.avatar-img {
+  background: none;
+}
+
+.member-avatar:has(img.avatar-img) {
+  background: none;
 }
 
 .member-info {
@@ -415,23 +436,29 @@
 }
 
 /* Responsividade */
-@media (max-width: 1600px) {
-  .team-grid {
-    grid-template-columns: repeat(4, minmax(260px, 1fr));
-  }
-}
 @media (max-width: 1200px) {
   .team-grid {
-    grid-template-columns: repeat(2, minmax(320px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.2rem;
+    padding: 0 0.5rem;
+  }
+  .team-card {
+    padding: 1.5rem 0.7rem;
+    min-height: 360px;
   }
 }
-@media (max-width: 900px) {
+
+@media (max-width: 700px) {
   .team-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    padding: 0;
   }
   .team-card {
     min-width: 0;
-    max-width: 100%;
+    max-width: 100vw;
+    padding: 1.2rem 0.3rem;
+    min-height: 320px;
   }
 }
 
@@ -559,4 +586,106 @@
 }
 .fade-delay-8 {
   animation-delay: 0.8s;
+}
+
+.qrcode-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 4rem 0 0 0;
+  width: 100%;
+}
+
+.qrcode-container {
+  background: #fff;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.13);
+  padding: 3rem 2.5rem 2.5rem 2.5rem;
+  text-align: center;
+  max-width: 520px;
+  width: 100%;
+  margin: 0 auto 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.qrcode-container h3 {
+  font-size: 1.7rem;
+  color: #1e3a8a;
+  margin-bottom: 0.7rem;
+}
+
+.qrcode-container p {
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  font-size: 1.08rem;
+}
+
+.qrcode-img-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qrcode-img {
+  width: 100%;
+  max-width: 300px;
+  aspect-ratio: 1/1;
+  object-fit: contain;
+  border-radius: 18px;
+  box-shadow: 0 2px 12px rgba(30, 58, 138, 0.13);
+  background: #f5f7fa;
+  padding: 0.7rem;
+  margin: 0 auto;
+  transition: max-width 0.2s, width 0.2s;
+}
+
+@media (max-width: 900px) {
+  .qrcode-img {
+    max-width: 180px;
+  }
+}
+
+@media (max-width: 600px) {
+  .qrcode-img {
+    max-width: 120px;
+  }
+}
+
+.qrcode-wide-container {
+  background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
+  border-radius: 20px;
+  color: white;
+  padding: 4rem 3rem;
+  margin: 0 auto 3rem auto;
+  max-width: 1200px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  box-shadow: 0 8px 32px rgba(30, 58, 138, 0.13);
+}
+
+.qrcode-text {
+  flex: 2;
+  text-align: left;
+}
+
+.qrcode-text h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.qrcode-text p {
+  font-size: 1.15rem;
+  opacity: 0.92;
+  color: #e0e7ef;
+  margin-bottom: 0;
+  max-width: 600px;
 }

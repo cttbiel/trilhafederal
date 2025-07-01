@@ -5,8 +5,8 @@ import UniversidadesInter from "./pages/Pages_inter/Universidades_inter/Universi
 import TecnicosInter from "./pages/Pages_inter/Tecnicos_inter/Tecnicos_inter";
 import InstitutosInter from "./pages/Pages_inter/Institutos_inter/Institutos_inter";
 import TeamPage from "./pages/Pages_aux/Team_page";
-import ContactPage from "./pages/Pages_aux/Contact_page";
 import Internacional from "./pages/Pages_aux/Internacional";
+import ContactPage from "./pages/Pages_aux/Contact_page";
 
 // Importando todas as páginas de universidades
 import UFMG from "./pages/Pages_inter/Universidades_inter/Universidades/UFMG";
@@ -102,8 +102,6 @@ function App() {
             <Route path="/tecnico/etec-gv" element={<ETECGV />} />
             <Route path="/tecnico/etec-sjc" element={<ETECSJC />} />
 
-            <Route path="/contato" element={<ContactPage />} />
-
             {/* Rotas temporárias para instituições sem páginas específicas */}
             <Route
               path="/institution/ifsc"
@@ -135,6 +133,7 @@ function App() {
               element={<NotificacoesEmConstrucao />}
             />
             <Route path="/internacional" element={<Internacional />} />
+            <Route path="/contato" element={<ContactPage />} />
           </Routes>
         </main>
         <Footer />

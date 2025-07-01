@@ -22,7 +22,7 @@ const Header = () => {
         <nav className="nav-links">
           <Link to="/">Início</Link>
           <a href="#sobre">Sobre</a>
-          <Link to="/internacional">Trilha Internacional</Link>
+          
           <div className="dropdown-container">
             <button
               className="dropdown-trigger"

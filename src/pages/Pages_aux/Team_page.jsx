@@ -12,44 +12,33 @@ import {
   FaEnvelope,
 } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import caioImg from "../../assets/Team_images/caio.jpeg";
+import kauaImg from "../../assets/Team_images/kaua.jpeg";
+import gamataImg from "../../assets/Team_images/gamata.jpeg";
+import cttImg from "../../assets/Team_images/ctt.jpeg";
+import qrcodeImg from "../../assets/QRcode/qrcode_site.jpg";
 
 const TeamPage = () => {
   const teamMembers = [
     {
-      name: "Ana Silva",
-      role: "Desenvolvedora Frontend",
-      bio: "Especialista em React e design de interfaces. Apaixonada por criar experiências digitais que fazem a diferença na vida das pessoas.",
-      avatar: "👩‍💻",
-      linkedin: "#",
-      github: "#",
-      email: "ana.silva@trilhafederal.com.br",
+      name: "Caio Bertolato",
+      img: caioImg,
+      desc: "Aluno de Engenharia de Computação do CEFET-MG e membro da equipe de competição Fórmula Cefast.",
     },
     {
-      name: "Carlos Santos",
-      role: "Desenvolvedor Backend",
-      bio: "Focado em arquitetura de sistemas e APIs. Acredita que a tecnologia deve ser acessível a todos.",
-      avatar: "👨‍💻",
-      linkedin: "#",
-      github: "#",
-      email: "carlos.santos@trilhafederal.com.br",
+      name: "Gabriel Expedito",
+      img: gamataImg,
+      desc: "Aluno de Engenharia de Computação do CEFET-MG e técnico em Mecânica pela mesma instituição.",
     },
     {
-      name: "Mariana Costa",
-      role: "Designer UX/UI",
-      bio: "Criativa e empática, transforma ideias em experiências visuais que conectam pessoas e informações.",
-      avatar: "👩‍🎨",
-      linkedin: "#",
-      github: "#",
-      email: "mariana.costa@trilhafederal.com.br",
+      name: "Gabriel Silva",
+      img: cttImg,
+      desc: "Aluno de Engenharia de Computação do CEFET-MG e estagiário de desenvolvimento na GOL Airlines.",
     },
     {
-      name: "João Pereira",
-      role: "Analista de Dados",
-      bio: "Responsável por análise e visualização de dados, garantindo decisões baseadas em evidências para o projeto.",
-      avatar: "👨‍🔬",
-      linkedin: "#",
-      github: "#",
-      email: "joao.pereira@trilhafederal.com.br",
+      name: "Kauã Faria",
+      img: kauaImg,
+      desc: "Aluno de Engenharia de Computação do CEFET-MG e diretor de projetos da Commit Jr, empresa júnior de computação.",
     },
   ];
 
@@ -85,9 +74,7 @@ const TeamPage = () => {
       {/* Header da Página */}
       <div className="team-header fade-in-up fade-delay-1">
         <div className="team-header-content">
-          <Link to="/" className="back-button">
-            <FaArrowLeft /> Voltar ao Início
-          </Link>
+
           <div className="team-hero">
             <h1>Quem Somos</h1>
             <p className="team-subtitle">
@@ -157,23 +144,16 @@ const TeamPage = () => {
                   className={`team-card fade-in-up fade-delay-${index + 5}`}
                 >
                   <div className="member-avatar">
-                    <span className="avatar-emoji">{member.avatar}</span>
+                    {member.img ? (
+                      <img src={member.img} alt={member.name} className="avatar-img" />
+                    ) : (
+                      <span className="avatar-emoji" role="img" aria-label="Avatar">👤</span>
+                    )}
                   </div>
                   <div className="member-info">
                     <h3>{member.name}</h3>
-                    <p className="member-role">{member.role}</p>
-                    <p className="member-bio">{member.bio}</p>
-                    <div className="member-social">
-                      <a href={member.linkedin} aria-label="LinkedIn">
-                        <FaLinkedin />
-                      </a>
-                      <a href={member.github} aria-label="GitHub">
-                        <FaGithub />
-                      </a>
-                      <a href={`mailto:${member.email}`} aria-label="Email">
-                        <FaEnvelope />
-                      </a>
-                    </div>
+                    <p className="member-role">Estudante de Engenharia de Computação</p>
+                    <p className="member-bio">{member.desc}</p>
                   </div>
                 </div>
               ))}
@@ -181,14 +161,16 @@ const TeamPage = () => {
           </section>
 
           {/* Nossa História */}
-          <section className="story-section fade-in-up fade-delay-5">
+          <section className="story-section fade-in-up fade-delay-6">
             <div className="section-header">
               <h2>Nossa História</h2>
             </div>
             <div className="story-content">
               <div className="story-text">
                 <p>
-                  O projeto Trilha Federal começou em 2024, quando identificamos
+                  O projeto Trilha Federal começou em 2025, através de um projeto 
+                  pensado para a disciplina de "Filosofia da Tecnologia", 
+                  quando identificamos
                   uma lacuna significativa no acesso à informação sobre
                   instituições federais de ensino. Muitos estudantes,
                   especialmente aqueles de escolas públicas ou de regiões menos
@@ -207,7 +189,7 @@ const TeamPage = () => {
           </section>
 
           {/* Call to Action */}
-          <section className="cta-section fade-in-up fade-delay-6">
+          <section className="cta-section fade-in-up fade-delay-7">
             <div className="cta-content">
               <h2>Faça Parte da Nossa Missão</h2>
               <p>
@@ -224,6 +206,19 @@ const TeamPage = () => {
                 >
                   Entre em Contato
                 </a>
+              </div>
+            </div>
+          </section>
+
+          {/* QR Code do Site - Final da Página */}
+          <section className="qrcode-section fade-in-up fade-delay-8">
+            <div className="qrcode-wide-container">
+              <div className="qrcode-text">
+                <h3>Acesse o nosso site!</h3>
+                <p>Escaneie o QR code ao lado para acessar rapidamente em seu dispositivo móvel.<br/>Ideal para apresentações em sala de aula.</p>
+              </div>
+              <div className="qrcode-img-wrapper">
+                <img src={qrcodeImg} alt="QR code do site Trilha Federal" className="qrcode-img" />
               </div>
             </div>
           </section>

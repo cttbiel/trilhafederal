@@ -54,10 +54,11 @@
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.2;
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, #007a2e 0%, #009c3b 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  color: transparent;
   animation: fadeInUp 1s ease-out;
 }
 
@@ -519,7 +520,7 @@
 /* CTA Section */
 .cta-section {
   padding: 5rem 0;
-  background: var(--gradient-primary);
+  background: linear-gradient(135deg, #0047ab 10%, #008f4c 90%);
   text-align: center;
   color: white;
   position: relative;
@@ -529,16 +530,9 @@
   box-shadow: var(--shadow-md);
 }
 
-.cta-section::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="rgba(255,255,255,0.1)" points="0,1000 1000,0 1000,1000"/></svg>');
-  background-size: cover;
-  border-radius: 2rem;
+.cta-section h2,
+.cta-section p {
+  color: white;
 }
 
 .cta-section h2 {
@@ -574,11 +568,13 @@
 }
 
 .cta-button.primary {
-  background: white;
-  color: var(--primary-color);
+  background: var(--primary-color);
+  color: white;
 }
 
 .cta-button.primary:hover {
+  background: var(--primary-dark);
+  color: white;
   transform: translateY(-3px);
   box-shadow: var(--shadow-lg);
 }

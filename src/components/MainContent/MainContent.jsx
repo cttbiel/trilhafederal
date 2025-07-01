@@ -304,7 +304,20 @@ const MainContent = () => {
         </div>
       </section>
 
-      {/* Seção 5: Call to Action */}
+      {/* Seção 5: Contato Simplificado */}
+      <section id="contato" className="contact-section">
+        <div className="container">
+          <div className="contact-card">
+            <h2>Entre em Contato</h2>
+            <p>Tem dúvidas? Quer contribuir? Estamos aqui para ajudar!</p>
+            <Link to="/contato" className="contact-button">
+              Fale Conosco
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Seção 6: Call to Action */}
       <section className="cta-section">
         <div className="container">
           <h2>Pronto para começar sua jornada?</h2>
@@ -319,19 +332,6 @@ const MainContent = () => {
             <a href="#contato" className="cta-button secondary">
               Cadastre-se
             </a>
-          </div>
-        </div>
-      </section>
-
-      {/* Seção 6: Contato Simplificado */}
-      <section id="contato" className="contact-section">
-        <div className="container">
-          <div className="contact-card">
-            <h2>Entre em Contato</h2>
-            <p>Tem dúvidas? Quer contribuir? Estamos aqui para ajudar!</p>
-            <Link to="/contato" className="contact-button">
-              Fale Conosco
-            </Link>
           </div>
         </div>
       </section>
