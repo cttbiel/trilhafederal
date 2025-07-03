@@ -779,6 +779,10 @@
     margin: 0 0.5rem 1rem 0.5rem;
     border-radius: 1rem;
   }
+
+  .page-container {
+    padding-top: 70px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -938,6 +942,53 @@
   .contact-section {
     margin: 0 0.25rem 0.5rem 0.25rem;
     border-radius: 0.75rem;
+  }
+
+  .page-container {
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 425px) {
+  .hero-title {
+    font-size: 1.2rem;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  .hero-section,
+  .about-section,
+  .vestibulares-section,
+  .resources-section,
+  .cta-section,
+  .contact-section {
+    margin: 0 0.1rem 0.5rem 0.1rem;
+    border-radius: 0.7rem;
+    padding: 0.7rem 0.2rem;
+  }
+  .institution-card,
+  .resource-card {
+    font-size: 0.9rem;
+    padding: 0.7rem 0.2rem;
+  }
+  .hero-img {
+    height: 120px;
+  }
+}
+@media (max-width: 375px) {
+  .hero-title {
+    font-size: 1rem;
+  }
+  .hero-subtitle {
+    font-size: 0.8rem;
+  }
+  .institution-card,
+  .resource-card {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.1rem;
+  }
+  .hero-img {
+    height: 90px;
   }
 }
 
