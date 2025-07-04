@@ -16,6 +16,16 @@ import { Link, useNavigate, useLocation } from "react-router-dom";
 const TeamPage = () => {
   const teamMembers = [
     {
+      name: "Kauã Faria",
+      img: "/assets/Members/kaua.jpeg",
+      desc: "Aluno de Engenharia de Computação do CEFET-MG e diretor de projetos da Commit Jr, empresa júnior de computação.",
+    },
+    {
+      name: "Gabriel Carvalho",
+      img: "/assets/Members/ctt.jpeg",
+      desc: "Aluno de Engenharia de Computação do CEFET-MG e estagiário de desenvolvimento na GOL Linhas Aéreas.",
+    },
+    {
       name: "Caio Bertolato",
       img: "/assets/Members/caio.jpeg",
       desc: "Aluno de Engenharia de Computação do CEFET-MG e membro da equipe de competição Fórmula Cefast.",
@@ -24,16 +34,6 @@ const TeamPage = () => {
       name: "Gabriel Expedito",
       img: "/assets/Members/gamata.jpeg",
       desc: "Aluno de Engenharia de Computação do CEFET-MG e técnico em Mecânica pela mesma instituição.",
-    },
-    {
-      name: "Gabriel Carvalho",
-      img: "/assets/Members/ctt.jpeg",
-      desc: "Aluno de Engenharia de Computação do CEFET-MG e estagiário de desenvolvimento na GOL Linhas Aéreas.",
-    },
-    {
-      name: "Kauã Faria",
-      img: "/assets/Members/kaua.jpeg",
-      desc: "Aluno de Engenharia de Computação do CEFET-MG e diretor de projetos da Commit Jr, empresa júnior de computação.",
     },
   ];
 

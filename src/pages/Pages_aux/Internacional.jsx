@@ -1,8 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "./Internacional.css";
 import { FaGlobeAsia, FaShip } from "react-icons/fa";
 
 const Internacional = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="internacional-page">
       <section className="hero-internacional">

@@ -1,9 +1,52 @@
 import React from "react";
 import "./Footer.css";
 import { FaEnvelope, FaWhatsapp, FaInstagram } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
+  const handleScrollToSection = (sectionId) => (e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      const el = document.getElementById(sectionId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById(sectionId);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 400);
+    }
+  };
+
+  const handleSobreClick = (e) => {
+    e.preventDefault();
+    if (location.pathname === "/") {
+      const el = document.getElementById("sobre");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      navigate("/");
+      setTimeout(() => {
+        const el = document.getElementById("sobre");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 400);
+    }
+  };
+
   return (
     <footer className="footer-container">
       <div className="footer-content">
@@ -40,16 +83,27 @@ const Footer = () => {
           <h4>Links Rápidos</h4>
           <ul className="footer-links">
             <li>
-              <a href="#inicio">Início</a>
+              <Link to="/" onClick={scrollToTop}>
+                Início
+              </Link>
             </li>
             <li>
-              <a href="#sobre">Sobre</a>
+              <Link to="/quem-somos" onClick={scrollToTop}>
+                Quem Somos
+              </Link>
             </li>
             <li>
-              <a href="#vestibulares">Vestibulares</a>
+              <a
+                href="#vestibulares"
+                onClick={handleScrollToSection("vestibulares")}
+              >
+                Vestibulares
+              </a>
             </li>
             <li>
-              <a href="#trilha-internacional">Trilha Internacional</a>
+              <Link to="/internacional" onClick={scrollToTop}>
+                Trilha Internacional
+              </Link>
             </li>
           </ul>
         </div>
