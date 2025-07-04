@@ -58,7 +58,7 @@
       "site": "https://www.cefetmg.br",
       "telefone": "(31) 3319-7000",
       "email": "reitoria@cefetmg.br",
-      "instagram": "@cefetmgoficial"
+      "instagram": "@cefetmg"
     },
     "imagens": {
       "campus": "/assets/instituicoes/CEFET_campus.jpg",
@@ -121,7 +121,7 @@
       "site": "https://www.cefet-rj.br",
       "telefone": "(21) 2566-3000",
       "email": "reitoria@cefet-rj.br",
-      "instagram": "@cefetrjoficial"
+      "instagram": "@cefetrj"
     },
     "imagens": {
       "campus": "/assets/instituicoes/CEFETRJ_campus.jpg",
@@ -224,7 +224,7 @@
     "descricao": "O COLUNI é um colégio técnico universitário vinculado à UFV, referência em ensino técnico integrado ao ensino médio, com tradição em formação de jovens profissionais."
   },
   {
-    "nome": "Escola Estadual de São Paulo - Pedro II",
+    "nome": "Colégio Pedro II",
     "tipo": "Colégio Técnico Federal",
     "sigla": "PEDROII",
     "estado": "Rio de Janeiro",

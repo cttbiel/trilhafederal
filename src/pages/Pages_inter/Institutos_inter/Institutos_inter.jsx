@@ -1,6 +1,7 @@
 import React, { useState, useMemo } from "react";
 import institutos from "./institutos.json";
 import { Link } from "react-router-dom";
+import { FiSearch, FiChevronDown } from "react-icons/fi";
 import "./Institutos_inter.css";
 
 const getUniqueEstados = (list) => {
@@ -46,22 +47,23 @@ const InstitutosInter = () => {
                 value={busca}
                 onChange={(e) => setBusca(e.target.value)}
               />
-              <span className="search-icon" role="img" aria-label="Buscar">
-                🔍
-              </span>
+              <FiSearch className="search-icon" />
             </div>
             <div className="filter-container">
-              <select
-                className="region-filter"
-                value={estado}
-                onChange={(e) => setEstado(e.target.value)}
-              >
-                {estados.map((est) => (
-                  <option key={est} value={est}>
-                    {est}
-                  </option>
-                ))}
-              </select>
+              <div className="region-filter-wrapper">
+                <select
+                  className="region-filter"
+                  value={estado}
+                  onChange={(e) => setEstado(e.target.value)}
+                >
+                  {estados.map((est) => (
+                    <option key={est} value={est}>
+                      {est}
+                    </option>
+                  ))}
+                </select>
+                <FiChevronDown className="region-filter-arrow" />
+              </div>
             </div>
           </div>
         </div>

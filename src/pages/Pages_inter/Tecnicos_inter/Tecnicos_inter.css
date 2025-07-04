@@ -1,7 +1,7 @@
 .tecnicos-inter-container {
-  max-width: 1800px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 6rem 1rem 2rem 1rem;
+  padding: 6rem 2rem 2rem 2rem;
 }
 
 .tecnicos-header {
@@ -89,9 +89,14 @@
   min-width: 200px;
 }
 
+.region-filter-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .region-filter {
   width: 100%;
-  padding: 1rem 1.5rem;
+  padding: 1rem 2.5rem 1rem 1.5rem;
   border: 2px solid #e0e0e0;
   border-radius: 1rem;
   font-size: 1rem;
@@ -99,12 +104,24 @@
   cursor: pointer;
   transition: all 0.3s ease;
   color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
-.region-filter:focus {
-  outline: none;
-  border-color: #2196f3;
-  box-shadow: 0 0 0 3px rgba(33, 150, 243, 0.1);
+.region-filter-arrow {
+  position: absolute;
+  right: 1.2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  font-size: 1.3rem;
+  color: #888;
+  transition: transform 0.3s;
+}
+
+.region-filter-wrapper:focus-within .region-filter-arrow {
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .tecnicos-grid {
@@ -259,25 +276,26 @@ span {
   display: inline-block;
 }
 
-@media (max-width: 1500px) {
+@media (min-width: 1500px) {
   .tecnicos-grid {
     grid-template-columns: repeat(4, 1fr);
-  }
-}
-
-@media (max-width: 1200px) {
-  .tecnicos-grid {
-    grid-template-columns: repeat(3, 1fr);
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
 @media (max-width: 900px) {
-  .tecnicos-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .tecnicos-inter-container {
+    max-width: 100vw;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    box-sizing: border-box;
+    overflow-x: hidden;
   }
-
-  .tecnico-card {
-    max-width: 100%;
+  .tecnicos-grid {
+    padding: 0.5rem;
+    width: 100%;
+    box-sizing: border-box;
   }
 }
 

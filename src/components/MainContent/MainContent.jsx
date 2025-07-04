@@ -108,7 +108,7 @@ const MainContent = () => {
             </div>
           </div>
 
-          <div className="history-section">
+          <div className="history-section hide-on-mobile">
             <h3>Nossa História</h3>
             <p>
               Fundado em 2025 por quatro jovens estudantes do CEFET-MG, o Trilha
@@ -122,7 +122,7 @@ const MainContent = () => {
             </p>
           </div>
 
-          <div className="stats-section">
+          <div className="stats-section hide-on-mobile">
             <div className="stat-item">
               <h3>1000+</h3>
               <p>Vestibulares</p>
@@ -307,34 +307,27 @@ const MainContent = () => {
         </div>
       </section>
 
-      {/* Seção 5: Contato Simplificado */}
-      <section id="contato" className="contact-section">
-        <div className="container">
-          <div className="contact-card">
+      {/* Seção 5: Contato Simplificado (nova versão grande) */}
+      <section className="contato-destaque-section fade-in-up">
+        <div className="contato-destaque-container">
+          <div className="contato-destaque-text">
             <h2>Entre em Contato</h2>
-            <p>Tem dúvidas? Quer contribuir? Estamos aqui para ajudar!</p>
-            <Link to="/contato" className="contact-button">
-              Fale Conosco
-            </Link>
-          </div>
-        </div>
-      </section>
-
-      {/* Seção 6: Call to Action */}
-      <section className="cta-section">
-        <div className="container">
-          <h2>Pronto para começar sua jornada?</h2>
-          <p>
-            Junte-se a milhares de estudantes que já descobriram o caminho para
-            o ensino público de excelência
-          </p>
-          <div className="cta-buttons">
-            <a href="#contato" className="cta-button primary">
-              Começar Agora
-            </a>
-            <a href="#contato" className="cta-button secondary">
-              Cadastre-se
-            </a>
+            <p>Tem dúvidas, sugestões ou quer contribuir? Fale com a gente!</p>
+            <div className="contato-destaque-info">
+              <FaEnvelope
+                style={{
+                  fontSize: "2.2rem",
+                  color: "var(--primary-color, #2551ca)",
+                  marginBottom: "0.5rem",
+                }}
+              />
+              <a
+                href="mailto:atrilhafederal@gmail.com"
+                className="contato-destaque-email"
+              >
+                atrilhafederal@gmail.com
+              </a>
+            </div>
           </div>
         </div>
       </section>

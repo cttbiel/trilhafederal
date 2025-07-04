@@ -1,20 +1,36 @@
 // src/components/Header.jsx
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Header.css";
 import { FaChevronDown } from "react-icons/fa";
 
-const HamburgerIcon = ({ open }) => (
-  <span className={`hamburger-icon${open ? " open" : ""}`} aria-hidden="true">
-    <span></span>
-    <span></span>
-    <span></span>
-  </span>
-);
-
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const dropdownRef = useRef(null);
+  const buttonRef = useRef(null);
+
+  // Fecha o dropdown ao clicar fora
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setIsDropdownOpen(false);
+      }
+    }
+    if (isDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    } else {
+      document.removeEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isDropdownOpen]);
 
   const toggleDropdown = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -74,41 +90,59 @@ const Header = () => {
             alt="Trilha Federal Logo"
             className="logo-img"
           />
-          <span>Trilha Federal</span>
+          <span className="logo-title">Trilha Federal</span>
         </Link>
-        <nav className="nav-links">
+        <nav className="nav-links hide-on-mobile">
           <Link to="/" onClick={scrollToTop}>
             Início
           </Link>
           <a href="#sobre" onClick={handleSobreClick}>
             Sobre
           </a>
-
-          <div className="dropdown-container">
+          {/* Dropdown Recursos integrado na navegação */}
+          <div className="nav-dropdown-container">
             <button
-              className="dropdown-trigger"
-              onClick={toggleDropdown}
-              onMouseEnter={() => setIsDropdownOpen(true)}
+              className="nav-dropdown-btn"
+              ref={buttonRef}
+              aria-haspopup="true"
+              aria-expanded={isDropdownOpen}
+              onClick={() => setIsDropdownOpen((open) => !open)}
+              tabIndex={0}
             >
-              Recursos{" "}
+              Recursos
               <FaChevronDown
-                className={`dropdown-icon ${isDropdownOpen ? "rotated" : ""}`}
+                className={`nav-dropdown-icon${
+                  isDropdownOpen ? " rotated" : ""
+                }`}
               />
             </button>
             <div
-              className={`dropdown-menu ${isDropdownOpen ? "open" : ""}`}
-              onMouseLeave={() => setIsDropdownOpen(false)}
+              className={`nav-dropdown-menu${isDropdownOpen ? " open" : ""}`}
+              ref={dropdownRef}
+              role="menu"
             >
               <a
                 href="#vestibulares"
                 onClick={handleScrollToSection("vestibulares")}
+                className="nav-dropdown-link"
+                tabIndex={isDropdownOpen ? 0 : -1}
               >
                 Vestibulares
               </a>
-              <Link to="/internacional" onClick={scrollToTop}>
+              <Link
+                to="/internacional"
+                onClick={scrollToTop}
+                className="nav-dropdown-link"
+                tabIndex={isDropdownOpen ? 0 : -1}
+              >
                 Trilha Internacional
               </Link>
-              <a href="#recursos" onClick={handleScrollToSection("recursos")}>
+              <a
+                href="#recursos"
+                onClick={handleScrollToSection("recursos")}
+                className="nav-dropdown-link"
+                tabIndex={isDropdownOpen ? 0 : -1}
+              >
                 Ferramentas
               </a>
             </div>
@@ -120,65 +154,116 @@ const Header = () => {
             Contato
           </Link>
         </nav>
-        <Link to="/contato" className="header-cta">
+        <Link to="/contato" className="header-cta hide-on-mobile">
           <span>Entrar</span>
         </Link>
         {/* Botão menu mobile */}
         <button
-          className="mobile-menu-toggle"
+          className={`mobile-menu-toggle${isMobileMenuOpen ? " open" : ""}`}
           aria-label={isMobileMenuOpen ? "Fechar menu" : "Abrir menu"}
           onClick={() => setIsMobileMenuOpen((open) => !open)}
         >
-          <HamburgerIcon open={isMobileMenuOpen} />
+          <span className="hamburger-line" aria-hidden="true"></span>
         </button>
         {/* Menu mobile */}
         {isMobileMenuOpen && (
           <div className="mobile-menu-overlay" onClick={closeMobileMenu}>
-            <nav
-              className="mobile-menu"
+            <aside
+              className="mobile-menu-cafellow"
               onClick={(e) => e.stopPropagation()}
               aria-label="Menu principal mobile"
             >
-              <Link to="/" onClick={scrollToTop}>
-                Início
-              </Link>
-              <a href="#sobre" onClick={handleSobreClick}>
-                Sobre
-              </a>
-              <div className="mobile-dropdown">
-                <span>Recursos</span>
-                <div className="mobile-dropdown-menu">
+              <button
+                className="mobile-menu-close"
+                onClick={closeMobileMenu}
+                aria-label="Fechar menu"
+              >
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <div className="mobile-menu-logo-row">
+                <img
+                  src="/assets/Main_images/logo_site_img_005.png"
+                  alt="Trilha Federal Logo"
+                  className="mobile-menu-logo"
+                />
+                <span className="mobile-menu-title">Trilha Federal</span>
+              </div>
+              <nav className="mobile-menu-links">
+                <Link
+                  to="/"
+                  onClick={() => {
+                    closeMobileMenu();
+                    scrollToTop();
+                  }}
+                >
+                  Início
+                </Link>
+                <a
+                  href="#sobre"
+                  onClick={(e) => {
+                    closeMobileMenu();
+                    handleSobreClick(e);
+                  }}
+                >
+                  Sobre
+                </a>
+                <Link
+                  to="/quem-somos"
+                  onClick={() => {
+                    closeMobileMenu();
+                    scrollToTop();
+                  }}
+                >
+                  Quem Somos
+                </Link>
+                <Link
+                  to="/contato"
+                  onClick={() => {
+                    closeMobileMenu();
+                    scrollToTop();
+                  }}
+                >
+                  Contato
+                </Link>
+                <div className="mobile-menu-group">
+                  <span className="mobile-menu-group-title">Recursos</span>
                   <a
                     href="#vestibulares"
-                    onClick={handleScrollToSection("vestibulares")}
+                    onClick={(e) => {
+                      closeMobileMenu();
+                      handleScrollToSection("vestibulares")(e);
+                    }}
                   >
                     Vestibulares
                   </a>
-                  <Link to="/internacional" onClick={scrollToTop}>
+                  <Link
+                    to="/internacional"
+                    onClick={() => {
+                      closeMobileMenu();
+                      scrollToTop();
+                    }}
+                  >
                     Trilha Internacional
                   </Link>
                   <a
                     href="#recursos"
-                    onClick={handleScrollToSection("recursos")}
+                    onClick={(e) => {
+                      closeMobileMenu();
+                      handleScrollToSection("recursos")(e);
+                    }}
                   >
                     Ferramentas
                   </a>
                 </div>
-              </div>
-              <Link to="/quem-somos" onClick={scrollToTop}>
-                Quem Somos
-              </Link>
-              <Link to="/contato" onClick={scrollToTop}>
-                Contato
-              </Link>
+              </nav>
               <Link
                 to="/contato"
-                className="header-cta mobile"
+                className="mobile-menu-cta"
                 onClick={closeMobileMenu}
               >
                 <span>Entrar</span>
               </Link>
-            </nav>
+            </aside>
           </div>
         )}
       </div>

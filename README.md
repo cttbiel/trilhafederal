@@ -70,4 +70,4 @@ Fundado em 2025 por quatro jovens estudantes do CEFET-MG, o Trilha Federal nasce
 
 © 2025 Trilha Federal. Todos os direitos reservados.
 
-Desenvolvido com ❤️ para democratizar a educação pública.
+Desenvolvido para democratizar a educação pública.

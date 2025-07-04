@@ -250,7 +250,7 @@ const TeamPage = () => {
                   Escaneie o QR code ao lado para acessar rapidamente em seu
                   dispositivo móvel.
                   <br />
-                  Ideal para apresentações em sala de aula.
+                  
                 </p>
               </div>
               <div className="qrcode-img-wrapper">
