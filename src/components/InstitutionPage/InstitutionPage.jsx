@@ -18,6 +18,36 @@ import { Link } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
 import { useToast } from "../../GlobalToast";
 
+const AdmissionCard = ({ proc }) => {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className="admission-card">
+      <FaCalendarAlt className="admission-icon" />
+      <div className="admission-info">
+        <h3>{proc.nome}</h3>
+        <p>{proc.descricao}</p>
+        {open && proc.datas && (
+          <ul
+            style={{
+              fontSize: "0.98em",
+              marginTop: "0.5em",
+            }}
+          >
+            {Object.entries(proc.datas).map(([etapa, valor], i) => (
+              <li key={i}>
+                <b>{etapa[0].toUpperCase() + etapa.slice(1)}:</b> {valor}
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
+      <button className="admission-btn" onClick={() => setOpen((v) => !v)}>
+        {open ? "Fechar" : "Saiba mais"}
+      </button>
+    </div>
+  );
+};
+
 const InstitutionPage = ({
   nome,
   tipo,
@@ -34,26 +64,23 @@ const InstitutionPage = ({
   descricao,
 }) => {
   const [showMore, setShowMore] = useState(false);
-  const [imageError, setImageError] = useState(false);
   const { user, favorites, addFavorite, removeFavorite } = useAuth();
   const isFavorited = favorites.includes(sigla);
   const { showToast } = useToast();
 
   // Imagem padrão quando a imagem específica não carrega
   const defaultImage = "/assets/instituicoes/trilha_federal_img_001.jpeg";
-  const campusImage = imageError
-    ? defaultImage
-    : imagens?.campus || defaultImage;
+  const campusImage = imagens?.campus || defaultImage;
 
   const shortDescription =
     descricao.slice(0, 150) + (descricao.length > 150 ? "..." : "");
 
   // Padronizar tipo para exibição
   let tipoPadrao = tipo;
-    if (
+  if (
     tipo?.toLowerCase().includes("técnico") ||
     tipo?.toLowerCase().includes("tecnico") ||
-      tipo?.toLowerCase().includes("colégio") ||
+    tipo?.toLowerCase().includes("colégio") ||
     tipo?.toLowerCase().includes("colegio")
   ) {
     tipoPadrao = "Colégio Técnico";
@@ -180,45 +207,9 @@ const InstitutionPage = ({
                 <section className="admission-section">
                   <h2>Processos Seletivos</h2>
                   <div className="admission-grid">
-                    {processos_seletivos?.map((proc, idx) => {
-                      const [open, setOpen] = useState(false);
-                      return (
-                        <div className="admission-card" key={idx}>
-                          <FaCalendarAlt className="admission-icon" />
-                          <div className="admission-info">
-                            <h3>{proc.nome}</h3>
-                            <p>{proc.descricao}</p>
-                            {open && proc.datas && (
-                              <ul
-                                style={{
-                                  fontSize: "0.98em",
-                                  marginTop: "0.5em",
-                                }}
-                              >
-                                {Object.entries(proc.datas).map(
-                                  ([etapa, valor], i) => (
-                                    <li key={i}>
-                                      <b>
-                                        {etapa[0].toUpperCase() +
-                                          etapa.slice(1)}
-                                        :
-                                      </b>{" "}
-                                      {valor}
-                                    </li>
-                                  )
-                                )}
-                              </ul>
-                            )}
-                          </div>
-                          <button
-                            className="admission-btn"
-                            onClick={() => setOpen((v) => !v)}
-                          >
-                            {open ? "Fechar" : "Saiba mais"}
-                          </button>
-                        </div>
-                      );
-                    })}
+                    {processos_seletivos?.map((proc, idx) => (
+                      <AdmissionCard key={idx} proc={proc} />
+                    ))}
                   </div>
                 </section>
 

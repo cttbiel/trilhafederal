@@ -1,13 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaUser } from "react-icons/fa";
 import "./Login-page.css";
-import { useAuth } from "../../../AuthContext";
 import { useToast } from "../../../GlobalToast";
+import { supabase } from "../../../supabaseClient";
 
 const LoginPage = () => {
   const navigate = useNavigate();
-  const { login } = useAuth();
   const { showToast } = useToast();
   const [formData, setFormData] = useState({
     email: "",
@@ -16,7 +15,6 @@ const LoginPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [rememberMe, setRememberMe] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -33,7 +31,6 @@ const LoginPage = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setSuccess("");
     if (!formData.email || !formData.password) {
       showToast("Por favor, preencha todos os campos.", "error");
       setLoading(false);
@@ -44,14 +41,17 @@ const LoginPage = () => {
       setLoading(false);
       return;
     }
-    setTimeout(() => {
-      showToast(
-        "O login está temporariamente desativado. Aguarde a implementação do backend.",
-        "error"
-      );
+    const { error } = await supabase.auth.signInWithPassword({
+      email: formData.email,
+      password: formData.password,
+    });
+    if (error) {
+      showToast(error.message, "error");
       setLoading(false);
-    }, 800);
-    return;
+      return;
+    }
+    setLoading(false);
+    // O redirecionamento para /dashboard já está implementado via useEffect
   };
 
   const handleForgotPassword = () => {
@@ -60,6 +60,33 @@ const LoginPage = () => {
       "error"
     );
   };
+
+  const handleGoogleLogin = async () => {
+    const { error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
+    if (error) showToast(error.message, "error");
+  };
+
+  useEffect(() => {
+    const checkSession = async () => {
+      const { data } = await supabase.auth.getSession();
+      if (data?.session?.user) {
+        navigate("/dashboard");
+      }
+    };
+    checkSession();
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        if (session?.user) {
+          navigate("/dashboard");
+        }
+      }
+    );
+    return () => {
+      listener?.subscription.unsubscribe();
+    };
+  }, [navigate]);
 
   return (
     <div className="login-page-clean-container">
@@ -150,6 +177,13 @@ const LoginPage = () => {
             ) : (
               "Entrar"
             )}
+          </button>
+          <button
+            className="login-google-btn"
+            onClick={handleGoogleLogin}
+            type="button"
+          >
+            Entrar com Google
           </button>
         </form>
         <div className="login-clean-signup">

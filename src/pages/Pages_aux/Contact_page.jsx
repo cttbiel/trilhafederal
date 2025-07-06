@@ -35,7 +35,7 @@ const ContactPage = () => {
           "error"
         );
       }
-    } catch (err) {
+    } catch {
       showToast(
         "Ocorreu um erro ao enviar. Tente novamente mais tarde.",
         "error"

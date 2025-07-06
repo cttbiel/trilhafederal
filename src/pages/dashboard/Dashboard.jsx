@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   FaCalendarCheck,
   FaStar,
@@ -16,30 +16,7 @@ import { useAuth } from "../../AuthContext";
 import universidades from "../Pages_inter/Universidades_inter/universidades.json";
 import institutos from "../Pages_inter/Institutos_inter/institutos.json";
 import tecnicos from "../Pages_inter/Tecnicos_inter/tecnicos.json";
-
-// Dados mockados do usuário
-const user = {
-  nome: "Gabriel",
-  email: "gabriel@email.com",
-  avatar: "",
-  favoritos: [
-    { nome: "UFMG", tipo: "Universidade" },
-    { nome: "IFMG", tipo: "Instituto" },
-    { nome: "CEFET-MG", tipo: "Técnico" },
-  ],
-  eventos: [
-    { titulo: "Inscrição UFMG", data: "10/06/2024" },
-    { titulo: "Prova IFMG", data: "15/06/2024" },
-  ],
-  estatisticas: {
-    simulados: 3,
-    media: 78,
-  },
-  mensagens: [
-    "Novo simulado disponível!",
-    "Não perca o prazo de inscrição da UFMG!",
-  ],
-};
+import { supabase } from "../../supabaseClient";
 
 function getInstituicaoFavorita(sigla) {
   return (
@@ -51,6 +28,22 @@ function getInstituicaoFavorita(sigla) {
 
 const Dashboard = () => {
   const { favorites, removeFavorite } = useAuth();
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    supabase.auth.getSession().then(({ data }) => {
+      setUser(data?.session?.user || null);
+    });
+    // Listener para mudanças de auth
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        setUser(session?.user || null);
+      }
+    );
+    return () => {
+      listener?.subscription.unsubscribe();
+    };
+  }, []);
 
   if (!user) {
     return (
@@ -94,13 +87,23 @@ const Dashboard = () => {
       <div className="dashboard-container">
         <div className="dashboard-header">
           <div className="user-info">
-            {user?.avatar ? (
-              <img src={user.avatar} alt="Avatar" className="user-avatar" />
+            {user?.user_metadata?.avatar_url ? (
+              <img
+                src={user.user_metadata.avatar_url}
+                alt="Avatar"
+                className="user-avatar"
+              />
             ) : (
               <FaUserCircle className="user-avatar" />
             )}
             <div>
-              <h2>Olá, {user?.nome}!</h2>
+              <h2>
+                Olá,{" "}
+                {user?.user_metadata?.name ||
+                  user?.email?.split("@")[0] ||
+                  "Usuário"}
+                !
+              </h2>
               <p>{user?.email}</p>
             </div>
           </div>
@@ -109,7 +112,7 @@ const Dashboard = () => {
           <section className="dashboard-section">
             <h3>Próximos eventos</h3>
             <ul className="event-list">
-              {user?.eventos.map((ev, i) => (
+              {(user?.eventos || []).map((ev, i) => (
                 <li key={i}>
                   <FaCalendarCheck className="icon" />
                   <span>{ev.titulo}</span> <b>{ev.data}</b>
@@ -193,12 +196,14 @@ const Dashboard = () => {
             <div className="stats-grid">
               <div className="stat-card">
                 <span className="stat-value">
-                  {user?.estatisticas.simulados}
+                  {user?.estatisticas?.simulados ?? 0}
                 </span>
                 <span className="stat-label">Simulados feitos</span>
               </div>
               <div className="stat-card">
-                <span className="stat-value">{user?.estatisticas.media}%</span>
+                <span className="stat-value">
+                  {user?.estatisticas?.media ?? 0}%
+                </span>
                 <span className="stat-label">Média de acertos</span>
               </div>
             </div>
@@ -207,7 +212,7 @@ const Dashboard = () => {
           <section className="dashboard-section">
             <h3>Mensagens</h3>
             <ul className="messages-list">
-              {user?.mensagens.map((msg, i) => (
+              {(user?.mensagens || []).map((msg, i) => (
                 <li key={i}>{msg}</li>
               ))}
             </ul>

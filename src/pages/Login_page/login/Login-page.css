@@ -1261,3 +1261,32 @@
     padding: 0.5rem 0.7rem;
   }
 }
+
+.login-google-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background: #fff;
+  color: #ea4335;
+  border: 2px solid #ea4335;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0.1rem 0 0.2rem 0;
+  cursor: pointer;
+  transition: all 0.2s;
+  box-shadow: none;
+}
+.login-google-btn:hover {
+  background: #ea4335;
+  color: #fff;
+  border-color: #ea4335;
+}
+.login-google-btn img {
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+}

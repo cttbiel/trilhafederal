@@ -38,14 +38,44 @@ O Trilha Federal é uma plataforma que democratiza o acesso à informação sobr
 - **Escolas Técnicas**: Instituições especializadas em formação técnica de qualidade
 - **Recursos Educacionais**: Calendário de vestibulares, guias de estudo, simulados e mais
 - **Comunidade**: Conecte-se com outros estudantes e compartilhe experiências
+- **Autenticação Segura**: Login com Google e cadastro tradicional via Supabase
+- **Dashboard Personalizado**: Acompanhe seus favoritos e progresso
 
 ## Tecnologias Utilizadas
 
-- React 19
-- Vite
-- React Icons
-- CSS3 com variáveis CSS
-- Design responsivo
+- **Frontend**: React 19, Vite, React Router DOM
+- **Autenticação**: Supabase (Google OAuth + Email/Senha)
+- **UI/UX**: React Icons, CSS3 com variáveis CSS
+- **Design**: Responsivo e acessível
+- **Deploy**: Vercel
+
+## Funcionalidades Implementadas
+
+### ✅ Autenticação Completa
+
+- Login social com Google (1 clique)
+- Cadastro tradicional com email e senha
+- Logout seguro
+- Redirecionamento automático
+
+### ✅ Dashboard Personalizado
+
+- Exibição do nome e email do usuário
+- Lista de instituições favoritas
+- Atalhos para recursos
+- Interface responsiva
+
+### ✅ Sistema de Favoritos
+
+- Adicionar/remover instituições
+- Persistência local
+- Exibição no dashboard
+
+### ✅ Design Responsivo
+
+- Funciona em desktop, tablet e mobile
+- Interface moderna e acessível
+- Feedback visual para ações
 
 ## Como Executar
 
@@ -72,12 +102,16 @@ O Trilha Federal é uma plataforma que democratiza o acesso à informação sobr
 ```
 src/
 ├── components/
-│   ├── Header/
-│   ├── MainContent/
-│   ├── Footer/
-│   └── MapaDoBrasil/
-├── assets/
-└── App.jsx
+│   ├── Header/          # Header com autenticação
+│   ├── MainContent/     # Conteúdo principal
+│   ├── Footer/          # Rodapé
+│   └── MapaDoBrasil/    # Mapa interativo
+├── pages/
+│   ├── Login_page/      # Login e cadastro
+│   ├── dashboard/       # Dashboard do usuário
+│   └── Pages_inter/     # Páginas de instituições
+├── supabaseClient.js    # Configuração Supabase
+└── AuthContext.jsx      # Contexto de favoritos
 ```
 
 ## Nossa História

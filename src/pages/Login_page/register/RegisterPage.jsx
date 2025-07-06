@@ -1,13 +1,11 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaUser } from "react-icons/fa";
 import "./RegisterPage.css";
-import { useAuth } from "../../../AuthContext";
 import { useToast } from "../../../GlobalToast";
+import { supabase } from "../../../supabaseClient";
 
 const RegisterPage = () => {
-  const navigate = useNavigate();
-  const { register } = useAuth();
   const { showToast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
@@ -18,7 +16,6 @@ const RegisterPage = () => {
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -35,10 +32,9 @@ const RegisterPage = () => {
     setShowConfirmPassword(!showConfirmPassword);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setSuccess("");
     if (
       !formData.name ||
       !formData.email ||
@@ -64,14 +60,24 @@ const RegisterPage = () => {
       setLoading(false);
       return;
     }
-    setTimeout(() => {
-      showToast(
-        "O cadastro está temporariamente desativado. Aguarde a implementação do backend.",
-        "error"
-      );
+    const { error } = await supabase.auth.signUp({
+      email: formData.email,
+      password: formData.password,
+      options: { data: { name: formData.name } },
+    });
+    if (error) {
+      showToast(error.message, "error");
       setLoading(false);
-    }, 900);
-    return;
+      return;
+    }
+    showToast(
+      "Cadastro realizado! Verifique seu e-mail para confirmar.",
+      "success"
+    );
+    setLoading(false);
+    setTimeout(() => {
+      window.location.href = "/dashboard";
+    }, 1200);
   };
 
   return (

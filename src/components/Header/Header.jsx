@@ -3,14 +3,14 @@ import React, { useState, useRef, useEffect } from "react";
 import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./Header.css";
 import { FaChevronDown, FaUserCircle, FaSignOutAlt } from "react-icons/fa";
-import { useAuth } from "../../AuthContext";
+import { supabase } from "../../supabaseClient";
 
 const Header = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const dropdownRef = useRef(null);
   const buttonRef = useRef(null);
-  const { user, logout } = useAuth();
+  const [user, setUser] = useState(null);
 
   // Fecha o dropdown ao clicar fora
   useEffect(() => {
@@ -33,6 +33,22 @@ const Header = () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [isDropdownOpen]);
+
+  useEffect(() => {
+    const getUser = async () => {
+      const { data } = await supabase.auth.getSession();
+      setUser(data?.session?.user || null);
+    };
+    getUser();
+    const { data: listener } = supabase.auth.onAuthStateChange(
+      (_event, session) => {
+        setUser(session?.user || null);
+      }
+    );
+    return () => {
+      listener?.subscription.unsubscribe();
+    };
+  }, []);
 
   const closeMobileMenu = () => setIsMobileMenuOpen(false);
 
@@ -155,21 +171,24 @@ const Header = () => {
         {user ? (
           <div className="header-user-menu hide-on-mobile">
             <Link to="/dashboard" className="user-info-link">
-              {user.avatar ? (
+              {user?.user_metadata?.avatar_url ? (
                 <img
-                  src={user.avatar}
+                  src={user.user_metadata.avatar_url}
                   alt="Avatar"
                   className="user-avatar-mini"
                 />
               ) : (
                 <FaUserCircle className="user-avatar-mini" />
               )}
-              <span className="user-name">{user.nome}</span>
+              <span className="user-name">
+                {user?.user_metadata?.name || user?.email?.split("@")[0]}
+              </span>
             </Link>
             <button
               className="logout-btn-mini"
-              onClick={() => {
-                logout();
+              onClick={async () => {
+                await supabase.auth.signOut();
+                setUser(null);
                 navigate("/");
               }}
             >
@@ -177,13 +196,13 @@ const Header = () => {
             </button>
           </div>
         ) : (
-        <Link
-          to="/login"
-          className="header-cta hide-on-mobile"
-          onClick={scrollToTop}
-        >
-          <span>Entrar</span>
-        </Link>
+          <Link
+            to="/login"
+            className="header-cta hide-on-mobile"
+            onClick={scrollToTop}
+          >
+            <span>Entrar</span>
+          </Link>
         )}
         {/* Botão menu mobile */}
         <button
@@ -294,21 +313,24 @@ const Header = () => {
               {user ? (
                 <div className="mobile-menu-user-info">
                   <Link to="/dashboard" className="user-info-link">
-                    {user.avatar ? (
+                    {user?.user_metadata?.avatar_url ? (
                       <img
-                        src={user.avatar}
+                        src={user.user_metadata.avatar_url}
                         alt="Avatar"
                         className="user-avatar-mini"
                       />
                     ) : (
                       <FaUserCircle className="user-avatar-mini" />
                     )}
-                    <span className="user-name">{user.nome}</span>
+                    <span className="user-name">
+                      {user?.user_metadata?.name || user?.email?.split("@")[0]}
+                    </span>
                   </Link>
                   <button
                     className="logout-btn-mini"
-                    onClick={() => {
-                      logout();
+                    onClick={async () => {
+                      await supabase.auth.signOut();
+                      setUser(null);
                       navigate("/");
                       closeMobileMenu();
                     }}
@@ -317,16 +339,16 @@ const Header = () => {
                   </button>
                 </div>
               ) : (
-              <Link
-                to="/login"
-                className="mobile-menu-cta"
-                onClick={() => {
-                  closeMobileMenu();
-                  scrollToTop();
-                }}
-              >
-                <span>Entrar</span>
-              </Link>
+                <Link
+                  to="/login"
+                  className="mobile-menu-cta"
+                  onClick={() => {
+                    closeMobileMenu();
+                    scrollToTop();
+                  }}
+                >
+                  <span>Entrar</span>
+                </Link>
               )}
             </aside>
           </div>
