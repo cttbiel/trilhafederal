@@ -38,19 +38,36 @@
 
 .login-content {
   display: flex;
-  min-height: 600px;
-  background: #fff;
-  border-radius: 1.2rem;
-  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
-  overflow: visible;
+  width: 100%;
   max-width: 900px;
   margin: 3.5rem auto 2.5rem auto;
+  background: #fff;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.08);
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 75vh;
+  height: 75vh;
+  align-items: stretch;
+  animation: fadeSlideIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
   flex-direction: row;
+}
+
+.login-info,
+.login-form-section {
+  flex: 1 1 0;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0;
 }
 
 /* Left Side - Information */
 .login-info {
-  flex: 1;
+  flex: 1 1 0;
+  height: 100%;
+  min-height: 0;
   background: var(--gradient-primary);
   padding: 2.5rem 2rem;
   display: flex;
@@ -59,6 +76,7 @@
   color: white;
   position: relative;
   overflow: hidden;
+  border-radius: 20px 0 0 20px;
 }
 
 .login-info::before {
@@ -118,15 +136,17 @@
 
 /* Right Side - Form */
 .login-form-section {
-  flex: 1;
+  flex: 1 1 0;
+  height: 100%;
+  min-height: 0;
   padding: 2.5rem 2.2rem 2.5rem 2.2rem;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   min-width: 340px;
-  min-height: 600px;
   position: relative;
   overflow: visible;
+  border-radius: 0 20px 20px 0;
 }
 
 .login-header {
@@ -473,13 +493,22 @@
   .login-content {
     flex-direction: column-reverse;
     align-items: stretch;
-    min-height: 700px;
+    min-height: unset;
+    height: auto;
     margin: 2rem 0.5rem 2rem 0.5rem;
+    border-radius: 20px;
+  }
+  .login-info,
+  .login-form-section {
+    min-height: unset;
+    height: auto;
+    border-radius: 0;
+  }
+  .login-info {
+    border-radius: 0 0 20px 20px;
   }
   .login-form-section {
-    min-width: 0;
-    padding: 2.5rem 1.2rem 2.5rem 1.2rem;
-    min-height: 500px;
+    border-radius: 20px 20px 0 0;
   }
   .login-header {
     margin-bottom: 1rem;
@@ -522,15 +551,24 @@
 
 @media (max-width: 600px) {
   .login-content {
-    min-height: 100vh;
+    min-height: unset;
+    height: auto;
     margin: 0;
     border-radius: 0;
     box-shadow: none;
     flex-direction: column-reverse;
   }
+  .login-info,
   .login-form-section {
-    padding: 1.2rem 0.5rem 1.2rem 0.5rem;
-    min-height: 400px;
+    min-height: unset;
+    height: auto;
+    border-radius: 0;
+  }
+  .login-info {
+    display: none !important;
+  }
+  .login-form-section {
+    border-radius: 12px 12px 0 0;
   }
   .login-header {
     margin-bottom: 0.7rem;
@@ -552,17 +590,18 @@
 
 @media (max-width: 480px) {
   .login-content {
-    flex-direction: column;
+    flex-direction: column-reverse;
     margin: 0.7rem;
     border-radius: 10px;
     max-width: 98vw;
     min-width: 0;
   }
   .login-info {
-    display: none !important;
+    display: block !important;
+    border-radius: 0 0 10px 10px;
   }
   .login-form-section {
-    padding: 1.2rem 0.7rem !important;
+    border-radius: 10px 10px 0 0;
   }
   .login-info h1 {
     font-size: 1.2rem;
@@ -588,6 +627,44 @@
   .back-button {
     padding: 0.5rem 0.75rem;
     font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .login-content {
+    max-width: 96vw;
+    margin: 0.5rem auto;
+    border-radius: 8px;
+  }
+  .login-form-section {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem !important;
+  }
+  .login-header {
+    margin-bottom: 0.5rem;
+  }
+  .login-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .login-title {
+    font-size: 1.05rem;
+  }
+  .login-subtitle {
+    font-size: 0.92rem;
+  }
+  .form-input {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.6rem 0.6rem 2rem;
+  }
+  .login-button {
+    font-size: 1rem;
+    padding: 0.7rem 0;
+  }
+  .social-button {
+    font-size: 0.95rem;
+    padding: 0.6rem 0;
   }
 }
 

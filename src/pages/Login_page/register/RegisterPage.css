@@ -16,24 +16,41 @@
   display: flex;
   width: 100%;
   max-width: 1100px;
-  max-height: 700px;
   margin: 0;
   background: var(--background-white);
   box-shadow: var(--shadow-lg);
   border-radius: 20px;
   overflow: hidden;
-  min-height: auto;
+  min-height: 75vh;
+  height: 75vh;
+  align-items: stretch;
   animation: fadeSlideIn 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-direction: row;
+}
+
+.register-info,
+.register-form-section {
+  flex: 1 1 0;
+  height: 100%;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 0;
+}
+
+.register-form-section {
+  border-radius: 0 20px 20px 0;
+}
+
+.register-info {
+  border-radius: 20px 0 0 20px;
 }
 
 /* Left Side - Information */
 .register-info {
-  flex: 1;
   background: var(--gradient-primary);
   padding: 2.5rem 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   color: white;
   position: relative;
   overflow: hidden;
@@ -96,13 +113,7 @@
 
 /* Right Side - Form */
 .register-form-section {
-  flex: 1;
   padding: 2.5rem 2.2rem 2.5rem 2.2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  min-width: 340px;
-  min-height: 600px;
   position: relative;
   overflow: visible;
   background: var(--background-white);
@@ -114,10 +125,11 @@
 }
 
 .register-logo {
-  width: 80px;
-  height: 80px;
-  margin: 0 auto;
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 1.1rem auto;
   display: block;
+  object-fit: contain;
 }
 
 .register-title {
@@ -330,6 +342,52 @@
   }
 }
 
+@media (max-width: 900px) {
+  .register-content {
+    flex-direction: column-reverse;
+    align-items: stretch;
+    min-height: unset;
+    height: auto;
+    margin: 2rem 0.5rem 2rem 0.5rem;
+    border-radius: 20px;
+  }
+  .register-info,
+  .register-form-section {
+    min-height: unset;
+    height: auto;
+    border-radius: 0;
+  }
+  .register-info {
+    border-radius: 0 0 20px 20px;
+  }
+  .register-form-section {
+    border-radius: 20px 20px 0 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .register-content {
+    min-height: unset;
+    height: auto;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    flex-direction: column-reverse;
+  }
+  .register-info,
+  .register-form-section {
+    min-height: unset;
+    height: auto;
+    border-radius: 0;
+  }
+  .register-info {
+    display: none !important;
+  }
+  .register-form-section {
+    border-radius: 12px 12px 0 0;
+  }
+}
+
 @media (max-width: 768px) {
   .register-content {
     flex-direction: column;
@@ -351,17 +409,52 @@
 
 @media (max-width: 480px) {
   .register-content {
-    flex-direction: column;
-    margin: 0.2rem;
+    flex-direction: column-reverse;
+    margin: 0.7rem;
     border-radius: 10px;
-    max-width: 99vw;
+    max-width: 98vw;
     min-width: 0;
   }
   .register-info {
-    display: none !important;
+    display: block !important;
+    border-radius: 0 0 10px 10px;
   }
   .register-form-section {
-    padding: 1.2rem 0.7rem !important;
+    border-radius: 10px 10px 0 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .register-content {
+    max-width: 96vw;
+    margin: 0.5rem auto;
+    border-radius: 8px;
+  }
+  .register-form-section {
+    padding: 0.7rem 0.2rem 0.7rem 0.2rem !important;
+  }
+  .register-header {
+    margin-bottom: 0.5rem;
+  }
+  .register-logo {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+  }
+  .register-title {
+    font-size: 1.05rem;
+  }
+  .register-subtitle {
+    font-size: 0.92rem;
+  }
+  .register-form-input {
+    font-size: 0.95rem;
+    padding: 0.6rem 0.6rem 0.6rem 2rem;
+  }
+  .register-button {
+    font-size: 1rem;
+    padding: 0.7rem 0;
   }
 }
 
