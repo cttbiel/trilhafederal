@@ -134,7 +134,7 @@
 
 .universidades-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   padding: 2rem;
   border-radius: 0 0 1.5rem 1.5rem;
@@ -336,9 +336,16 @@ span {
 
 @media (min-width: 1500px) {
   .universidades-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+}
+
+@media (max-width: 1200px) {
+  .universidades-grid {
+    gap: 1.2rem;
+    padding: 1.2rem;
   }
 }
 
@@ -351,19 +358,17 @@ span {
     overflow-x: hidden;
   }
   .universidades-grid {
+    gap: 1rem;
     padding: 0.5rem;
     width: 100%;
     box-sizing: border-box;
-  }
-  .universidade-card {
-    max-width: 100%;
   }
 }
 
 @media (max-width: 768px) {
   .search-filter-content {
     flex-direction: column;
-    align-items: center;
+    gap: 1rem;
   }
 
   .search-container,
@@ -378,15 +383,15 @@ span {
 
   .universidades-grid {
     grid-template-columns: 1fr;
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .universidades-header {
-    padding: 2rem 1rem;
+    padding: 2rem 1rem 1rem 1rem;
   }
 
   .search-filter-section {
-    padding: 1.5rem;
+    padding: 1rem 1rem 0.5rem 1rem;
   }
 }
 

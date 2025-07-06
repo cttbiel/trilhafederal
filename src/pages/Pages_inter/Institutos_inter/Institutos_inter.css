@@ -134,7 +134,7 @@
 
 .institutos-grid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 2rem;
   padding: 2rem;
   border-radius: 0 0 1.5rem 1.5rem;
@@ -289,15 +289,18 @@ span {
   display: inline-block;
 }
 
-@media (max-width: 1500px) {
+@media (min-width: 1500px) {
   .institutos-grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
 @media (max-width: 1200px) {
   .institutos-grid {
-    grid-template-columns: repeat(3, 1fr);
+    gap: 1.2rem;
+    padding: 1.2rem;
   }
 }
 
@@ -310,13 +313,10 @@ span {
     overflow-x: hidden;
   }
   .institutos-grid {
+    gap: 1rem;
     padding: 0.5rem;
     width: 100%;
     box-sizing: border-box;
-  }
-
-  .instituto-card {
-    max-width: 100%;
   }
 }
 
@@ -397,12 +397,4 @@ span {
   background: linear-gradient(135deg, #e8f8f3 0%, #d1f2e6 100%);
   color: #00b894;
   border: 1px solid rgba(0, 184, 148, 0.1);
-}
-
-@media (min-width: 1500px) {
-  .institutos-grid {
-    grid-template-columns: repeat(4, 1fr);
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
 }
