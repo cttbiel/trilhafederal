@@ -310,33 +310,41 @@ const Header = () => {
                   </a>
                 </div>
               </nav>
+              {/* Bloco do usuário fixo na base do menu */}
               {user ? (
-                <div className="mobile-menu-user-info">
-                  <Link to="/dashboard" className="user-info-link">
-                    {user?.user_metadata?.avatar_url ? (
-                      <img
-                        src={user.user_metadata.avatar_url}
-                        alt="Avatar"
-                        className="user-avatar-mini"
-                      />
-                    ) : (
-                      <FaUserCircle className="user-avatar-mini" />
-                    )}
-                    <span className="user-name">
-                      {user?.user_metadata?.name || user?.email?.split("@")[0]}
-                    </span>
-                  </Link>
-                  <button
-                    className="logout-btn-mini"
-                    onClick={async () => {
-                      await supabase.auth.signOut();
-                      setUser(null);
-                      navigate("/");
-                      closeMobileMenu();
-                    }}
-                  >
-                    <FaSignOutAlt /> Sair
-                  </button>
+                <div className="mobile-menu-user-footer">
+                  <div className="mobile-menu-user-info">
+                    <Link
+                      to="/dashboard"
+                      className="user-info-link"
+                      onClick={closeMobileMenu}
+                    >
+                      {user?.user_metadata?.avatar_url ? (
+                        <img
+                          src={user.user_metadata.avatar_url}
+                          alt="Avatar"
+                          className="user-avatar-mini"
+                        />
+                      ) : (
+                        <FaUserCircle className="user-avatar-mini" />
+                      )}
+                      <span className="user-name">
+                        {user?.user_metadata?.name ||
+                          user?.email?.split("@")[0]}
+                      </span>
+                    </Link>
+                    <button
+                      className="logout-btn-mini"
+                      onClick={async () => {
+                        await supabase.auth.signOut();
+                        setUser(null);
+                        navigate("/");
+                        closeMobileMenu();
+                      }}
+                    >
+                      <FaSignOutAlt /> Sair
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <Link
