@@ -55,7 +55,7 @@ const Internacional = () => {
                 <li>Acomodação subsidiada</li>
               </ul>
               <a
-                href="https://www.br.emb-japan.go.jp/itpr_pt/bolsa_mext.html"
+                href="https://www.br.emb-japan.go.jp/itpr_pt/bolsas_programas.html"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"
@@ -83,7 +83,7 @@ const Internacional = () => {
                 <li>Atividades em alto-mar e em terra</li>
               </ul>
               <a
-                href="https://www.swyaa.org.br/"
+                href="http://www.swyaabrasil.org/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="btn btn-primary"

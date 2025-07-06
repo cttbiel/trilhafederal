@@ -46,7 +46,11 @@ const LoginPage = () => {
       password: formData.password,
     });
     if (error) {
-      showToast(error.message, "error");
+      let msg = error.message;
+      if (msg === "Invalid login credentials") {
+        msg = "Email ou senha incorretos. Por favor, tente novamente.";
+      }
+      showToast(msg, "error");
       setLoading(false);
       return;
     }
