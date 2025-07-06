@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://trilhafederal.vercel.app/sitemap.xml 

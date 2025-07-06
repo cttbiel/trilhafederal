@@ -1,0 +1,371 @@
+[
+  {
+    "nome": "CEFET-MG - Centro Federal de Educação Tecnológica de Minas Gerais",
+    "tipo": "Escola Técnica Federal",
+    "sigla": "CEFET-MG",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "cidade": "Belo Horizonte",
+    "campi": [
+      {
+        "nome": "Campus Belo Horizonte",
+        "endereco": "Av. Amazonas, 5253, Nova Suíssa, Belo Horizonte - MG, CEP 30421-169"
+      },
+      {
+        "nome": "Campus Araxá",
+        "endereco": "Av. Ministro Olavo Drummond, 25, São Geraldo, Araxá - MG, CEP 38104-200"
+      },
+      {
+        "nome": "Campus Divinópolis",
+        "endereco": "Rua Álvares de Azevedo, 400, Bela Vista, Divinópolis - MG, CEP 35503-822"
+      }
+    ],
+    "cursos_graduacao": [
+      "Engenharia de Controle e Automação",
+      "Engenharia Elétrica",
+      "Engenharia Mecânica",
+      "Administração"
+    ],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Informática", "modalidade": "Integrado" },
+      { "nome": "Técnico em Eletrotécnica", "modalidade": "Integrado" },
+      { "nome": "Técnico em Mecânica", "modalidade": "Subsequente" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular CEFET-MG",
+        "descricao": "Processo seletivo próprio para cursos técnicos e superiores, com provas objetivas e redação.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      },
+      {
+        "nome": "ENEM/SiSU",
+        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "datas": {
+          "inscricoes": "Janeiro de 2025"
+        }
+      }
+    ],
+    "cotas": [
+      {
+        "modalidade": "Lei de Cotas CEFET-MG",
+        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal."
+      }
+    ],
+    "contatos": {
+      "site": "https://www.cefetmg.br",
+      "telefone": "(31) 3319-7000",
+      "email": "reitoria@cefetmg.br",
+      "instagram": "@cefetmg"
+    },
+    "imagens": {
+      "campus": "/assets/instituicoes/CEFET_campus.jpg",
+      "logo": "/assets/instituicoes/CEFET_logo.png"
+    },
+    "descricao": "O CEFET-MG é referência nacional em educação técnica e tecnológica, com forte atuação em Minas Gerais. Oferece cursos técnicos, de graduação e pós-graduação, promovendo inovação, inclusão e desenvolvimento regional."
+  },
+  {
+    "nome": "CEFET-RJ - Centro Federal de Educação Tecnológica Celso Suckow da Fonseca",
+    "tipo": "Escola Técnica Federal",
+    "sigla": "CEFET-RJ",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "cidade": "Rio de Janeiro",
+    "campi": [
+      {
+        "nome": "Campus Maracanã",
+        "endereco": "Av. Maracanã, 229, Maracanã, Rio de Janeiro - RJ, CEP 20271-110"
+      },
+      {
+        "nome": "Campus Nova Iguaçu",
+        "endereco": "Av. Gov. Roberto Silveira, s/n, Centro, Nova Iguaçu - RJ, CEP 26275-580"
+      }
+    ],
+    "cursos_graduacao": [
+      "Engenharia de Produção",
+      "Engenharia Elétrica",
+      "Engenharia Mecânica",
+      "Administração"
+    ],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Informática", "modalidade": "Integrado" },
+      { "nome": "Técnico em Eletrotécnica", "modalidade": "Integrado" },
+      { "nome": "Técnico em Mecânica", "modalidade": "Subsequente" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular CEFET-RJ",
+        "descricao": "Processo seletivo próprio para cursos técnicos e superiores, com provas objetivas e redação.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      },
+      {
+        "nome": "ENEM/SiSU",
+        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "datas": {
+          "inscricoes": "Janeiro de 2025"
+        }
+      }
+    ],
+    "cotas": [
+      {
+        "modalidade": "Lei de Cotas CEFET-RJ",
+        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal."
+      }
+    ],
+    "contatos": {
+      "site": "https://www.cefet-rj.br",
+      "telefone": "(21) 2566-3000",
+      "email": "reitoria@cefet-rj.br",
+      "instagram": "@cefetrj"
+    },
+    "imagens": {
+      "campus": "/assets/instituicoes/CEFETRJ_campus.jpg",
+      "logo": "/assets/instituicoes/CEFETRJ_logo.png"
+    },
+    "descricao": "O CEFET-RJ é uma das principais instituições de ensino técnico e tecnológico do Brasil, com tradição em inovação, pesquisa e formação de profissionais qualificados."
+  },
+  {
+    "nome": "COLTEC - Colégio Técnico da UFMG",
+    "tipo": "Colégio Técnico Universitário",
+    "sigla": "COLTEC",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "cidade": "Belo Horizonte",
+    "campi": [
+      {
+        "nome": "Campus UFMG",
+        "endereco": "Av. Antônio Carlos, 6627, Pampulha, Belo Horizonte - MG, CEP 31270-901"
+      }
+    ],
+    "cursos_graduacao": [],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Informática", "modalidade": "Integrado" },
+      { "nome": "Técnico em Eletrônica", "modalidade": "Integrado" },
+      { "nome": "Técnico em Química", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular COLTEC",
+        "descricao": "Processo seletivo próprio para cursos técnicos integrados ao ensino médio.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      }
+    ],
+    "cotas": [
+      {
+        "modalidade": "Lei de Cotas COLTEC",
+        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal."
+      }
+    ],
+    "contatos": {
+      "site": "https://www.coltec.ufmg.br",
+      "telefone": "(31) 3409-4000",
+      "email": "coltec@coltec.ufmg.br",
+      "instagram": "@coltecufmg"
+    },
+    "imagens": {
+      "campus": "/assets/instituicoes/COLTEC_campus.jpg",
+      "logo": "/assets/instituicoes/COLTEC_logo.png"
+    },
+    "descricao": "O COLTEC é referência em ensino técnico integrado ao ensino médio, com tradição em inovação, pesquisa e formação de jovens profissionais em Minas Gerais."
+  },
+  {
+    "nome": "COLUNI - Colégio Universitário da UFV",
+    "tipo": "Colégio Técnico Universitário",
+    "sigla": "COLUNI",
+    "estado": "Minas Gerais",
+    "regiao": "Sudeste",
+    "cidade": "Viçosa",
+    "campi": [
+      {
+        "nome": "Campus UFV",
+        "endereco": "Avenida Peter Henry Rolfs, s/n, Campus Universitário, Viçosa - MG, CEP 36570-900"
+      }
+    ],
+    "cursos_graduacao": [],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Informática", "modalidade": "Integrado" },
+      { "nome": "Técnico em Química", "modalidade": "Integrado" },
+      { "nome": "Técnico em Agropecuária", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular COLUNI",
+        "descricao": "Processo seletivo próprio para cursos técnicos integrados ao ensino médio.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      }
+    ],
+    "cotas": [
+      {
+        "modalidade": "Lei de Cotas COLUNI",
+        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal."
+      }
+    ],
+    "contatos": {
+      "site": "https://www.coluni.ufv.br",
+      "telefone": "(31) 3612-6000",
+      "email": "coluni@ufv.br",
+      "instagram": "@coluniufv"
+    },
+    "imagens": {
+      "campus": "/assets/instituicoes/COLUNI_campus.jpg",
+      "logo": "/assets/instituicoes/COLUNI_logo.png"
+    },
+    "descricao": "O COLUNI é um colégio técnico universitário vinculado à UFV, referência em ensino técnico integrado ao ensino médio, com tradição em formação de jovens profissionais."
+  },
+  {
+    "nome": "Colégio Pedro II",
+    "tipo": "Colégio Técnico Federal",
+    "sigla": "PEDROII",
+    "estado": "Rio de Janeiro",
+    "regiao": "Sudeste",
+    "cidade": "Rio de Janeiro",
+    "campi": [
+      {
+        "nome": "Campus Centro",
+        "endereco": "Rua Campo de Santana, 131, Centro, Rio de Janeiro - RJ, CEP 20211-130"
+      },
+      {
+        "nome": "Campus São Cristóvão",
+        "endereco": "Rua São Cristóvão, 177, São Cristóvão, Rio de Janeiro - RJ, CEP 20940-001"
+      }
+    ],
+    "cursos_graduacao": [],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Informática", "modalidade": "Integrado" },
+      { "nome": "Técnico em Administração", "modalidade": "Integrado" },
+      { "nome": "Técnico em Química", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibular Pedro II",
+        "descricao": "Processo seletivo próprio para cursos técnicos integrados ao ensino médio.",
+        "datas": {
+          "inscricoes": "Setembro a Outubro de 2024",
+          "provas": "Novembro de 2024"
+        }
+      }
+    ],
+    "cotas": [
+      {
+        "modalidade": "Lei de Cotas Pedro II",
+        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme Lei Federal."
+      }
+    ],
+    "contatos": {
+      "site": "https://www.cp2.g12.br",
+      "telefone": "(21) 3822-8000",
+      "email": "reitoria@cp2.g12.br",
+      "instagram": "@colegiopedroii"
+    },
+    "imagens": {
+      "campus": "/assets/instituicoes/COLÉGIO_PEDRO_campus.jpeg",
+      "logo": "/assets/instituicoes/PEDROII_logo.png"
+    },
+    "descricao": "O Colégio Pedro II é uma das instituições de ensino mais tradicionais do Brasil, referência em educação básica e técnica, com diversos campi no Rio de Janeiro."
+  },
+  {
+    "nome": "ETEC Getúlio Vargas",
+    "tipo": "Escola Técnica Estadual",
+    "sigla": "ETEC-GV",
+    "estado": "São Paulo",
+    "regiao": "Sudeste",
+    "cidade": "São Paulo",
+    "campi": [
+      {
+        "nome": "Unidade Central",
+        "endereco": "Av. Tiradentes, 822, Luz, São Paulo - SP, CEP 01102-000"
+      }
+    ],
+    "cursos_graduacao": [],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Administração", "modalidade": "Integrado" },
+      { "nome": "Técnico em Informática", "modalidade": "Integrado" },
+      { "nome": "Técnico em Química", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibulinho ETEC",
+        "descricao": "Processo seletivo próprio para cursos técnicos integrados ao ensino médio.",
+        "datas": {
+          "inscricoes": "Abril a Maio de 2024",
+          "provas": "Junho de 2024"
+        }
+      }
+    ],
+    "cotas": [
+      {
+        "modalidade": "Lei de Cotas ETEC",
+        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme legislação estadual."
+      }
+    ],
+    "contatos": {
+      "site": "https://www.etecgv.com.br",
+      "telefone": "(11) 3326-3000",
+      "email": "secretaria@etecgv.com.br",
+      "instagram": "@etecgetuliovargas"
+    },
+    "imagens": {
+      "campus": "/assets/instituicoes/ETECGV_campus.jpg",
+      "logo": "/assets/instituicoes/ETECGV_logo.png"
+    },
+    "descricao": "A ETEC Getúlio Vargas é uma das mais tradicionais escolas técnicas estaduais de São Paulo, referência em ensino técnico integrado ao ensino médio, com forte atuação em áreas como administração, informática e química."
+  },
+  {
+    "nome": "ETEC de São José dos Campos",
+    "tipo": "Escola Técnica Estadual",
+    "sigla": "ETEC-SJC",
+    "estado": "São Paulo",
+    "regiao": "Sudeste",
+    "cidade": "São José dos Campos",
+    "campi": [
+      {
+        "nome": "Unidade Central",
+        "endereco": "Rua Felício Savastano, 300, Vila Industrial, São José dos Campos - SP, CEP 12220-160"
+      }
+    ],
+    "cursos_graduacao": [],
+    "cursos_tecnicos": [
+      { "nome": "Técnico em Mecatrônica", "modalidade": "Integrado" },
+      { "nome": "Técnico em Logística", "modalidade": "Integrado" },
+      { "nome": "Técnico em Informática", "modalidade": "Integrado" }
+    ],
+    "processos_seletivos": [
+      {
+        "nome": "Vestibulinho ETEC",
+        "descricao": "Processo seletivo próprio para cursos técnicos integrados ao ensino médio.",
+        "datas": {
+          "inscricoes": "Abril a Maio de 2024",
+          "provas": "Junho de 2024"
+        }
+      }
+    ],
+    "cotas": [
+      {
+        "modalidade": "Lei de Cotas ETEC",
+        "descricao": "Reserva de vagas para estudantes de escolas públicas, pretos, pardos, indígenas e pessoas com deficiência, conforme legislação estadual."
+      }
+    ],
+    "contatos": {
+      "site": "https://www.etecsanjosedoscampos.com.br",
+      "telefone": "(12) 3921-7000",
+      "email": "secretaria@etecsanjosedoscampos.com.br",
+      "instagram": "@etecsanjosedoscampos"
+    },
+    "imagens": {
+      "campus": "/assets/instituicoes/ETECSJC_campus.jpg",
+      "logo": "/assets/instituicoes/ETECSJC_logo.png"
+    },
+    "descricao": "A ETEC de São José dos Campos é referência em ensino técnico estadual, com destaque para os cursos de mecatrônica, logística e informática, formando profissionais qualificados para o mercado regional."
+  }
+]
