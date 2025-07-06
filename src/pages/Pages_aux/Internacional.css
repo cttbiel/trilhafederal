@@ -310,6 +310,17 @@
   transform: translateY(-6px) scale(1.035);
   box-shadow: 0 8px 40px rgba(30, 58, 138, 0.16);
 }
+.programa-icon,
+.programa-icon.japao,
+.programa-icon.swyaa {
+  background: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .programa-icon {
   width: 80px;
   height: 80px;

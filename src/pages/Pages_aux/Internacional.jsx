@@ -13,13 +13,25 @@ const Internacional = () => {
         <div className="container">
           <div className="hero-internacional-flags">
             <span className="flag" role="img" aria-label="Bandeira do Japão">
-              🇯🇵
+              <img
+                src="/assets/internacional/japao.png"
+                alt="Bandeira do Japão"
+                style={{ height: "1.7em", verticalAlign: "middle" }}
+              />
             </span>
             <span className="flag" role="img" aria-label="Bandeira do Brasil">
-              🇧🇷
+              <img
+                src="/assets/internacional/brasil.png"
+                alt="Bandeira do Brasil"
+                style={{ height: "1.7em", verticalAlign: "middle" }}
+              />
             </span>
-            <span className="flag" role="img" aria-label="Bandeira do Mundo">
-              🌎
+            <span className="flag" role="img" aria-label="Planeta Terra">
+              <img
+                src="/assets/internacional/planeta.png"
+                alt="Planeta Terra"
+                style={{ height: "1.7em", verticalAlign: "middle" }}
+              />
             </span>
           </div>
           <h1 className="hero-internacional-title">Trilha Internacional</h1>
@@ -36,9 +48,11 @@ const Internacional = () => {
             {/* MEXT */}
             <div className="programa-card-internacional">
               <div className="programa-icon japao">
-                <span role="img" aria-label="Bandeira do Japão">
-                  🇯🇵
-                </span>
+                <img
+                  src="/assets/internacional/japao.png"
+                  alt="Bandeira do Japão"
+                  style={{ height: "2em", verticalAlign: "middle" }}
+                />
               </div>
               <h2>MEXT - Japão</h2>
               <p className="programa-desc">
@@ -67,7 +81,11 @@ const Internacional = () => {
             {/* SWYAA */}
             <div className="programa-card-internacional">
               <div className="programa-icon swyaa">
-                <FaShip size={36} />
+                <img
+                  src="/assets/internacional/navio.png"
+                  alt="Navio SWYAA"
+                  style={{ height: "2em", verticalAlign: "middle" }}
+                />
               </div>
               <h2>SWYAA - Ship for World Youth Alumni Association</h2>
               <p className="programa-desc">

@@ -26,6 +26,88 @@ function getInstituicaoFavorita(sigla) {
   );
 }
 
+function parseDataVestibular(dataStr) {
+  if (!dataStr || typeof dataStr !== "string") return [];
+  dataStr = dataStr.trim().toLowerCase();
+  // Ignorar datas vagas
+  if (
+    dataStr.includes("a serem anunciadas") ||
+    dataStr.includes("em breve") ||
+    dataStr.includes("indefinido")
+  ) {
+    return [];
+  }
+  const meses = [
+    "janeiro",
+    "fevereiro",
+    "março",
+    "abril",
+    "maio",
+    "junho",
+    "julho",
+    "agosto",
+    "setembro",
+    "outubro",
+    "novembro",
+    "dezembro",
+  ];
+  const hoje = new Date();
+  let datas = [];
+  // dd/mm/yyyy
+  if (/\d{2}\/\d{2}\/\d{4}/.test(dataStr)) {
+    const [d, m, y] = dataStr.split("/");
+    const dt = new Date(`${y}-${m}-${d}`);
+    if (dt >= hoje) datas.push(dt);
+    return datas;
+  }
+  // "Janeiro de 2025" ou "Novembro de 2024"
+  let match = dataStr.match(/([a-zçãéíúôê]+) de (\d{4})/i);
+  if (match) {
+    const mes = meses.findIndex((m) => m === match[1]);
+    if (mes >= 0) {
+      const dt = new Date(Number(match[2]), mes, 1);
+      if (dt >= hoje) datas.push(dt);
+    }
+  }
+  // "Setembro a Outubro de 2024" ou "Abril e Junho de 2025"
+  match = dataStr.match(/([a-zçãéíúôê]+)[ aez]+([a-zçãéíúôê]+) de (\d{4})/i);
+  if (match) {
+    const mes1 = meses.findIndex((m) => m === match[1]);
+    const mes2 = meses.findIndex((m) => m === match[2]);
+    const ano = Number(match[3]);
+    if (mes1 >= 0) {
+      const dt1 = new Date(ano, mes1, 1);
+      if (dt1 >= hoje) datas.push(dt1);
+    }
+    if (mes2 >= 0) {
+      const dt2 = new Date(ano, mes2, 1);
+      if (dt2 >= hoje) datas.push(dt2);
+    }
+  }
+  // "Abril e Junho de 2025"
+  match = dataStr.match(/([a-zçãéíúôê]+) e ([a-zçãéíúôê]+) de (\d{4})/i);
+  if (match) {
+    const mes1 = meses.findIndex((m) => m === match[1]);
+    const mes2 = meses.findIndex((m) => m === match[2]);
+    const ano = Number(match[3]);
+    if (mes1 >= 0) {
+      const dt1 = new Date(ano, mes1, 1);
+      if (dt1 >= hoje) datas.push(dt1);
+    }
+    if (mes2 >= 0) {
+      const dt2 = new Date(ano, mes2, 1);
+      if (dt2 >= hoje) datas.push(dt2);
+    }
+  }
+  // Apenas ano
+  match = dataStr.match(/(\d{4})/);
+  if (match) {
+    const dt = new Date(Number(match[1]), 0, 1);
+    if (dt >= hoje) datas.push(dt);
+  }
+  return datas;
+}
+
 const Dashboard = () => {
   const { favorites, removeFavorite } = useAuth();
   const [user, setUser] = useState(null);
@@ -52,7 +134,6 @@ const Dashboard = () => {
       setProximosEventos([]);
       return;
     }
-    const hoje = new Date();
     let eventos = [];
     favorites.forEach((sigla) => {
       const inst = getInstituicaoFavorita(sigla);
@@ -60,43 +141,8 @@ const Dashboard = () => {
       inst.processos_seletivos.forEach((proc) => {
         if (proc.datas) {
           Object.entries(proc.datas).forEach(([etapa, dataStr]) => {
-            // Tenta converter a data para formato Date
-            let dataVest = null;
-            // Suporta formatos tipo "Janeiro de 2025" ou "10/11/2024"
-            if (/\d{2}\/\d{2}\/\d{4}/.test(dataStr)) {
-              // Formato dd/mm/yyyy
-              const [d, m, y] = dataStr.split("/");
-              dataVest = new Date(`${y}-${m}-${d}`);
-            } else if (/\d{4}/.test(dataStr)) {
-              // Tenta pegar ano
-              dataVest = new Date(dataStr);
-            } else {
-              // Tenta converter mês/ano tipo "Janeiro de 2025"
-              const meses = [
-                "janeiro",
-                "fevereiro",
-                "março",
-                "abril",
-                "maio",
-                "junho",
-                "julho",
-                "agosto",
-                "setembro",
-                "outubro",
-                "novembro",
-                "dezembro",
-              ];
-              const match = dataStr.match(/([A-Za-zçãéíúôê]+) de (\d{4})/i);
-              if (match) {
-                const mes = meses.findIndex(
-                  (m) => m === match[1].toLowerCase()
-                );
-                if (mes >= 0) {
-                  dataVest = new Date(Number(match[2]), mes, 1);
-                }
-              }
-            }
-            if (dataVest && dataVest >= hoje) {
+            const datas = parseDataVestibular(dataStr);
+            datas.forEach((dataVest) => {
               eventos.push({
                 sigla,
                 nome: inst.nome,
@@ -106,12 +152,11 @@ const Dashboard = () => {
                 data: dataStr,
                 dataObj: dataVest,
               });
-            }
+            });
           });
         }
       });
     });
-    // Ordena por data
     eventos.sort((a, b) => a.dataObj - b.dataObj);
     setProximosEventos(eventos.slice(0, 3));
   }, [favorites]);
