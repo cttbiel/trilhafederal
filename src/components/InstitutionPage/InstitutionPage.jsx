@@ -50,10 +50,10 @@ const InstitutionPage = ({
 
   // Padronizar tipo para exibição
   let tipoPadrao = tipo;
-  if (
+    if (
     tipo?.toLowerCase().includes("técnico") ||
     tipo?.toLowerCase().includes("tecnico") ||
-    tipo?.toLowerCase().includes("colégio") ||
+      tipo?.toLowerCase().includes("colégio") ||
     tipo?.toLowerCase().includes("colegio")
   ) {
     tipoPadrao = "Colégio Técnico";

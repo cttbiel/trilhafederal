@@ -1,16 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import {
-  FaEnvelope,
-  FaLock,
-  FaEye,
-  FaEyeSlash,
-  FaGoogle,
-  FaFacebook,
-  FaUser,
-  FaGraduationCap,
-  FaArrowLeft,
-} from "react-icons/fa";
+import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaUser } from "react-icons/fa";
 import "./Login-page.css";
 import { useAuth } from "../../../AuthContext";
 import { useToast } from "../../../GlobalToast";
@@ -44,8 +34,6 @@ const LoginPage = () => {
     e.preventDefault();
     setLoading(true);
     setSuccess("");
-
-    // Validação dos campos antes de bloquear o login
     if (!formData.email || !formData.password) {
       showToast("Por favor, preencha todos os campos.", "error");
       setLoading(false);
@@ -56,8 +44,6 @@ const LoginPage = () => {
       setLoading(false);
       return;
     }
-
-    // Bloquear login até termos backend
     setTimeout(() => {
       showToast(
         "O login está temporariamente desativado. Aguarde a implementação do backend.",
@@ -68,195 +54,109 @@ const LoginPage = () => {
     return;
   };
 
-  const handleSocialLogin = (provider) => {
-    setLoading(true);
-    setSuccess("");
-    setTimeout(() => {
-      showToast(
-        `Login com ${provider} ainda não está disponível. Aguarde novidades!`,
-        "error"
-      );
-      setLoading(false);
-    }, 900);
-  };
-
   const handleForgotPassword = () => {
-    // Navigate to forgot password page or show modal
-    setSuccess("Link de recuperação enviado para seu email!");
+    showToast(
+      "Em breve você poderá recuperar sua senha por email! Por enquanto, entre em contato pelo nosso suporte.",
+      "error"
+    );
   };
 
   return (
-    <div className="login-page-container">
-      <div className="login-content">
-        {/* Left Side - Information */}
-        <div className="login-info">
-          <div className="login-info-content">
-            <h1>Bem-vindo ao Trilha Federal</h1>
-            <p>
-              Acesse sua conta para acompanhar seus vestibulares favoritos e ter
-              acesso a recursos exclusivos para sua preparação.
-            </p>
-            <ul className="login-features">
-              <li>Acompanhe seus vestibulares favoritos</li>
-              <li>Acesse simulados exclusivos</li>
-              <li>Receba notificações personalizadas</li>
-              <li>Participe da comunidade de estudantes</li>
-              <li>Tenha acesso a estatísticas detalhadas</li>
-            </ul>
-          </div>
+    <div className="login-page-clean-container">
+      <div className="login-clean-card">
+        <div className="login-clean-header">
+          <img
+            src="/assets/Main_images/logo_site_img_005.png"
+            alt="Trilha Federal"
+            className="login-clean-logo"
+          />
+          <h1 className="login-clean-title">Bem-vindo de volta!</h1>
+          <p className="login-clean-subtitle">
+            Acesse sua conta para acompanhar seus vestibulares favoritos
+          </p>
         </div>
-
-        {/* Right Side - Form */}
-        <div className="login-form-section">
-          {/* Botão Voltar */}
-          <Link to="/" className="login-back-btn">
-            ← Voltar para a página inicial
-          </Link>
-          {/* Header */}
-          <div className="login-header">
-            <img
-              src="/assets/Main_images/logo_site_img_005.png"
-              alt="Trilha Federal"
-              className="login-logo"
+        <form className="login-clean-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              className="form-input"
+              placeholder="seu@email.com"
+              required
+              disabled={loading}
             />
-            <h1 className="login-title">Bem-vindo de volta!</h1>
-            <p className="login-subtitle">
-              Acesse sua conta para acompanhar seus vestibulares favoritos
-            </p>
+            <FaEnvelope className="input-icon" />
           </div>
-
-          {/* Login Form */}
-          <form className="login-form" onSubmit={handleSubmit}>
-            {/* Email Field */}
-            <div className="form-group">
-              <label htmlFor="email" className="form-label">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="form-input"
-                placeholder="seu@email.com"
-                required
-                disabled={loading}
-              />
-              <FaEnvelope className="input-icon" />
-            </div>
-
-            {/* Password Field */}
-            <div className="form-group">
-              <label htmlFor="password" className="form-label">
-                Senha
-              </label>
-              <input
-                type={showPassword ? "text" : "password"}
-                id="password"
-                name="password"
-                value={formData.password}
-                onChange={handleInputChange}
-                className="form-input"
-                placeholder="Sua senha"
-                required
-                disabled={loading}
-              />
-              <FaLock className="input-icon" />
-              <button
-                type="button"
-                className="password-toggle"
-                onClick={togglePasswordVisibility}
-                disabled={loading}
-              >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
-              </button>
-            </div>
-
-            {/* Remember Me & Forgot Password */}
-            <div className="remember-forgot">
-              <label className="remember-me">
-                <input
-                  type="checkbox"
-                  checked={rememberMe}
-                  onChange={(e) => setRememberMe(e.target.checked)}
-                  disabled={loading}
-                />
-                Lembrar de mim
-              </label>
-              <button
-                type="button"
-                className="forgot-password"
-                onClick={handleForgotPassword}
-                disabled={loading}
-              >
-                Esqueceu a senha?
-              </button>
-            </div>
-
-            {/* Login Button */}
-            <button type="submit" className="login-button" disabled={loading}>
-              {loading ? (
-                <>
-                  <span className="loading-spinner"></span>
-                  Entrando...
-                </>
-              ) : (
-                "Entrar"
-              )}
-            </button>
-          </form>
-
-          {/* Divider */}
-          <div className="divider">
-            <span>ou continue com</span>
-          </div>
-
-          {/* Social Login */}
-          <div className="social-login">
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">
+              Senha
+            </label>
+            <input
+              type={showPassword ? "text" : "password"}
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleInputChange}
+              className="form-input"
+              placeholder="Sua senha"
+              required
+              disabled={loading}
+            />
+            <FaLock className="input-icon" />
             <button
               type="button"
-              className="social-button google"
-              onClick={() => handleSocialLogin("Google")}
+              className="password-toggle"
+              onClick={togglePasswordVisibility}
               disabled={loading}
             >
-              <FaGoogle />
-              Google
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
+          </div>
+          <div className="remember-forgot">
+            <label className="remember-me">
+              <input
+                type="checkbox"
+                checked={rememberMe}
+                onChange={(e) => setRememberMe(e.target.checked)}
+                disabled={loading}
+              />
+              Lembrar de mim
+            </label>
             <button
               type="button"
-              className="social-button facebook"
-              onClick={() => handleSocialLogin("Facebook")}
+              className="forgot-password"
+              onClick={handleForgotPassword}
               disabled={loading}
             >
-              <FaFacebook />
-              Facebook
+              Esqueceu a senha?
             </button>
           </div>
-
-          {/* Sign Up Section */}
-          <div className="signup-section">
-            <p className="signup-text">Ainda não tem uma conta?</p>
-            <Link to="/cadastro" className="signup-button">
-              <FaUser style={{ marginRight: "0.5rem" }} />
-              Criar conta
-            </Link>
-          </div>
-
-          {/* Additional Info */}
-          <div
-            style={{
-              textAlign: "center",
-              marginTop: "2rem",
-              fontSize: "0.9rem",
-              color: "#6b7280",
-            }}
+          <button
+            type="submit"
+            className="login-clean-button"
+            disabled={loading}
           >
-            <p>
-              <FaGraduationCap style={{ marginRight: "0.5rem" }} />
-              Acesse recursos exclusivos para vestibulares federais
-            </p>
-          </div>
+            {loading ? (
+              <>
+                <span className="loading-spinner"></span>
+                Entrando...
+              </>
+            ) : (
+              "Entrar"
+            )}
+          </button>
+        </form>
+        <div className="login-clean-signup">
+          <span>Ainda não tem uma conta?</span>
+          <Link to="/cadastro" className="login-clean-signup-btn">
+            <FaUser style={{ marginRight: "0.5rem" }} /> Criar conta
+          </Link>
         </div>
       </div>
     </div>

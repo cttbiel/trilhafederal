@@ -62,14 +62,7 @@ function App() {
       <Router>
         <div className="App">
           <Routes>
-            {/* Página de login sem Header e Footer */}
-            <Route path="/login" element={<LoginPage />} />
-            {/* Página de cadastro sem Header e Footer */}
-            <Route path="/cadastro" element={<RegisterPage />} />
-            {/* Dashboard pós-login */}
-            <Route path="/dashboard" element={<Dashboard />} />
-
-            {/* Todas as outras páginas com Header e Footer */}
+            {/* Todas as páginas com Header e Footer, inclusive login e cadastro */}
             <Route
               path="/*"
               element={
@@ -85,6 +78,9 @@ function App() {
                       />
                       <Route path="/tecnicos" element={<TecnicosInter />} />
                       <Route path="/institutos" element={<InstitutosInter />} />
+                      <Route path="/login" element={<LoginPage />} />
+                      <Route path="/cadastro" element={<RegisterPage />} />
+                      <Route path="/dashboard" element={<Dashboard />} />
 
                       {/* Rotas das Universidades */}
                       <Route path="/universidade/ufmg" element={<UFMG />} />

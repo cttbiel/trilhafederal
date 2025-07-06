@@ -177,13 +177,13 @@ const Header = () => {
             </button>
           </div>
         ) : (
-          <Link
-            to="/login"
-            className="header-cta hide-on-mobile"
-            onClick={scrollToTop}
-          >
-            <span>Entrar</span>
-          </Link>
+        <Link
+          to="/login"
+          className="header-cta hide-on-mobile"
+          onClick={scrollToTop}
+        >
+          <span>Entrar</span>
+        </Link>
         )}
         {/* Botão menu mobile */}
         <button
@@ -317,16 +317,16 @@ const Header = () => {
                   </button>
                 </div>
               ) : (
-                <Link
-                  to="/login"
-                  className="mobile-menu-cta"
-                  onClick={() => {
-                    closeMobileMenu();
-                    scrollToTop();
-                  }}
-                >
-                  <span>Entrar</span>
-                </Link>
+              <Link
+                to="/login"
+                className="mobile-menu-cta"
+                onClick={() => {
+                  closeMobileMenu();
+                  scrollToTop();
+                }}
+              >
+                <span>Entrar</span>
+              </Link>
               )}
             </aside>
           </div>

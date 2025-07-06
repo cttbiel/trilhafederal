@@ -39,8 +39,6 @@ const RegisterPage = () => {
     e.preventDefault();
     setLoading(true);
     setSuccess("");
-
-    // Validação dos campos antes de simular cadastro
     if (
       !formData.name ||
       !formData.email ||
@@ -66,8 +64,6 @@ const RegisterPage = () => {
       setLoading(false);
       return;
     }
-
-    // Bloquear cadastro até termos backend
     setTimeout(() => {
       showToast(
         "O cadastro está temporariamente desativado. Aguarde a implementação do backend.",
@@ -79,159 +75,124 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="register-page-container">
-      <div className="register-content">
-        {/* Left Side - Information */}
-        <div className="register-info">
-          <div className="register-info-content">
-            <h1>Crie sua conta no Trilha Federal</h1>
-            <p>
-              Cadastre-se para acompanhar vestibulares, acessar simulados,
-              receber notificações e participar da comunidade!
-            </p>
-            <ul className="register-features">
-              <li>Crie seu perfil personalizado</li>
-              <li>Acompanhe vestibulares e simulados</li>
-              <li>Receba notificações exclusivas</li>
-              <li>Participe da comunidade de estudantes</li>
-              <li>Tenha acesso a estatísticas detalhadas</li>
-            </ul>
-          </div>
+    <div className="register-page-clean-container">
+      <div className="register-clean-card">
+        <div className="register-clean-header">
+          <img
+            src="/assets/Main_images/logo_site_img_005.png"
+            alt="Trilha Federal"
+            className="register-clean-logo"
+          />
+          <h1 className="register-clean-title">Criar conta</h1>
+          <p className="register-clean-subtitle">
+            Preencha os campos abaixo para criar sua conta gratuita
+          </p>
         </div>
-        {/* Right Side - Form */}
-        <div className="register-form-section">
-          {/* Botão Voltar */}
-          <Link
-            to="/"
-            className="login-back-btn"
-            style={{ marginBottom: 16, display: "inline-block" }}
-          >
-            ← Voltar para a página inicial
-          </Link>
-          <div className="register-header">
-            <img
-              src="/assets/Main_images/logo_site_img_005.png"
-              alt="Trilha Federal"
-              className="register-logo"
+        <form className="register-clean-form" onSubmit={handleSubmit}>
+          <div className="form-group">
+            <label htmlFor="name" className="form-label">
+              Nome completo
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              value={formData.name}
+              onChange={handleInputChange}
+              className="form-input"
+              placeholder="Seu nome completo"
+              required
+              disabled={loading}
             />
-            <h1 className="register-title">Criar conta</h1>
-            <p className="register-subtitle">
-              Preencha os campos abaixo para criar sua conta gratuita
-            </p>
+            <FaUser className="input-icon" />
           </div>
-          <form className="register-form" onSubmit={handleSubmit}>
-            {/* Nome */}
-            <div className="register-form-group">
-              <label htmlFor="name" className="register-form-label">
-                Nome completo
-              </label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleInputChange}
-                className="register-form-input"
-                placeholder="Seu nome completo"
-                required
-                disabled={loading}
-              />
-              <FaUser className="register-input-icon" />
-            </div>
-            {/* Email */}
-            <div className="register-form-group">
-              <label htmlFor="email" className="register-form-label">
-                Email
-              </label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                className="register-form-input"
-                placeholder="seu@email.com"
-                required
-                disabled={loading}
-              />
-              <FaEnvelope className="register-input-icon" />
-            </div>
-            {/* Criar Senha */}
-            <div className="register-form-group">
-              <label htmlFor="password" className="register-form-label">
-                Criar senha
-              </label>
-              <input
-                type={showPassword ? "text" : "password"}
-                id="password"
-                name="password"
-                value={formData.password}
-                onChange={handleInputChange}
-                className="register-form-input"
-                placeholder="Crie uma senha"
-                required
-                disabled={loading}
-              />
-              <FaLock className="register-input-icon" />
-              <button
-                type="button"
-                className="register-password-toggle"
-                onClick={togglePasswordVisibility}
-                disabled={loading}
-              >
-                {showPassword ? <FaEyeSlash /> : <FaEye />}
-              </button>
-            </div>
-            {/* Confirmar Senha */}
-            <div className="register-form-group">
-              <label htmlFor="confirmPassword" className="register-form-label">
-                Confirmar senha
-              </label>
-              <input
-                type={showConfirmPassword ? "text" : "password"}
-                id="confirmPassword"
-                name="confirmPassword"
-                value={formData.confirmPassword}
-                onChange={handleInputChange}
-                className="register-form-input"
-                placeholder="Confirme sua senha"
-                required
-                disabled={loading}
-              />
-              <FaLock className="register-input-icon" />
-              <button
-                type="button"
-                className="register-password-toggle"
-                onClick={toggleConfirmPasswordVisibility}
-                disabled={loading}
-              >
-                {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
-              </button>
-            </div>
-            {/* Botão Criar Conta */}
+          <div className="form-group">
+            <label htmlFor="email" className="form-label">
+              Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleInputChange}
+              className="form-input"
+              placeholder="seu@email.com"
+              required
+              disabled={loading}
+            />
+            <FaEnvelope className="input-icon" />
+          </div>
+          <div className="form-group">
+            <label htmlFor="password" className="form-label">
+              Criar senha
+            </label>
+            <input
+              type={showPassword ? "text" : "password"}
+              id="password"
+              name="password"
+              value={formData.password}
+              onChange={handleInputChange}
+              className="form-input"
+              placeholder="Crie uma senha"
+              required
+              disabled={loading}
+            />
+            <FaLock className="input-icon" />
             <button
-              type="submit"
-              className="register-button"
+              type="button"
+              className="password-toggle"
+              onClick={togglePasswordVisibility}
               disabled={loading}
             >
-              {loading ? (
-                <>
-                  <span className="register-loading-spinner"></span>
-                  Criando conta...
-                </>
-              ) : (
-                "Criar conta"
-              )}
+              {showPassword ? <FaEyeSlash /> : <FaEye />}
             </button>
-          </form>
-          <hr className="register-divider" />
-          <div className="register-signup-section">
-            <p className="register-signup-text">Já tem uma conta?</p>
-            <Link to="/login" className="register-signup-button">
-              <FaUser style={{ marginRight: "0.5rem" }} />
-              Entrar
-            </Link>
           </div>
+          <div className="form-group">
+            <label htmlFor="confirmPassword" className="form-label">
+              Confirmar senha
+            </label>
+            <input
+              type={showConfirmPassword ? "text" : "password"}
+              id="confirmPassword"
+              name="confirmPassword"
+              value={formData.confirmPassword}
+              onChange={handleInputChange}
+              className="form-input"
+              placeholder="Confirme sua senha"
+              required
+              disabled={loading}
+            />
+            <FaLock className="input-icon" />
+            <button
+              type="button"
+              className="password-toggle"
+              onClick={toggleConfirmPasswordVisibility}
+              disabled={loading}
+            >
+              {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+            </button>
+          </div>
+          <button
+            type="submit"
+            className="register-clean-button"
+            disabled={loading}
+          >
+            {loading ? (
+              <>
+                <span className="register-loading-spinner"></span>
+                Criando conta...
+              </>
+            ) : (
+              "Criar conta"
+            )}
+          </button>
+        </form>
+        <div className="register-clean-signin">
+          <span>Já tem uma conta?</span>
+          <Link to="/login" className="register-clean-signin-btn">
+            <FaUser style={{ marginRight: "0.5rem" }} /> Entrar
+          </Link>
         </div>
       </div>
     </div>
