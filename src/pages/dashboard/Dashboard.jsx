@@ -11,7 +11,6 @@ import {
 } from "react-icons/fa";
 import "./Dashboard.css";
 import Header from "../../components/Header/Header";
-import Footer from "../../components/Footer/Footer";
 import { useAuth } from "../../AuthContext";
 import universidades from "../Pages_inter/Universidades_inter/universidades.json";
 import institutos from "../Pages_inter/Institutos_inter/institutos.json";
@@ -76,7 +75,6 @@ const Dashboard = () => {
             Entrar
           </a>
         </div>
-        <Footer />
       </>
     );
   }
@@ -219,7 +217,6 @@ const Dashboard = () => {
           </section>
         </div>
       </div>
-      <Footer />
     </>
   );
 };
