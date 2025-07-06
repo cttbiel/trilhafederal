@@ -16,6 +16,7 @@ import universidades from "../Pages_inter/Universidades_inter/universidades.json
 import institutos from "../Pages_inter/Institutos_inter/institutos.json";
 import tecnicos from "../Pages_inter/Tecnicos_inter/tecnicos.json";
 import { supabase } from "../../supabaseClient";
+import { Helmet } from "react-helmet-async";
 
 function getInstituicaoFavorita(sigla) {
   return (
@@ -28,6 +29,8 @@ function getInstituicaoFavorita(sigla) {
 const Dashboard = () => {
   const { favorites, removeFavorite } = useAuth();
   const [user, setUser] = useState(null);
+  const [removing, setRemoving] = useState("");
+  const [proximosEventos, setProximosEventos] = useState([]);
 
   useEffect(() => {
     supabase.auth.getSession().then(({ data }) => {
@@ -44,9 +47,85 @@ const Dashboard = () => {
     };
   }, []);
 
+  useEffect(() => {
+    if (!favorites || favorites.length === 0) {
+      setProximosEventos([]);
+      return;
+    }
+    const hoje = new Date();
+    let eventos = [];
+    favorites.forEach((sigla) => {
+      const inst = getInstituicaoFavorita(sigla);
+      if (!inst || !inst.processos_seletivos) return;
+      inst.processos_seletivos.forEach((proc) => {
+        if (proc.datas) {
+          Object.entries(proc.datas).forEach(([etapa, dataStr]) => {
+            // Tenta converter a data para formato Date
+            let dataVest = null;
+            // Suporta formatos tipo "Janeiro de 2025" ou "10/11/2024"
+            if (/\d{2}\/\d{2}\/\d{4}/.test(dataStr)) {
+              // Formato dd/mm/yyyy
+              const [d, m, y] = dataStr.split("/");
+              dataVest = new Date(`${y}-${m}-${d}`);
+            } else if (/\d{4}/.test(dataStr)) {
+              // Tenta pegar ano
+              dataVest = new Date(dataStr);
+            } else {
+              // Tenta converter mês/ano tipo "Janeiro de 2025"
+              const meses = [
+                "janeiro",
+                "fevereiro",
+                "março",
+                "abril",
+                "maio",
+                "junho",
+                "julho",
+                "agosto",
+                "setembro",
+                "outubro",
+                "novembro",
+                "dezembro",
+              ];
+              const match = dataStr.match(/([A-Za-zçãéíúôê]+) de (\d{4})/i);
+              if (match) {
+                const mes = meses.findIndex(
+                  (m) => m === match[1].toLowerCase()
+                );
+                if (mes >= 0) {
+                  dataVest = new Date(Number(match[2]), mes, 1);
+                }
+              }
+            }
+            if (dataVest && dataVest >= hoje) {
+              eventos.push({
+                sigla,
+                nome: inst.nome,
+                tipo: inst.tipo,
+                processo: proc.nome,
+                etapa,
+                data: dataStr,
+                dataObj: dataVest,
+              });
+            }
+          });
+        }
+      });
+    });
+    // Ordena por data
+    eventos.sort((a, b) => a.dataObj - b.dataObj);
+    setProximosEventos(eventos.slice(0, 3));
+  }, [favorites]);
+
   if (!user) {
     return (
       <>
+        <Helmet>
+          <title>Painel do Usuário | Trilha Federal</title>
+          <meta
+            name="description"
+            content="Acompanhe seus vestibulares favoritos, simulados, estatísticas e notificações personalizadas no painel do Trilha Federal."
+          />
+        </Helmet>
         <Header />
         <div
           className="dashboard-container"
@@ -81,6 +160,13 @@ const Dashboard = () => {
 
   return (
     <>
+      <Helmet>
+        <title>Painel do Usuário | Trilha Federal</title>
+        <meta
+          name="description"
+          content="Acompanhe seus vestibulares favoritos, simulados, estatísticas e notificações personalizadas no painel do Trilha Federal."
+        />
+      </Helmet>
       <Header />
       <div className="dashboard-container">
         <div className="dashboard-header">
@@ -109,14 +195,29 @@ const Dashboard = () => {
         <div className="dashboard-main">
           <section className="dashboard-section">
             <h3>Próximos eventos</h3>
-            <ul className="event-list">
-              {(user?.eventos || []).map((ev, i) => (
-                <li key={i}>
-                  <FaCalendarCheck className="icon" />
-                  <span>{ev.titulo}</span> <b>{ev.data}</b>
-                </li>
-              ))}
-            </ul>
+            {favorites.length === 0 ? (
+              <p style={{ color: "#888", fontStyle: "italic" }}>
+                Adicione instituições aos favoritos e acompanhe aqui as datas
+                dos vestibulares mais próximos! 😉
+              </p>
+            ) : proximosEventos.length === 0 ? (
+              <p style={{ color: "#888", fontStyle: "italic" }}>
+                Nenhum vestibular futuro encontrado nos seus favoritos. Fique de
+                olho nas atualizações!
+              </p>
+            ) : (
+              <ul className="event-list">
+                {proximosEventos.map((ev, i) => (
+                  <li key={i}>
+                    <FaCalendarCheck className="icon" />
+                    <span>
+                      <b>{ev.nome}</b> — {ev.processo} ({ev.etapa}):{" "}
+                      <b>{ev.data}</b>
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            )}
           </section>
 
           <section className="dashboard-section">
@@ -160,9 +261,18 @@ const Dashboard = () => {
                       <button
                         className="favorite-remove"
                         title="Remover dos favoritos"
-                        onClick={() => removeFavorite(sigla)}
+                        onClick={async () => {
+                          setRemoving(sigla);
+                          await removeFavorite(sigla);
+                          setRemoving("");
+                        }}
+                        disabled={removing === sigla}
                       >
-                        <FaTrashAlt />
+                        {removing === sigla ? (
+                          <span className="favorite-loading-spinner"></span>
+                        ) : (
+                          <FaTrashAlt />
+                        )}
                       </button>
                     </li>
                   );

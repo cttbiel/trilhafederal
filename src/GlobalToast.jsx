@@ -5,17 +5,26 @@ const ToastContext = createContext();
 
 export function ToastProvider({ children }) {
   const [toast, setToast] = useState(null);
+  const [leaving, setLeaving] = useState(false);
 
   const showToast = useCallback((message, type = "info") => {
     setToast({ message, type });
-    setTimeout(() => setToast(null), 2200);
+    setLeaving(false);
+    setTimeout(() => {
+      setLeaving(true);
+      setTimeout(() => setToast(null), 350); // tempo da animação de saída
+    }, 3000);
   }, []);
 
   return (
     <ToastContext.Provider value={{ showToast }}>
       {children}
       {toast && (
-        <div className={`global-toast global-toast-${toast.type}`}>
+        <div
+          className={`global-toast global-toast-${toast.type}${
+            leaving ? " global-toast-leave" : ""
+          }`}
+        >
           {toast.message}
         </div>
       )}
@@ -26,4 +35,3 @@ export function ToastProvider({ children }) {
 export function useToast() {
   return useContext(ToastContext);
 }
- 

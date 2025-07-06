@@ -198,12 +198,53 @@
 .favorite-remove:hover {
   background: #d32f2f;
 }
+.favorite-loading-spinner {
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  border: 2.5px solid #009c3b;
+  border-top: 2.5px solid #fff;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-right: 0.2em;
+  vertical-align: middle;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.favorites-list {
+  max-height: 320px;
+  overflow-y: auto;
+  padding-right: 4px; /* espaço para scrollbar */
+  margin-bottom: 0.5rem;
+}
+
+/* Scrollbar discreta */
+.favorites-list::-webkit-scrollbar {
+  width: 7px;
+}
+.favorites-list::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 6px;
+}
+.favorites-list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
 @media (max-width: 900px) {
   .dashboard-main {
     grid-template-columns: 1fr;
   }
   .shortcuts {
     grid-column: span 1;
+  }
+  .favorites-list {
+    max-height: 200px;
   }
 }
 @media (max-width: 600px) {

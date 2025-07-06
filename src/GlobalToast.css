@@ -25,6 +25,9 @@
 .global-toast-error {
   background: #e74c3c;
 }
+.global-toast-leave {
+  animation: toast-out 0.35s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
 @keyframes toast-in {
   from {
     transform: translateX(-50%) translateY(40px);
@@ -33,5 +36,15 @@
   to {
     transform: translateX(-50%) translateY(0);
     opacity: 0.97;
+  }
+}
+@keyframes toast-out {
+  from {
+    transform: translateX(-50%) translateY(0);
+    opacity: 0.97;
+  }
+  to {
+    transform: translateX(-50%) translateY(40px);
+    opacity: 0;
   }
 }

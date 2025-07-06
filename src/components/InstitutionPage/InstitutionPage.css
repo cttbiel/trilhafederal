@@ -681,3 +681,95 @@
     width: 100%;
   }
 }
+
+.floating-fav-btn {
+  position: fixed;
+  bottom: 2.2rem;
+  right: 2.2rem;
+  z-index: 1000;
+  background: #fff;
+  border: 2.5px solid #d32f2f;
+  color: #d32f2f;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.13);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.1rem;
+  cursor: pointer;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s, border 0.2s;
+  outline: none;
+  animation: fav-float-in 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.floating-fav-btn.favorited {
+  background: #d32f2f;
+  color: #fff;
+  border-color: #d32f2f;
+  animation: fav-pop 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.floating-fav-btn:active {
+  transform: scale(0.93);
+}
+.floating-fav-btn.loading {
+  opacity: 0.7;
+  pointer-events: none;
+}
+.floating-fav-icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.fav-float-spinner {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.5em;
+  height: 1.5em;
+  border: 2.5px solid #fff;
+  border-top: 2.5px solid #d32f2f;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+@keyframes fav-float-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.7) translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+@keyframes fav-pop {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.18);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 700px) {
+  .floating-fav-btn {
+    bottom: 1.2rem;
+    right: 1.2rem;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+  }
+}

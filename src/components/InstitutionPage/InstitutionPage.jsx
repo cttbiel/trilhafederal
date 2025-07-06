@@ -12,11 +12,13 @@ import {
   FaArrowLeft,
   FaExternalLinkAlt,
   FaStar,
+  FaHeart,
 } from "react-icons/fa";
 import FadeInPageWrapper from "../../pages/Pages_aux/FadeInPageWrapper";
 import { Link } from "react-router-dom";
 import { useAuth } from "../../AuthContext";
 import { useToast } from "../../GlobalToast";
+import FloatingFavoriteButton from "./FloatingFavoriteButton";
 
 const AdmissionCard = ({ proc }) => {
   const [open, setOpen] = useState(false);
@@ -67,6 +69,7 @@ const InstitutionPage = ({
   const { user, favorites, addFavorite, removeFavorite } = useAuth();
   const isFavorited = favorites.includes(sigla);
   const { showToast } = useToast();
+  const [favLoading, setFavLoading] = useState(false);
 
   // Imagem padrão quando a imagem específica não carrega
   const defaultImage = "/assets/instituicoes/trilha_federal_img_001.jpeg";
@@ -86,14 +89,16 @@ const InstitutionPage = ({
     tipoPadrao = "Colégio Técnico";
   }
 
-  const handleFavorite = () => {
+  const handleFavorite = async () => {
+    setFavLoading(true);
     if (isFavorited) {
-      removeFavorite(sigla);
+      await removeFavorite(sigla);
       showToast("Removido dos favoritos!", "info");
     } else {
-      addFavorite(sigla);
+      await addFavorite(sigla);
       showToast("Adicionado aos favoritos!", "success");
     }
+    setFavLoading(false);
   };
 
   return (
@@ -113,20 +118,7 @@ const InstitutionPage = ({
               <span className="institution-location">
                 <FaMapMarkerAlt /> {cidade} - {estado}
               </span>
-              {user && (
-                <button
-                  className={`favorite-btn${isFavorited ? " favorited" : ""}`}
-                  onClick={handleFavorite}
-                  title={
-                    isFavorited
-                      ? "Remover dos favoritos"
-                      : "Adicionar aos favoritos"
-                  }
-                >
-                  <FaStar />{" "}
-                  {isFavorited ? "Favorito" : "Adicionar aos favoritos"}
-                </button>
-              )}
+              {/* Botão favorito inline no mobile - REMOVIDO */}
               {contatos?.site && (
                 <a
                   href={contatos.site}
@@ -299,6 +291,14 @@ const InstitutionPage = ({
           </div>
         </div>
       </div>
+      {/* Botão flutuante de favorito via Portal, sempre fixo na viewport */}
+      {user && (
+        <FloatingFavoriteButton
+          isFavorited={isFavorited}
+          loading={favLoading}
+          onClick={handleFavorite}
+        />
+      )}
     </FadeInPageWrapper>
   );
 };
