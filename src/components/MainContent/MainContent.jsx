@@ -359,33 +359,6 @@ const MainContent = () => {
             </div>
           </div>
         </section>
-
-        {/* Seção 5: Contato Simplificado (nova versão grande) */}
-        <section className="contato-destaque-section fade-in-up">
-          <div className="contato-destaque-container">
-            <div className="contato-destaque-text">
-              <h2>Entre em Contato</h2>
-              <p>
-                Tem dúvidas, sugestões ou quer contribuir? Fale com a gente!
-              </p>
-              <div className="contato-destaque-info">
-                <FaEnvelope
-                  style={{
-                    fontSize: "2.2rem",
-                    color: "var(--primary-color, #2551ca)",
-                    marginBottom: "0.5rem",
-                  }}
-                />
-                <a
-                  href="mailto:atrilhafederal@gmail.com"
-                  className="contato-destaque-email"
-                >
-                  atrilhafederal@gmail.com
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
       </div>
     </>
   );
