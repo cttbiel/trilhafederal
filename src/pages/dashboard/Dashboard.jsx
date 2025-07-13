@@ -8,6 +8,9 @@ import {
   FaSignOutAlt,
   FaUserCircle,
   FaTrashAlt,
+  FaUniversity,
+  FaGraduationCap,
+  FaClock,
 } from "react-icons/fa";
 import "./Dashboard.css";
 import Header from "../../components/Header/Header";
@@ -26,86 +29,141 @@ function getInstituicaoFavorita(sigla) {
   );
 }
 
-function parseDataVestibular(dataStr) {
-  if (!dataStr || typeof dataStr !== "string") return [];
-  dataStr = dataStr.trim().toLowerCase();
-  // Ignorar datas vagas
-  if (
-    dataStr.includes("a serem anunciadas") ||
-    dataStr.includes("em breve") ||
-    dataStr.includes("indefinido")
-  ) {
-    return [];
-  }
-  const meses = [
-    "janeiro",
-    "fevereiro",
-    "março",
-    "abril",
-    "maio",
-    "junho",
-    "julho",
-    "agosto",
-    "setembro",
-    "outubro",
-    "novembro",
-    "dezembro",
-  ];
+// Função melhorada para extrair datas dos processos seletivos
+function extrairDatasVestibulares(favorites) {
+  if (!favorites || favorites.length === 0) return [];
+
   const hoje = new Date();
-  let datas = [];
-  // dd/mm/yyyy
-  if (/\d{2}\/\d{2}\/\d{4}/.test(dataStr)) {
-    const [d, m, y] = dataStr.split("/");
-    const dt = new Date(`${y}-${m}-${d}`);
-    if (dt >= hoje) datas.push(dt);
-    return datas;
-  }
-  // "Janeiro de 2025" ou "Novembro de 2024"
-  let match = dataStr.match(/([a-zçãéíúôê]+) de (\d{4})/i);
-  if (match) {
-    const mes = meses.findIndex((m) => m === match[1]);
-    if (mes >= 0) {
-      const dt = new Date(Number(match[2]), mes, 1);
-      if (dt >= hoje) datas.push(dt);
-    }
-  }
-  // "Setembro a Outubro de 2024" ou "Abril e Junho de 2025"
-  match = dataStr.match(/([a-zçãéíúôê]+)[ aez]+([a-zçãéíúôê]+) de (\d{4})/i);
-  if (match) {
-    const mes1 = meses.findIndex((m) => m === match[1]);
-    const mes2 = meses.findIndex((m) => m === match[2]);
-    const ano = Number(match[3]);
-    if (mes1 >= 0) {
-      const dt1 = new Date(ano, mes1, 1);
-      if (dt1 >= hoje) datas.push(dt1);
-    }
-    if (mes2 >= 0) {
-      const dt2 = new Date(ano, mes2, 1);
-      if (dt2 >= hoje) datas.push(dt2);
-    }
-  }
-  // "Abril e Junho de 2025"
-  match = dataStr.match(/([a-zçãéíúôê]+) e ([a-zçãéíúôê]+) de (\d{4})/i);
-  if (match) {
-    const mes1 = meses.findIndex((m) => m === match[1]);
-    const mes2 = meses.findIndex((m) => m === match[2]);
-    const ano = Number(match[3]);
-    if (mes1 >= 0) {
-      const dt1 = new Date(ano, mes1, 1);
-      if (dt1 >= hoje) datas.push(dt1);
-    }
-    if (mes2 >= 0) {
-      const dt2 = new Date(ano, mes2, 1);
-      if (dt2 >= hoje) datas.push(dt2);
-    }
-  }
-  // Apenas ano
-  match = dataStr.match(/(\d{4})/);
-  if (match) {
-    const dt = new Date(Number(match[1]), 0, 1);
-    if (dt >= hoje) datas.push(dt);
-  }
-  return datas;
+  const eventos = [];
+
+  favorites.forEach((sigla) => {
+    const inst = getInstituicaoFavorita(sigla);
+    if (!inst || !inst.processos_seletivos) return;
+
+    inst.processos_seletivos.forEach((proc) => {
+      if (proc.datas) {
+        Object.entries(proc.datas).forEach(([etapa, dataStr]) => {
+          // Pular datas vagas ou indefinidas
+          if (
+            !dataStr ||
+            dataStr.toLowerCase().includes("a definir") ||
+            dataStr.toLowerCase().includes("em breve") ||
+            dataStr.toLowerCase().includes("indefinido")
+          ) {
+            return;
+          }
+
+          // Tentar extrair data específica (dd/mm/yyyy)
+          const dataMatch = dataStr.match(/(\d{2})\/(\d{2})\/(\d{4})/);
+          if (dataMatch) {
+            const [, dia, mes, ano] = dataMatch;
+            const dataObj = new Date(ano, mes - 1, dia);
+            if (dataObj >= hoje) {
+              eventos.push({
+                sigla,
+                nome: inst.nome,
+                tipo: inst.tipo,
+                processo: proc.nome,
+                etapa: etapa
+                  .replace(/_/g, " ")
+                  .replace(/\b\w/g, (l) => l.toUpperCase()),
+                data: dataStr,
+                dataObj,
+                descricao: proc.descricao,
+              });
+            }
+          } else {
+            // Para datas como "Janeiro de 2025" ou "17/01/2026 a 21/01/2026"
+            const meses = [
+              "janeiro",
+              "fevereiro",
+              "março",
+              "abril",
+              "maio",
+              "junho",
+              "julho",
+              "agosto",
+              "setembro",
+              "outubro",
+              "novembro",
+              "dezembro",
+            ];
+
+            // Padrão "Janeiro de 2025"
+            let match = dataStr.match(/([a-zçãéíúôê]+) de (\d{4})/i);
+            if (match) {
+              const mes = meses.findIndex((m) => m === match[1].toLowerCase());
+              if (mes >= 0) {
+                const dataObj = new Date(Number(match[2]), mes, 1);
+                if (dataObj >= hoje) {
+                  eventos.push({
+                    sigla,
+                    nome: inst.nome,
+                    tipo: inst.tipo,
+                    processo: proc.nome,
+                    etapa: etapa
+                      .replace(/_/g, " ")
+                      .replace(/\b\w/g, (l) => l.toUpperCase()),
+                    data: dataStr,
+                    dataObj,
+                    descricao: proc.descricao,
+                  });
+                }
+              }
+            }
+
+            // Padrão "17/01/2026 a 21/01/2026" - pegar a primeira data
+            const rangeMatch = dataStr.match(/(\d{2}\/\d{2}\/\d{4})/);
+            if (rangeMatch) {
+              const [dia, mes, ano] = rangeMatch[1].split("/");
+              const dataObj = new Date(ano, mes - 1, dia);
+              if (dataObj >= hoje) {
+                eventos.push({
+                  sigla,
+                  nome: inst.nome,
+                  tipo: inst.tipo,
+                  processo: proc.nome,
+                  etapa: etapa
+                    .replace(/_/g, " ")
+                    .replace(/\b\w/g, (l) => l.toUpperCase()),
+                  data: dataStr,
+                  dataObj,
+                  descricao: proc.descricao,
+                });
+              }
+            }
+          }
+        });
+      }
+    });
+  });
+
+  // Ordenar por data (mais próximas primeiro)
+  eventos.sort((a, b) => a.dataObj - b.dataObj);
+  return eventos;
+}
+
+// Função para formatar data relativa
+function formatarDataRelativa(dataObj) {
+  const hoje = new Date();
+  const diffTime = dataObj - hoje;
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+  if (diffDays === 0) return "Hoje";
+  if (diffDays === 1) return "Amanhã";
+  if (diffDays < 7) return `Em ${diffDays} dias`;
+  if (diffDays < 30) return `Em ${Math.floor(diffDays / 7)} semanas`;
+  if (diffDays < 365) return `Em ${Math.floor(diffDays / 30)} meses`;
+  return `Em ${Math.floor(diffDays / 365)} anos`;
+}
+
+// Função para obter ícone baseado no tipo de instituição
+function getIconeInstituicao(tipo) {
+  if (tipo?.includes("Universidade")) return <FaUniversity />;
+  if (tipo?.includes("Instituto")) return <FaGraduationCap />;
+  if (tipo?.includes("Técnica") || tipo?.includes("Colégio"))
+    return <FaGraduationCap />;
+  return <FaUniversity />;
 }
 
 const Dashboard = () => {
@@ -130,35 +188,8 @@ const Dashboard = () => {
   }, []);
 
   useEffect(() => {
-    if (!favorites || favorites.length === 0) {
-      setProximosEventos([]);
-      return;
-    }
-    let eventos = [];
-    favorites.forEach((sigla) => {
-      const inst = getInstituicaoFavorita(sigla);
-      if (!inst || !inst.processos_seletivos) return;
-      inst.processos_seletivos.forEach((proc) => {
-        if (proc.datas) {
-          Object.entries(proc.datas).forEach(([etapa, dataStr]) => {
-            const datas = parseDataVestibular(dataStr);
-            datas.forEach((dataVest) => {
-              eventos.push({
-                sigla,
-                nome: inst.nome,
-                tipo: inst.tipo,
-                processo: proc.nome,
-                etapa,
-                data: dataStr,
-                dataObj: dataVest,
-              });
-            });
-          });
-        }
-      });
-    });
-    eventos.sort((a, b) => a.dataObj - b.dataObj);
-    setProximosEventos(eventos.slice(0, 3));
+    const eventos = extrairDatasVestibulares(favorites);
+    setProximosEventos(eventos.slice(0, 5)); // Mostrar os 5 próximos eventos
   }, [favorites]);
 
   if (!user) {
@@ -239,29 +270,67 @@ const Dashboard = () => {
         </div>
         <div className="dashboard-main">
           <section className="dashboard-section">
-            <h3>Próximos eventos</h3>
+            <h3>
+              <FaCalendarCheck className="icon" />
+              Próximos eventos dos seus favoritos
+              {proximosEventos.length > 0 && (
+                <span className="evento-count">({proximosEventos.length})</span>
+              )}
+            </h3>
             {favorites.length === 0 ? (
-              <p style={{ color: "#888", fontStyle: "italic" }}>
-                Adicione instituições aos favoritos e acompanhe aqui as datas
-                dos vestibulares mais próximos! 😉
-              </p>
+              <div className="empty-state">
+                <FaStar className="empty-icon" />
+                <p>
+                  Adicione instituições aos favoritos e acompanhe aqui as datas
+                  dos vestibulares mais próximos! 😉
+                </p>
+              </div>
             ) : proximosEventos.length === 0 ? (
-              <p style={{ color: "#888", fontStyle: "italic" }}>
-                Nenhum vestibular futuro encontrado nos seus favoritos. Fique de
-                olho nas atualizações!
-              </p>
+              <div className="empty-state">
+                <FaClock className="empty-icon" />
+                <p>
+                  Nenhum vestibular futuro encontrado nos seus favoritos. Fique
+                  de olho nas atualizações!
+                </p>
+              </div>
             ) : (
-              <ul className="event-list">
+              <div className="eventos-grid">
                 {proximosEventos.map((ev, i) => (
-                  <li key={i}>
-                    <FaCalendarCheck className="icon" />
-                    <span>
-                      <b>{ev.nome}</b> — {ev.processo} ({ev.etapa}):{" "}
-                      <b>{ev.data}</b>
-                    </span>
-                  </li>
+                  <div key={i} className="evento-card">
+                    <div className="evento-header">
+                      {getIconeInstituicao(ev.tipo)}
+                      <div className="evento-info">
+                        <h4>{ev.nome}</h4>
+                        <span className="evento-tipo">{ev.tipo}</span>
+                      </div>
+                    </div>
+                    <div className="evento-detalhes">
+                      <div className="evento-processo">
+                        <strong>{ev.processo}</strong>
+                      </div>
+                      <div className="evento-etapa">
+                        <FaCalendarCheck className="icon" />
+                        <span>{ev.etapa}</span>
+                      </div>
+                      <div className="evento-data">
+                        <FaClock className="icon" />
+                        <span className="data-exata">{ev.data}</span>
+                        <span className="data-relativa">
+                          ({formatarDataRelativa(ev.dataObj)})
+                        </span>
+                      </div>
+                    </div>
+                  </div>
                 ))}
-              </ul>
+                {proximosEventos.length >= 5 && (
+                  <div className="evento-more">
+                    <p>
+                      Mostrando os 5 eventos mais próximos. Adicione mais
+                      favoritos para ver mais datas!
+                    </p>
+                  </div>
+                )}
+              </div>
             )}
           </section>
 
