@@ -33,18 +33,14 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular CEFET-MG",
-        "descricao": "Processo seletivo próprio para cursos técnicos e superiores, com provas objetivas e redação.",
+        "nome": "Processo Seletivo Técnico CEFET-MG",
+        "descricao": "Processo seletivo próprio para cursos técnicos integrados, concomitantes e subsequentes.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
-        }
-      },
-      {
-        "nome": "ENEM/SiSU",
-        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
-        "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "01/08/2025 a 22/09/2025",
+          "isencao": "01/08/2025 a 15/09/2025",
+          "prova": "02/11/2025 (data provável)",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       }
     ],
@@ -96,18 +92,13 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular CEFET-RJ",
-        "descricao": "Processo seletivo próprio para cursos técnicos e superiores, com provas objetivas e redação.",
+        "nome": "Processo Seletivo Técnico CEFET-RJ",
+        "descricao": "Processo seletivo próprio para cursos técnicos integrados e subsequentes.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
-        }
-      },
-      {
-        "nome": "ENEM/SiSU",
-        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
-        "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "A definir (normalmente agosto/setembro)",
+          "prova": "A definir (normalmente novembro)",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       }
     ],
@@ -150,11 +141,13 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular COLTEC",
+        "nome": "Processo Seletivo COLTEC (UFMG)",
         "descricao": "Processo seletivo próprio para cursos técnicos integrados ao ensino médio.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
+          "inscricoes": "Setembro/Outubro de 2025 (previsão)",
+          "prova": "Novembro de 2025 (previsão)",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       }
     ],
@@ -197,11 +190,13 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular COLUNI",
+        "nome": "Processo Seletivo COLUNI (UFV)",
         "descricao": "Processo seletivo próprio para cursos técnicos integrados ao ensino médio.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
+          "inscricoes": "A definir (normalmente setembro/outubro)",
+          "prova": "A definir (normalmente novembro)",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       }
     ],
@@ -248,11 +243,13 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular Pedro II",
+        "nome": "Processo Seletivo Colégio Pedro II",
         "descricao": "Processo seletivo próprio para cursos técnicos integrados ao ensino médio.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
+          "inscricoes": "A definir (normalmente setembro/outubro)",
+          "prova": "A definir (normalmente novembro)",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       }
     ],
@@ -295,11 +292,13 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibulinho ETEC",
+        "nome": "Vestibulinho ETEC (Getúlio Vargas)",
         "descricao": "Processo seletivo próprio para cursos técnicos integrados ao ensino médio.",
         "datas": {
-          "inscricoes": "Abril a Maio de 2024",
-          "provas": "Junho de 2024"
+          "inscricoes": "12/05/2025 a 13/06/2025",
+          "prova": "06/07/2025",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       }
     ],
@@ -342,11 +341,13 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibulinho ETEC",
+        "nome": "Vestibulinho ETEC (São José dos Campos)",
         "descricao": "Processo seletivo próprio para cursos técnicos integrados ao ensino médio.",
         "datas": {
-          "inscricoes": "Abril a Maio de 2024",
-          "provas": "Junho de 2024"
+          "inscricoes": "12/05/2025 a 13/06/2025",
+          "prova": "06/07/2025",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       }
     ],

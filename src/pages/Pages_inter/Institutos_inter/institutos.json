@@ -33,18 +33,33 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular IFMG",
-        "descricao": "Processo seletivo próprio do IFMG para cursos técnicos e superiores, com provas objetivas e redação.",
+        "nome": "Processo Seletivo Técnico IFMG",
+        "descricao": "Processo seletivo próprio do IFMG para cursos técnicos integrados, concomitantes e subsequentes.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
+          "inscricoes": "01/08/2025 a 22/09/2025",
+          "isencao": "01/08/2025 a 15/09/2025",
+          "prova": "02/11/2025 (data provável)",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       },
       {
-        "nome": "ENEM/SiSU",
-        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "26/05/2025 a 06/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "19/11/2025",
+          "resultado": "13/01/2026"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026",
+          "resultado": "26/01/2026",
+          "matricula": "27/01/2026 a 31/01/2026"
         }
       }
     ],
@@ -99,18 +114,32 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular IFRJ",
-        "descricao": "Processo seletivo próprio do IFRJ para cursos técnicos e superiores, com provas objetivas e redação.",
+        "nome": "Processo Seletivo Técnico IFRJ",
+        "descricao": "Processo seletivo próprio do IFRJ para cursos técnicos integrados, concomitantes e subsequentes.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
+          "inscricoes": "A definir (normalmente agosto/setembro)",
+          "prova": "A definir (normalmente novembro)",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       },
       {
-        "nome": "ENEM/SiSU",
-        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "26/05/2025 a 06/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "19/11/2025",
+          "resultado": "13/01/2026"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026",
+          "resultado": "26/01/2026",
+          "matricula": "27/01/2026 a 31/01/2026"
         }
       }
     ],
@@ -165,18 +194,32 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular IFES",
-        "descricao": "Processo seletivo próprio do IFES para cursos técnicos e superiores, com provas objetivas e redação.",
+        "nome": "Processo Seletivo Técnico IFES",
+        "descricao": "Processo seletivo próprio do IFES para cursos técnicos integrados, concomitantes e subsequentes.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
+          "inscricoes": "A definir (normalmente agosto/setembro)",
+          "prova": "A definir (normalmente novembro)",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       },
       {
-        "nome": "ENEM/SiSU",
-        "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "26/05/2025 a 06/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "19/11/2025",
+          "resultado": "13/01/2026"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026",
+          "resultado": "26/01/2026",
+          "matricula": "27/01/2026 a 31/01/2026"
         }
       }
     ],
@@ -231,18 +274,20 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular IFSP",
+        "nome": "Processo Seletivo Técnico IFSP",
         "descricao": "Processo seletivo próprio do IFSP para cursos técnicos e superiores, com provas objetivas e redação.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
+          "inscricoes": "20/05/2025 a 18/06/2025",
+          "provas": "A definir",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       },
       {
         "nome": "ENEM/SiSU",
         "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "Janeiro de 2026"
         }
       }
     ],
@@ -297,18 +342,20 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular IFNMG",
+        "nome": "Processo Seletivo Técnico IFNMG",
         "descricao": "Processo seletivo próprio do IFNMG para cursos técnicos e superiores, com provas objetivas e redação.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
+          "inscricoes": "A definir",
+          "provas": "A definir",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       },
       {
         "nome": "ENEM/SiSU",
         "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "Janeiro de 2026"
         }
       }
     ],
@@ -363,18 +410,20 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "Vestibular IFTM",
+        "nome": "Processo Seletivo Técnico IFTM",
         "descricao": "Processo seletivo próprio do IFTM para cursos técnicos e superiores, com provas objetivas e redação.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024"
+          "inscricoes": "A definir",
+          "provas": "A definir",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       },
       {
         "nome": "ENEM/SiSU",
         "descricao": "Ingresso nos cursos superiores via nota do ENEM pelo SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "Janeiro de 2026"
         }
       }
     ],

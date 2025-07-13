@@ -47,11 +47,22 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "ENEM/SiSU",
-        "descricao": "Principal forma de ingresso para graduação. Utiliza a nota do ENEM via SiSU.",
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio. Prova nacional utilizada como critério de seleção para diversas universidades.",
         "datas": {
-          "inscricoes": "Janeiro de 2025",
-          "resultado": "Fevereiro de 2025"
+          "inscricoes": "26/05/2025 a 06/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "19/11/2025",
+          "resultado": "13/01/2026"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada. Utiliza a nota do ENEM para ingresso em universidades públicas.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026",
+          "resultado": "26/01/2026",
+          "matricula": "27/01/2026 a 31/01/2026"
         }
       },
       {
@@ -167,26 +178,33 @@
     ],
     "processos_seletivos": [
       {
-        "nome": "ENEM/SiSU",
-        "descricao": "Ingresso no 1º semestre exclusivamente pelo ENEM/SiSU. Nota mínima na redação.",
+        "nome": "Vestibular UFU (2º semestre)",
+        "descricao": "Vestibular próprio da UFU para ingresso no segundo semestre.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "01/03/2025 a 18/03/2025",
+          "primeira_fase": "27/04/2025",
+          "segunda_fase": "25 e 26/05/2025",
+          "resultado": "Julho de 2025 (a confirmar)",
+          "matricula": "Julho/Agosto de 2025 (a confirmar)"
         }
       },
       {
-        "nome": "Vestibular UFU",
-        "descricao": "Ingresso no 2º semestre por vestibular próprio, duas fases de provas.",
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
         "datas": {
-          "inscricoes": "Fevereiro a Março de 2025",
-          "provas": "Abril e Junho de 2025"
+          "inscricoes": "26/05/2025 a 06/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "19/11/2025",
+          "resultado": "13/01/2026"
         }
       },
       {
-        "nome": "Processo Seletivo ESTES",
-        "descricao": "Ingresso nos cursos técnicos por prova objetiva.",
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
         "datas": {
-          "inscricoes": "Fevereiro a Março de 2025",
-          "prova": "Abril de 2025"
+          "inscricoes": "17/01/2026 a 21/01/2026 (previsão)",
+          "resultado": "26/01/2026 (previsão)",
+          "matricula": "27/01/2026 a 31/01/2026 (previsão)"
         }
       }
     ],
@@ -366,10 +384,33 @@
     "processos_seletivos": [
       {
         "nome": "FUVEST",
-        "descricao": "Vestibular próprio da USP, realizado em duas fases.",
+        "descricao": "Vestibular próprio da USP, um dos mais concorridos do Brasil.",
         "datas": {
-          "inscricoes": "Agosto a Setembro de 2024",
-          "provas": "Novembro de 2024 (1ª fase), Janeiro de 2025 (2ª fase)"
+          "inscricoes": "18/08/2025 a 07/10/2025",
+          "primeira_fase": "23/11/2025",
+          "segunda_fase": "14 e 15/12/2025",
+          "habilidades_especificas": "09/12/2025 a 09/01/2026",
+          "resultado": "Janeiro de 2026 (a confirmar)",
+          "matricula": "Janeiro/Fevereiro de 2026 (a confirmar)"
+        }
+      },
+      {
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via ENEM-USP.",
+        "datas": {
+          "inscricoes": "26/05/2025 a 06/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "19/11/2025",
+          "resultado": "13/01/2026"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026 (previsão)",
+          "resultado": "26/01/2026 (previsão)",
+          "matricula": "27/01/2026 a 31/01/2026 (previsão)"
         }
       }
     ],
@@ -430,8 +471,31 @@
         "nome": "Vestibular UNICAMP",
         "descricao": "Vestibular próprio da UNICAMP, realizado em duas fases.",
         "datas": {
-          "inscricoes": "Agosto a Setembro de 2024",
-          "provas": "Novembro de 2024 (1ª fase), Dezembro de 2024 (2ª fase)"
+          "inscricoes": "29/07/2025 a 06/09/2025",
+          "primeira_fase": "20/10/2025",
+          "segunda_fase": "24 e 25/11/2025",
+          "habilidades_especificas": "02 a 04/12/2025",
+          "resultado": "10/01/2026",
+          "matricula": "Janeiro de 2026 (a confirmar)"
+        }
+      },
+      {
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
+        "datas": {
+          "inscricoes": "26/05/2025 a 06/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "19/11/2025",
+          "resultado": "13/01/2026"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026 (previsão)",
+          "resultado": "26/01/2026 (previsão)",
+          "matricula": "27/01/2026 a 31/01/2026 (previsão)"
         }
       }
     ],
@@ -489,11 +553,33 @@
     "cursos_tecnicos": [],
     "processos_seletivos": [
       {
-        "nome": "VUNESP",
+        "nome": "Vestibular UNESP (VUNESP)",
         "descricao": "Vestibular próprio da UNESP, realizado em duas fases.",
         "datas": {
-          "inscricoes": "Setembro a Outubro de 2024",
-          "provas": "Novembro de 2024 (1ª fase), Dezembro de 2024 (2ª fase)"
+          "inscricoes": "02/09/2025 a 07/10/2025",
+          "primeira_fase": "17/11/2025",
+          "segunda_fase": "15 e 16/12/2025",
+          "resultado": "Janeiro de 2026 (a confirmar)",
+          "matricula": "Janeiro/Fevereiro de 2026 (a confirmar)"
+        }
+      },
+      {
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
+        "datas": {
+          "inscricoes": "26/05/2025 a 06/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "19/11/2025",
+          "resultado": "13/01/2026"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026 (previsão)",
+          "resultado": "26/01/2026 (previsão)",
+          "matricula": "27/01/2026 a 31/01/2026 (previsão)"
         }
       }
     ],
@@ -547,10 +633,22 @@
     "cursos_tecnicos": [],
     "processos_seletivos": [
       {
-        "nome": "ENEM/SiSU",
-        "descricao": "Principal forma de ingresso para graduação. Utiliza a nota do ENEM via SiSU.",
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "26/05/2025 a 06/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "19/11/2025",
+          "resultado": "13/01/2026"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026 (previsão)",
+          "resultado": "26/01/2026 (previsão)",
+          "matricula": "27/01/2026 a 31/01/2026 (previsão)"
         }
       }
     ],
@@ -604,10 +702,22 @@
     "cursos_tecnicos": [],
     "processos_seletivos": [
       {
-        "nome": "ENEM/SiSU",
-        "descricao": "Principal forma de ingresso para graduação. Utiliza a nota do ENEM via SiSU.",
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "26/05/2025 a 13/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "até 10 dias após o 2º dia do Enem",
+          "resultado": "Janeiro de 2026 (a confirmar)"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026 (previsão)",
+          "resultado": "26/01/2026 (previsão)",
+          "matricula": "27/01/2026 a 31/01/2026 (previsão)"
         }
       }
     ],
@@ -661,10 +771,22 @@
     "cursos_tecnicos": [],
     "processos_seletivos": [
       {
-        "nome": "ENEM/SiSU",
-        "descricao": "Principal forma de ingresso para graduação. Utiliza a nota do ENEM via SiSU.",
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "26/05/2025 a 13/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "até 10 dias após o 2º dia do Enem",
+          "resultado": "Janeiro de 2026 (a confirmar)"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026 (previsão)",
+          "resultado": "26/01/2026 (previsão)",
+          "matricula": "27/01/2026 a 31/01/2026 (previsão)"
         }
       }
     ],
@@ -722,10 +844,22 @@
     "cursos_tecnicos": [],
     "processos_seletivos": [
       {
-        "nome": "ENEM/SiSU",
-        "descricao": "Principal forma de ingresso para graduação. Utiliza a nota do ENEM via SiSU.",
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "26/05/2025 a 13/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "até 10 dias após o 2º dia do Enem",
+          "resultado": "Janeiro de 2026 (a confirmar)"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026 (previsão)",
+          "resultado": "26/01/2026 (previsão)",
+          "matricula": "27/01/2026 a 31/01/2026 (previsão)"
         }
       }
     ],
@@ -780,10 +914,34 @@
     "processos_seletivos": [
       {
         "nome": "Vestibular UERJ",
-        "descricao": "Vestibular próprio da UERJ, realizado em duas fases (Exame de Qualificação e Exame Discursivo).",
+        "descricao": "Vestibular próprio da UERJ, realizado em duas fases: Exame de Qualificação (1ª e 2ª etapas) e Exame Discursivo.",
         "datas": {
-          "inscricoes": "Abril a Maio de 2024",
-          "provas": "Junho e Setembro de 2024"
+          "inscricoes_1_exame_qualificacao": "08/04/2024 a 05/05/2024",
+          "prova_1_exame_qualificacao": "09/06/2024",
+          "inscricoes_2_exame_qualificacao": "08/07/2024 a 28/07/2024",
+          "prova_2_exame_qualificacao": "08/09/2024",
+          "inscricoes_exame_discursivo": "07/10/2024 a 27/10/2024",
+          "prova_exame_discursivo": "01/12/2024",
+          "resultado_final": "Janeiro de 2025 (a confirmar)"
+        }
+      },
+      {
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
+        "datas": {
+          "inscricoes": "26/05/2025 a 13/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "até 10 dias após o 2º dia do Enem",
+          "resultado": "Janeiro de 2026 (a confirmar)"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026 (previsão)",
+          "resultado": "26/01/2026 (previsão)",
+          "matricula": "27/01/2026 a 31/01/2026 (previsão)"
         }
       }
     ],
@@ -840,8 +998,29 @@
         "nome": "Vestibular UEMG",
         "descricao": "Vestibular próprio da UEMG, realizado em fase única.",
         "datas": {
-          "inscricoes": "Outubro a Novembro de 2024",
-          "provas": "Dezembro de 2024"
+          "inscricoes": "16/10/2024 a 16/11/2024",
+          "prova": "15/12/2024",
+          "resultado": "Janeiro de 2025 (a confirmar)",
+          "matricula": "Janeiro/Fevereiro de 2025 (a confirmar)"
+        }
+      },
+      {
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
+        "datas": {
+          "inscricoes": "26/05/2025 a 13/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "até 10 dias após o 2º dia do Enem",
+          "resultado": "Janeiro de 2026 (a confirmar)"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026 (previsão)",
+          "resultado": "26/01/2026 (previsão)",
+          "matricula": "27/01/2026 a 31/01/2026 (previsão)"
         }
       }
     ],
@@ -903,10 +1082,12 @@
       },
       {
         "nome": "PISM (Programa de Ingresso Seletivo Misto)",
-        "descricao": "Processo seriado de avaliação ao longo do ensino médio.",
+        "descricao": "Processo seriado de avaliação ao longo do ensino médio, realizado em três módulos.",
         "datas": {
-          "inscricoes": "Agosto a Setembro de 2024",
-          "provas": "Dezembro de 2024"
+          "inscricoes": "Agosto a Setembro de 2025 (a confirmar)",
+          "provas": "Dezembro de 2025 (a confirmar)",
+          "resultado": "Janeiro de 2026 (a confirmar)",
+          "matricula": "Janeiro/Fevereiro de 2026 (a confirmar)"
         }
       }
     ],
@@ -960,10 +1141,22 @@
     "cursos_tecnicos": [],
     "processos_seletivos": [
       {
-        "nome": "ENEM/SiSU",
-        "descricao": "Principal forma de ingresso para graduação. Utiliza a nota do ENEM via SiSU.",
+        "nome": "ENEM",
+        "descricao": "Exame Nacional do Ensino Médio, utilizado para ingresso via SiSU.",
         "datas": {
-          "inscricoes": "Janeiro de 2025"
+          "inscricoes": "26/05/2025 a 13/06/2025",
+          "provas": "09 e 16/11/2025",
+          "gabarito": "até 10 dias úteis após a prova",
+          "resultado": "13/01/2026"
+        }
+      },
+      {
+        "nome": "SiSU",
+        "descricao": "Sistema de Seleção Unificada, ingresso via nota do ENEM.",
+        "datas": {
+          "inscricoes": "17/01/2026 a 21/01/2026",
+          "resultado": "26/01/2026",
+          "matricula": "27/01/2026 a 31/01/2026"
         }
       }
     ],
@@ -1135,6 +1328,16 @@
         "descricao": "Principal forma de ingresso para graduação. Utiliza a nota do ENEM via SiSU.",
         "datas": {
           "inscricoes": "Janeiro de 2025"
+        }
+      },
+      {
+        "nome": "Vestibular UNIFESP (para cursos específicos)",
+        "descricao": "Vestibular próprio para alguns cursos, datas a definir conforme edital 2025/2026.",
+        "datas": {
+          "inscricoes": "A definir",
+          "provas": "A definir",
+          "resultado": "A definir",
+          "matricula": "A definir"
         }
       }
     ],
