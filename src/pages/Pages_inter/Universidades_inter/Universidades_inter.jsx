@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 import { FiSearch, FiChevronDown } from "react-icons/fi";
 import "./Universidades_inter.css";
 import { Helmet } from "react-helmet-async";
-import { useAuth } from "../../../AuthContext";
 import { FaHeart } from "react-icons/fa";
 
 const getUniqueEstados = (list) => {
@@ -16,8 +15,10 @@ const UniversidadesInter = () => {
   const [busca, setBusca] = useState("");
   const [estado, setEstado] = useState("Todos");
   const estados = useMemo(() => getUniqueEstados(universidades), []);
-  const { favorites, addFavorite, removeFavorite } = useAuth();
-  const [loadingFav, setLoadingFav] = useState(""); // sigla em loading
+  // Remover favoritos, loadingFav e handleToggleFavorite pois não são usados aqui
+  // const { favorites, addFavorite, removeFavorite } = useAuth();
+  // const [loadingFav, setLoadingFav] = useState("");
+  // const handleToggleFavorite = async (sigla, isFav) => { ... }
 
   const universidadesFiltradas = useMemo(() => {
     return universidades.filter((uni) => {
@@ -26,16 +27,6 @@ const UniversidadesInter = () => {
       return nomeMatch && estadoMatch;
     });
   }, [busca, estado]);
-
-  const handleToggleFavorite = async (sigla, isFav) => {
-    setLoadingFav(sigla);
-    if (isFav) {
-      await removeFavorite(sigla);
-    } else {
-      await addFavorite(sigla);
-    }
-    setLoadingFav("");
-  };
 
   return (
     <>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaUser } from "react-icons/fa";
 import "./RegisterPage.css";
-import { useToast } from "../../../GlobalToast";
+import { useToast } from "../../../useToast";
 import { supabase } from "../../../supabaseClient";
 
 const RegisterPage = () => {

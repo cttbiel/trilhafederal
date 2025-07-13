@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash, FaUser } from "react-icons/fa";
 import "./Login-page.css";
-import { useToast } from "../../../GlobalToast";
+import { useToast } from "../../../useToast";
 import { supabase } from "../../../supabaseClient";
 
 const LoginPage = () => {

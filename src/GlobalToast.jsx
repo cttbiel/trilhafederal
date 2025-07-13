@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useCallback } from "react";
+import React, { createContext, useState, useCallback } from "react";
 import "./GlobalToast.css";
 
 const ToastContext = createContext();
@@ -32,6 +32,4 @@ export function ToastProvider({ children }) {
   );
 }
 
-export function useToast() {
-  return useContext(ToastContext);
-}
+export { ToastContext };

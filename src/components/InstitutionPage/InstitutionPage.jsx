@@ -16,8 +16,8 @@ import {
 } from "react-icons/fa";
 import FadeInPageWrapper from "../../pages/Pages_aux/FadeInPageWrapper";
 import { Link } from "react-router-dom";
-import { useAuth } from "../../AuthContext";
-import { useToast } from "../../GlobalToast";
+import { useAuth } from "../../useAuth";
+import { useToast } from "../../useToast";
 import FloatingFavoriteButton from "./FloatingFavoriteButton";
 
 const AdmissionCard = ({ proc }) => {

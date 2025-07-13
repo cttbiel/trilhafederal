@@ -14,7 +14,7 @@ import {
 } from "react-icons/fa";
 import "./Dashboard.css";
 import Header from "../../components/Header/Header";
-import { useAuth } from "../../AuthContext";
+import { useAuth } from "../../useAuth";
 import universidades from "../Pages_inter/Universidades_inter/universidades.json";
 import institutos from "../Pages_inter/Institutos_inter/institutos.json";
 import tecnicos from "../Pages_inter/Tecnicos_inter/tecnicos.json";

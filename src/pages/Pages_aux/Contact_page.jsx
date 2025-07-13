@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { FaEnvelope, FaInstagram, FaMapMarkerAlt } from "react-icons/fa";
 import "./Contact_page.css";
-import { useToast } from "../../GlobalToast";
+import { useToast } from "../../useToast";
 
 const FORMSPREE_ENDPOINT = "https://formspree.io/f/mdkzbvjy";
 
