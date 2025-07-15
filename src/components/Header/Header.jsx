@@ -164,7 +164,21 @@ const Header = () => {
           <Link to="/quem-somos" onClick={scrollToTop}>
             Quem Somos
           </Link>
-          <Link to="/contato" onClick={scrollToTop}>
+          <Link
+            to="/contato"
+            onClick={(e) => {
+              e.preventDefault();
+              if (location.pathname !== "/contato") {
+                navigate("/contato");
+                setTimeout(
+                  () => window.scrollTo({ top: 0, behavior: "smooth" }),
+                  100
+                );
+              } else {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }
+            }}
+          >
             Contato
           </Link>
         </nav>
