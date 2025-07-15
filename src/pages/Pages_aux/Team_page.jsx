@@ -194,8 +194,9 @@ const TeamPage = () => {
                   Explorar Instituições
                 </a>
                 <a
-                  href="mailto:atrilhafederal@gmail.com"
                   className="cta-button secondary"
+                  onClick={() => navigate("/contato")}
+                  style={{ cursor: "pointer" }}
                 >
                   Entre em Contato
                 </a>
@@ -211,8 +212,6 @@ const TeamPage = () => {
                 <p>
                   Escaneie o QR code ao lado para acessar rapidamente em seu
                   dispositivo móvel.
-                  <br />
-                  Ideal para apresentações em sala de aula.
                 </p>
               </div>
               <div className="qrcode-img-wrapper">
