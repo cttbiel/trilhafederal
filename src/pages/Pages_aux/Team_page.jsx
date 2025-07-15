@@ -195,7 +195,13 @@ const TeamPage = () => {
                 </a>
                 <a
                   className="cta-button secondary"
-                  onClick={() => navigate("/contato")}
+                  onClick={() => {
+                    navigate("/contato");
+                    setTimeout(
+                      () => window.scrollTo({ top: 0, behavior: "smooth" }),
+                      100
+                    );
+                  }}
                   style={{ cursor: "pointer" }}
                 >
                   Entre em Contato
