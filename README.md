@@ -14,7 +14,7 @@ Acreditamos que todo jovem brasileiro merece a chance de sonhar alto e conquista
 
 ## Por que criamos o Trilha Federal?
 
-Somos **Gabriel Carvalho, Caio Bertolato, Gabriel Expedito** e **Kauã Faria**, dois jovens que estudaram em escolas estaduais de baixa qualidade em Belo Horizonte. Sabemos, na pele, o quanto a falta de estrutura e orientação pode dificultar o acesso às melhores universidades do país. Se o Trilha Federal existisse na nossa época, nossa trajetória teria sido muito mais fácil e justa. Por isso, criamos essa plataforma: para que outros jovens não passem pelas mesmas dificuldades e possam trilhar um caminho de sucesso.
+Dentre os nossos criadores, estão **Gabriel Carvalho** e **Kauã Faria**, dois jovens que estudaram em escolas estaduais de baixa qualidade em Belo Horizonte. Sabemos, na pele, o quanto a falta de estrutura e orientação pode dificultar o acesso às melhores universidades do país. Se o Trilha Federal existisse na nossa época, nossa trajetória teria sido muito mais fácil e justa. Por isso, criamos essa plataforma: para que outros jovens não passem pelas mesmas dificuldades e possam trilhar um caminho de sucesso.
 
 ## O que você encontra aqui?
 
@@ -77,43 +77,6 @@ O Trilha Federal é uma plataforma que democratiza o acesso à informação sobr
 - Interface moderna e acessível
 - Feedback visual para ações
 
-## Como Executar
-
-1. Clone o repositório
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
-3. Execute o servidor de desenvolvimento:
-   ```bash
-   npm run dev
-   ```
-4. Abra [http://localhost:5173](http://localhost:5173) no seu navegador
-
-## Scripts Disponíveis
-
-- `npm run dev` - Inicia o servidor de desenvolvimento
-- `npm run build` - Cria a build de produção
-- `npm run preview` - Visualiza a build de produção
-- `npm run lint` - Executa o linter
-
-## Estrutura do Projeto
-
-```
-src/
-├── components/
-│   ├── Header/          # Header com autenticação
-│   ├── MainContent/     # Conteúdo principal
-│   ├── Footer/          # Rodapé
-│   └── MapaDoBrasil/    # Mapa interativo
-├── pages/
-│   ├── Login_page/      # Login e cadastro
-│   ├── dashboard/       # Dashboard do usuário
-│   └── Pages_inter/     # Páginas de instituições
-├── supabaseClient.js    # Configuração Supabase
-└── AuthContext.jsx      # Contexto de favoritos
-```
-
 ## Nossa História
 
 Fundado em 2025 por quatro jovens estudantes do CEFET-MG, o Trilha Federal nasceu da experiência pessoal de Gabriel Junio Silva de Carvalho e Kauã Sergio Ramos Faria, que descobriram tardiamente as oportunidades em instituições federais após estudarem em escolas de ensino médio com poucos recursos. Hoje, junto com Gabriel Expedito Campos Coelho da Silva e Caio Bertolato Silva, todos cursando Engenharia de Computação, criaram esta plataforma para evitar que outros estudantes passem pela mesma situação.
@@ -121,7 +84,7 @@ Fundado em 2025 por quatro jovens estudantes do CEFET-MG, o Trilha Federal nasce
 ## Contato
 
 - **Email**: atrilhafederal@gmail.com
-- **WhatsApp**: (31) 99999-9999
+- **WhatsApp**: (31) 98976-5778
 - **Localização**: Belo Horizonte, MG - Brasil
 - **Instituição**: CEFET-MG - Centro Federal de Educação Tecnológica de Minas Gerais
 
