@@ -14,7 +14,7 @@ Acreditamos que todo jovem brasileiro merece a chance de sonhar alto e conquista
 
 ## Por que criamos o Trilha Federal?
 
-Somos **Gabriel Junio Silva de Carvalho** e **Kauã**, dois jovens que estudaram em escolas estaduais de baixa qualidade em Belo Horizonte. Sabemos, na pele, o quanto a falta de estrutura e orientação pode dificultar o acesso às melhores universidades do país. Se o Trilha Federal existisse na nossa época, nossa trajetória teria sido muito mais fácil e justa. Por isso, criamos essa plataforma: para que outros jovens não passem pelas mesmas dificuldades e possam trilhar um caminho de sucesso.
+Somos **Gabriel Carvalho, Caio Bertolato, Gabriel Expedito** e **Kauã Faria**, dois jovens que estudaram em escolas estaduais de baixa qualidade em Belo Horizonte. Sabemos, na pele, o quanto a falta de estrutura e orientação pode dificultar o acesso às melhores universidades do país. Se o Trilha Federal existisse na nossa época, nossa trajetória teria sido muito mais fácil e justa. Por isso, criamos essa plataforma: para que outros jovens não passem pelas mesmas dificuldades e possam trilhar um caminho de sucesso.
 
 ## O que você encontra aqui?
 
