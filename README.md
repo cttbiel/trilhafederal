@@ -29,6 +29,8 @@ Transformar a realidade de estudantes de escolas públicas através da democrati
 
 ### 🏛️ **Catálogo Completo de Instituições**
 
+_Disponível atualmente para a região Sudeste. Expansão nacional em desenvolvimento!_
+
 - **Universidades Federais**: USP, UNICAMP, UFMG, UFRJ, UNESP e mais
 - **Institutos Federais**: IFMG, IFES, IFRJ, IFSP e toda a rede federal
 - **Escolas Técnicas**: CEFET, ETECs, Colégios de Aplicação
@@ -57,6 +59,8 @@ Transformar a realidade de estudantes de escolas públicas através da democrati
 - Feedback visual para todas as ações
 
 ### 🗺️ **Mapa Interativo do Brasil**
+
+_Funcionalidade em construção. Em breve!_
 
 - Visualização geográfica das instituições
 - Filtros por região e tipo de instituição
@@ -129,6 +133,16 @@ Transformar a realidade de estudantes de escolas públicas através da democrati
 ### 📖 Nossa História
 
 Fundado em 2025, o Trilha Federal nasceu da experiência pessoal de estudantes que descobriram tardiamente as oportunidades em instituições federais. Após estudarem em escolas públicas com recursos limitados, nossa equipe decidiu criar uma solução para evitar que outros estudantes passem pela mesma situação.
+
+---
+
+## 🚧 Em Desenvolvimento
+
+- **Mapa Interativo do Brasil:** Visualização geográfica das instituições federais (em breve)
+- **Catálogo Nacional:** Expansão do catálogo para todas as regiões do Brasil
+- **Novos recursos de comunidade:** Mais ferramentas de integração e colaboração entre estudantes
+
+> _O Trilha Federal é um projeto em constante evolução. Seu apoio pode acelerar a implementação dessas funcionalidades e ampliar nosso impacto social!_
 
 ---
 
